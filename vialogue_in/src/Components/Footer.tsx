@@ -1,0 +1,135 @@
+import Link from "next/link";
+import { Facebook, Linkedin, Instagram, Twitter, Youtube } from "lucide-react";
+import Image from "next/image";
+import { FaFacebook, FaFacebookSquare, FaInstagram, FaInstagramSquare, FaLinkedin, FaTwitter, FaYoutube, FaYoutubeSquare } from "react-icons/fa";
+
+interface FooterLink {
+  label: string;
+  href: string;
+}
+
+interface FooterSection {
+  title: string;
+  span: string;
+  links: FooterLink[];
+}
+
+const footerData: FooterSection[] = [
+  {
+    title: "Channels",
+    span: "",
+    links: [
+      { label: "SMS", href: "/sms" },
+      { label: "WhatsApp", href: "/whatsapp" },
+      { label: "Voice", href: "/voice" },
+      { label: "RCS Business", href: "/rcs" },
+    ],
+  },
+  {
+    title: "Features",
+    span: "",
+    links: [
+      { label: "Agent", href: "/agent" },
+      { label: "Scalable API", href: "/third" },
+      { label: "Bots", href: "/bots" },
+      { label: "Conversation Tools", href: "/conversation" },
+    ],
+  },
+  {
+  title: "Company",
+  span: "col-span-2 sm:col-span-1",
+  links: [
+    { label: "About", href: "/about" },
+      { label: "Contact", href: "/contact" },
+      { label: "Industry", href: "/industry" },
+  ],
+},
+];
+
+const Footer: React.FC = () => {
+  return (
+    <footer className="bg-[#F8FAFC] border-t border-slate-200 text-slate-600 text-left sm:text-left relative z-10">
+      <div className="px-4 sm:px-6 lg:px-40 py-12 lg:py-20">
+
+        <div className="flex flex-col lg:flex-row gap-10 lg:gap-20 justify-between">
+
+          <div className="w-full lg:w-auto lg:min-w-[250px]">
+            <Image 
+              src="/imgs/logo2.svg" 
+              alt="footer-logo" 
+              className="mb-4 mx-auto sm:mx-0" 
+              width={120} 
+              height={40}
+            />
+            <div className="space-y-4 text-sm text-center sm:text-left">
+              <div className="flex gap-3">
+                <span className="text-slate-700 w-full leading-relaxed font-light">
+                  1st Floor, Landmark Cyber Park,
+                  <br />
+                  Sector 67, Gurugram – 122101,
+                  <br />
+                  Haryana, India
+                </span>
+              </div>
+            </div>
+          </div>
+          
+          <div className="grid grid-cols-2 mt-10 sm:mt-0 sm:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12 w-full">
+            {footerData.map((section, index) => (
+              <div key={index} className={section.span} >
+                <h4 className="text-slate-900 text-left text-xs font-semibold tracking-wider uppercase mb-4 text-brand-purple">
+                  {section.title}
+                </h4>
+                <ul className="space-y-3">
+                  {section.links.map((link, i) => (
+                    <li key={i}>
+                      <Link 
+                        href={link.href} 
+                        scroll={true}
+                        className={"text-sm text-left hover:text-brand-purple transition-colors duration-200"}
+                      >
+                        {link.label}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <div className="border-t border-slate-200 mt-12 pt-6 flex flex-col sm:flex-row justify-between items-center sm:items-center text-sm gap-4">
+          <div className="flex text-white gap-3 sm:gap-4 mt-8 sm:mt-0 justify-center w-fit sm:justify-left sm:max-w-[280px]">
+                <Link href="#" aria-label="Facebook" className="hover:text-brand-purple transition-colors">
+                  <FaFacebookSquare strokeWidth={2} size={28} className="w-[18px] h-[18px] sm:w-[22px] sm:h-[22px] text-slate-400 hover:text-brand-purple transition-colors" />
+                </Link>
+                <Link href="#" aria-label="LinkedIn" className="hover:text-brand-purple transition-colors">
+                  <FaLinkedin strokeWidth={2} size={28} className="w-[18px] h-[18px] sm:w-[22px] sm:h-[22px] text-slate-400 hover:text-brand-purple transition-colors" />
+                </Link>
+                <Link href="#" aria-label="Instagram" className="hover:text-brand-purple transition-colors">
+                  <FaInstagramSquare strokeWidth={2} size={28} className="w-[18px] h-[18px] sm:w-[22px] sm:h-[22px] text-slate-400 hover:text-brand-purple transition-colors" />
+                </Link>
+                <Link href="#" aria-label="Twitter" className="hover:text-brand-purple transition-colors">
+                  <FaTwitter strokeWidth={2} size={28} className="w-[18px] h-[18px] sm:w-[22px] sm:h-[22px] text-slate-400 hover:text-brand-purple transition-colors" />
+                </Link>
+                <Link href="#" aria-label="YouTube" className="hover:text-brand-purple transition-colors">
+                  <FaYoutubeSquare strokeWidth={2} size={28} className="w-[18px] h-[18px] sm:w-[22px] sm:h-[22px] text-slate-400 hover:text-brand-purple transition-colors" />
+                </Link>
+              </div>
+          <p className="text-center sm:text-left text-slate-500">© 2026 Vialogue. All Rights Reserved.</p>
+          <div className="flex gap-4 sm:gap-6 text-slate-500">
+            <Link href="#" className="hover:text-slate-900 transition-colors duration-200">
+              Privacy Policy
+            </Link>
+            <span className="text-slate-300">|</span>
+            <Link href="#" className="hover:text-slate-900 transition-colors duration-200">
+              Terms of Service
+            </Link>
+          </div>
+        </div>
+      </div>
+    </footer>
+  );
+};
+
+export default Footer;

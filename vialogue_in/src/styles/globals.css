@@ -1,0 +1,192 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #0f172a;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+
+  --color-bg-dark: #050816;
+  --color-bg-secondary: #f8fafc;
+  --color-accent-cyan: #06B6D4;
+  --color-brand-purple: #7C3AED;
+  --color-brand-blue: #2563EB;
+  --color-brand-cyan: #06B6D4;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+  overflow-x: hidden;
+}
+
+/* Glassmorphism utilities in Light Mode */
+.glass-panel {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(15, 23, 42, 0.08);
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.45);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(15, 23, 42, 0.06);
+  box-shadow: 0 8px 32px 0 rgba(15, 23, 42, 0.04);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.glass-card:hover {
+  background: rgba(255, 255, 255, 0.85);
+  border: 1px solid rgba(124, 58, 237, 0.15);
+  box-shadow: 0 12px 40px 0 rgba(124, 58, 237, 0.08);
+}
+
+/* Text Gradients */
+.text-gradient {
+  background: linear-gradient(135deg, #7C3AED 0%, #2563EB 50%, #06B6D4 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Animations */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.animate-float {
+  animation: float 4s ease-in-out infinite;
+}
+
+@keyframes pulse-glow {
+  0%, 100% {
+    opacity: 0.3;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.6;
+    transform: scale(1.05);
+  }
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 6s ease-in-out infinite;
+}
+
+/* globals.css */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.badge {
+  position: absolute;
+  background: #ffffff;
+  color: #111;
+  padding: 10px 14px;
+  border-radius: 999px;
+  font-size: 14px;
+  font-weight: 500;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+  white-space: nowrap;
+  pointer-events: none;
+}
+
+.badge-right {
+  right: -42px;
+}
+
+.badge-left {
+  left: -42px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.heading {
+  font-size: clamp(1.75rem, 5vw, 3rem) !important;
+  font-weight: 600 !important;
+  line-height: clamp(1.75rem, 5vw, 3rem) !important;
+  text-transform: uppercase;
+}
+
+.subheading {
+  font-size: clamp(1rem, 2.5vw, 1.2rem) !important;
+  font-weight: 200 !important;
+}
+
+.heading-two {
+  font-size: clamp(1.75rem, 5vw, 2rem) !important;
+  line-height: clamp(1.75rem, 5vw, 2rem) !important;
+  font-weight: 600 !important;
+  text-transform: capitalize;
+}
+
+.paragraph {
+  font-size: clamp(1.2rem, 2.5vw, 1.2rem) !important;
+  line-height: clamp(1.5rem, 2.5vw, 2rem) !important;
+  font-weight: 300 !important;
+}
+
+.subheading-two {
+  font-size: clamp(1rem, 2.5vw, 1.25rem) !important;
+  font-weight: 300 !important;
+  font-style: italic !important;
+}
+
+@media (max-width: 600px) {
+  .heading {
+  font-size: clamp(1.75rem, 5vw, 3rem) !important;
+  font-weight: 600 !important;
+  line-height: clamp(1.75rem, 5vw, 3rem) !important;
+  text-transform: uppercase;
+  text-align: center !important;
+}
+
+.subheading {
+  font-size: clamp(1rem, 2.5vw, 1.2rem) !important;
+  font-weight: 200 !important;
+  text-align: center !important;
+}
+
+.heading-two {
+  font-size: clamp(1.50rem, 5vw, 2rem) !important;
+  line-height: clamp(1.70rem, 5vw, 2rem) !important;
+  font-weight: 600 !important;
+  text-transform: capitalize;
+  text-align: center !important;
+  width: 100%;
+  padding: 0px 20px;
+}
+
+.paragraph {
+  font-size: clamp(1rem, 2.5vw, 1.2rem) !important;
+  line-height: clamp(1.7rem, 2.5vw, 2rem) !important;
+  font-weight: 300 !important;
+  text-align: center !important;
+}
+
+.subheading-two {
+  font-size: clamp(1rem, 2.5vw, 1.25rem) !important;
+  font-weight: 300 !important;
+  font-style: italic !important;
+  text-align: center !important;
+}
+}

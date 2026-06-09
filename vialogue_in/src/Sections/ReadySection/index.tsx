@@ -1,0 +1,98 @@
+'use client';
+
+import React from "react";
+import { easeOut, motion } from "framer-motion";
+import { Sparkles } from "lucide-react";
+import { useRouter } from "next/navigation";
+
+const container = {
+  hidden: { opacity: 0, scale: 0.96 },
+  visible: {
+    opacity: 1,
+    scale: 1,
+    transition: {
+      duration: 0.8,
+      ease: easeOut,
+      staggerChildren: 0.15,
+    },
+  },
+};
+
+const item = {
+  hidden: { opacity: 0, y: 30 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.6, ease: easeOut },
+  },
+};
+
+const button = {
+  hidden: { opacity: 0, y: 20 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.5, ease: easeOut },
+  },
+};
+
+interface ReadySectionProps {
+  heading?: string;
+  paragraph?: string;
+  btn1?: string;
+  btn2?: string;
+}
+
+const ReadySection: React.FC<ReadySectionProps> = ({ heading = "Ready to Start a Better Conversation?", paragraph = "Your customers are waiting. Build, innovate, and grow with the CPaaS platform designed for results.", btn1 = "Book a Demo", btn2 = "Talk to Our Voice Expert" }) => {
+  const route = useRouter();
+  return (
+    <section className="px-4 md:px-40 py-4 sm:py-16">
+      <motion.div
+        variants={container}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+        className="rounded-0 sm:rounded-3xl px-4 py-14 sm:px-16 sm:py-16 text-center bg-cover bg-center"
+        style={{ backgroundImage: "url(/imgs/bg.png)" }}
+      >
+        <motion.div variants={item} className="mb-4 max-w-4xl mx-auto">
+          <h2 className="heading-two text-white">{heading}</h2>
+        </motion.div>
+
+        <motion.div variants={item} className="mb-16 max-w-4xl mx-auto">
+          <h2 className="subheading text-white">
+            {paragraph}
+          </h2>
+        </motion.div>
+
+        <motion.div
+          variants={item}
+          className="flex flex-col sm:flex-row justify-center items-center gap-4"
+        >
+          <motion.button
+            variants={button}
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.96 }}
+            className="w-full cursor-pointer sm:w-auto px-8 py-3 rounded-xl text-white bg-[#6A47F2] text-base sm:text-lg"
+            onClick={()=>route.push("/contact")}
+          >
+            {btn1}
+          </motion.button>
+
+          <motion.button
+            variants={button}
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.96 }}
+            className="w-full cursor-pointer sm:w-auto px-8 py-3 rounded-xl text-white border border-[#ffffff84] flex items-center justify-center gap-2 text-base sm:text-lg"
+            onClick={()=>route.push("/contact")}
+          >
+            <Sparkles size={18} strokeWidth={1} />
+            {btn2}
+          </motion.button>
+        </motion.div>
+      </motion.div>
+    </section>
+  );
+};
+
+export default ReadySection;
