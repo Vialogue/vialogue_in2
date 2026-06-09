@@ -11,6 +11,7 @@ const nextConfig: NextConfig = {
       },
     ],
   },
+
   // output: "export",
   reactStrictMode: true,
 };
