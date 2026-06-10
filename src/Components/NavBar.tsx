@@ -15,6 +15,7 @@ import {
   Link,
   Megaphone,
   Zap,
+  ArrowRight,
 } from "lucide-react";
 import gsap from "gsap";
 import Router from "next/router";
@@ -192,43 +193,41 @@ const NavBar = () => {
           {/* DESKTOP MENU */}
 
           <div className="hidden lg:flex gap-10 items-center text-slate-600">
-            {open ? (
-              <div
-                className="flex items-center gap-1 cursor-pointer text-slate-900 font-medium transition-colors"
-                onMouseEnter={openMenu}
-                onClick={closeMenu}
-              >
-                Platform <ChevronUp size={16} className="text-brand-purple" />
-              </div>
-            ) : (
-              <div
-                className="flex items-center gap-1 cursor-pointer hover:text-slate-900 font-medium transition-colors"
-                onMouseEnter={openMenu}
-                onClick={openMenu}
-              >
-                Platform <ChevronDown size={16} />
-              </div>
-            )}
+            <div
+              className="relative flex items-center gap-1 cursor-pointer font-medium transition-colors py-2 group text-slate-600 hover:text-slate-950"
+              onMouseEnter={openMenu}
+              onClick={open ? closeMenu : openMenu}
+            >
+              Platform
+              <ChevronDown
+                size={14}
+                className={`transition-transform duration-300 ${open ? "rotate-180 text-brand-purple" : "text-slate-400"}`}
+              />
+              <span className="absolute bottom-0 left-0 w-full h-[2px] bg-brand-purple scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left" />
+            </div>
 
             <div
-              className="cursor-pointer hover:text-slate-900 font-medium transition-colors"
+              className="relative cursor-pointer hover:text-slate-950 font-medium transition-colors py-2 group"
               onClick={() => router.push("/industry")}
             >
               Industry
+              <span className="absolute bottom-0 left-0 w-full h-[2px] bg-brand-purple scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left" />
             </div>
 
             <div
-              className="cursor-pointer hover:text-slate-900 font-medium transition-colors"
+              className="relative cursor-pointer hover:text-slate-950 font-medium transition-colors py-2 group"
               onClick={() => router.push("/about")}
             >
               About
+              <span className="absolute bottom-0 left-0 w-full h-[2px] bg-brand-purple scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left" />
             </div>
 
             <div
-              className="cursor-pointer hover:text-slate-900 font-medium transition-colors"
+              className="relative cursor-pointer hover:text-slate-950 font-medium transition-colors py-2 group"
               onClick={() => router.push("/contact")}
             >
               Contact
+              <span className="absolute bottom-0 left-0 w-full h-[2px] bg-brand-purple scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left" />
             </div>
           </div>
 
@@ -257,18 +256,18 @@ const NavBar = () => {
       <div
         ref={panelRef}
         style={{ display: "none" }}
-        className="fixed rounded-2xl top-[100px] left-1/2 -translate-x-1/2 w-fit bg-white/95 backdrop-blur-xl shadow-2xl border border-slate-200/80 z-[9999999]"
+        className="fixed rounded-3xl top-[85px] left-1/2 -translate-x-1/2 w-[820px] bg-white/95 backdrop-blur-2xl shadow-[0_20px_50px_rgba(15,23,42,0.12)] border border-slate-200/80 z-[9999999]"
         onMouseLeave={closeMenu}
       >
-        <div className="max-w-fit mx-auto px-8 py-8 grid grid-cols-2 gap-8">
+        <div className="mx-auto p-8 grid grid-cols-12 gap-6">
           {/* CHANNELS */}
 
-          <div>
-            <h3 className="text-xs text-brand-purple mb-4 font-semibold tracking-widest">
+          <div className="col-span-5 border-r border-slate-100 pr-4">
+            <h3 className="text-[10px] font-bold text-slate-400 uppercase tracking-widest mb-4">
               CHANNELS
             </h3>
 
-            <div className="flex flex-col gap-1">
+            <div className="flex flex-col gap-1.5">
               {services.map((item, i) => {
                 const Icon = item.icon;
 
@@ -282,20 +281,18 @@ const NavBar = () => {
                       router.push(item.path);
                       closeMenu();
                     }}
-                    className="group flex items-start gap-3 cursor-pointer px-4 py-2.5 rounded-xl hover:bg-slate-50 transition-all duration-200"
+                    className="group flex items-start gap-4 cursor-pointer p-2 rounded-xl hover:bg-slate-50 transition-all duration-200"
                   >
-                    <Icon
-                      size={18}
-                      strokeWidth={2}
-                      className="mt-0.5 text-brand-purple min-w-8 min-h-8 p-2 border-slate-200/60 rounded-lg border bg-slate-50 group-hover:bg-purple-50 group-hover:border-purple-200 transition-all duration-200"
-                    />
+                    <div className="mt-0.5 text-brand-purple min-w-9 min-h-9 p-2 border-slate-200/60 rounded-xl border bg-slate-50 group-hover:bg-purple-50 group-hover:border-purple-200 group-hover:scale-105 transition-all duration-250 flex items-center justify-center shadow-sm">
+                      <Icon size={20} strokeWidth={2} />
+                    </div>
 
-                    <div>
-                      <div className="font-semibold text-sm text-slate-800 group-hover:text-brand-purple transition-colors">
+                    <div className="min-w-0">
+                      <div className="font-bold text-sm text-slate-800 group-hover:text-brand-purple transition-colors">
                         {item.label}
                       </div>
 
-                      <div className="text-xs max-w-[150px] text-slate-500 mt-0.5">
+                      <div className="text-xs text-slate-500 mt-0.5 leading-normal">
                         {item.desc}
                       </div>
                     </div>
@@ -307,12 +304,12 @@ const NavBar = () => {
 
           {/* FEATURES */}
 
-          <div>
-            <h3 className="text-xs text-brand-purple mb-4 font-semibold tracking-widest">
+          <div className="col-span-4 border-r border-slate-100 pr-4">
+            <h3 className="text-[10px] font-bold text-slate-400 uppercase tracking-widest mb-4">
               FEATURES
             </h3>
 
-            <div className="flex flex-col gap-1">
+            <div className="flex flex-col gap-1.5">
               {features.map((item, i) => {
                 const Icon = item.icon;
 
@@ -326,20 +323,18 @@ const NavBar = () => {
                       router.push(item.path);
                       closeMenu();
                     }}
-                    className="group flex items-start gap-3 cursor-pointer px-4 py-2.5 rounded-xl hover:bg-slate-50 transition-all duration-200"
+                    className="group flex items-start gap-4 cursor-pointer p-2 rounded-xl hover:bg-slate-50 transition-all duration-200"
                   >
-                    <Icon
-                      size={18}
-                      strokeWidth={2}
-                      className="mt-0.5 text-brand-purple min-w-8 min-h-8 p-2 border-slate-200/60 rounded-lg border bg-slate-50 group-hover:bg-purple-50 group-hover:border-purple-200 transition-all duration-200"
-                    />
+                    <div className="mt-0.5 text-brand-purple min-w-9 min-h-9 p-2 border-slate-200/60 rounded-xl border bg-slate-50 group-hover:bg-purple-50 group-hover:border-purple-200 group-hover:scale-105 transition-all duration-250 flex items-center justify-center shadow-sm">
+                      <Icon size={20} strokeWidth={2} />
+                    </div>
 
-                    <div>
-                      <div className="font-semibold text-sm text-slate-800 group-hover:text-brand-purple transition-colors">
+                    <div className="min-w-0">
+                      <div className="font-bold text-sm text-slate-800 group-hover:text-brand-purple transition-colors">
                         {item.label}
                       </div>
 
-                      <div className="text-xs max-w-[150px] text-slate-500 mt-0.5">
+                      <div className="text-xs text-slate-500 mt-0.5 leading-normal">
                         {item.desc}
                       </div>
                     </div>
@@ -347,6 +342,40 @@ const NavBar = () => {
                 );
               })}
             </div>
+          </div>
+
+          {/* DEVELOPER SHOWCASE */}
+
+          <div className="col-span-3 flex flex-col justify-between select-none">
+            <div className="space-y-2">
+              <span className="text-[9px] font-bold text-slate-450 uppercase tracking-widest block">Developer Hub</span>
+              <h4 className="text-xs font-bold text-slate-850 leading-tight">API Platform Status</h4>
+              <p className="text-[10px] text-slate-550 leading-normal font-light">
+                Route OTP codes, campaigns, and conversational notifications globally with low-latency APIs.
+              </p>
+            </div>
+
+            <div className="my-3 py-2 px-3 bg-slate-950 rounded-xl border border-slate-850 font-mono text-[9px] text-[#00E5FF] shadow-inner relative overflow-hidden group/console">
+              <div className="absolute top-1 right-2 text-[8px] text-slate-600 uppercase font-sans">vialogue-cli</div>
+              <div className="flex gap-1.5 items-center mb-1 text-slate-500 border-b border-slate-900 pb-1">
+                <span className="w-1.5 h-1.5 rounded-full bg-red-500/80" />
+                <span className="w-1.5 h-1.5 rounded-full bg-yellow-500/80" />
+                <span className="w-1.5 h-1.5 rounded-full bg-green-500/80" />
+              </div>
+              <span className="text-emerald-450">$</span> npm i @vialogue/sdk
+              <div className="text-slate-500 mt-1 text-[7px] flex items-center gap-1">
+                <span className="w-1 h-1 rounded-full bg-emerald-500 animate-pulse" />
+                API Connection Live
+              </div>
+            </div>
+
+            <a
+              href="/contact"
+              onClick={() => closeMenu()}
+              className="text-[10px] font-bold text-brand-purple hover:text-brand-purple/80 transition-colors flex items-center gap-1 cursor-pointer"
+            >
+              Integration Guides <ArrowRight size={10} className="mt-0.5" />
+            </a>
           </div>
         </div>
       </div>
