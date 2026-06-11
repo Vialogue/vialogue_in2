@@ -36,24 +36,13 @@ import ServiceHero from "@/Global/ServiceHero";
 export default function Conversation() {
   return (
     <div className="bg-white sm:text-left text-center ">
-      <div className="relative pb-[0%] bg-[#39006B]">
-        <div className="absolute inset-0 bg-gradient-to-b from-[#571C96] to-[#39006B] opacity-80" />
-
-        <div
-          className="absolute inset-0 bg-cover bg-center opacity-[0.1]"
-          style={{ backgroundImage: "url(/imgs/background.png)" }}
-        />
-
-        <div className="relative z-10">
-        <NavBar />
-        <ServiceHero
-          title="No-Code Conversation Builder for Chatbots & Customer Journeys | Vialogue"
-          description="Build automated customer journeys with Vialogue Conversation Builder. Create chatbots, workflows and interactive messaging flows without coding."
-          hero_img={"./imgs/hm/conv.png"}
-          off_nav={false}
-        />
-      </div>
-      </div>
+      <NavBar />
+      <ServiceHero
+        title="No-Code Conversation Builder for Chatbots & Customer Journeys | Vialogue"
+        description="Build automated customer journeys with Vialogue Conversation Builder. Create chatbots, workflows and interactive messaging flows without coding."
+        hero_img={"./imgs/hm/conv.png"}
+        off_nav={false}
+      />
       <GlobalOverview data={Build} />
       <ProblemSolution />
       <KeyFeatures heading="Key Features" features={conversationBuilderFeatures} />

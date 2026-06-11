@@ -24,19 +24,8 @@ import RevolvingCards from "@/Sections/Pages/Components/WhyWeStart";
 export default function About() {
   return (
     <div className="bg-white">
-      <div className="relative pb-16 bg-[#39006B]">
-        <div className="absolute inset-0 bg-gradient-to-b from-[#571C96] to-[#39006B] opacity-80" />
-
-        <div
-          className="absolute inset-0 bg-cover bg-center opacity-[0.1]"
-          style={{ backgroundImage: "url(/imgs/background.png)" }}
-        />
-
-        <div className="relative z-10">
-          <NavBar />
-          <OtherHero />
-        </div>
-      </div>
+      <NavBar />
+      <OtherHero />
       <RevolvingCards />
       <FounderNote />
       <MeetOurTeam />

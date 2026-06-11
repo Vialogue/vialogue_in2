@@ -23,11 +23,11 @@ const ButtonGlobal: React.FC<ButtonGlobalProps> = ({
           flex items-center justify-center gap-3
           px-5 py-3
           rounded-xl
-          bg-orange-500
+          bg-gradient-to-r from-brand-purple via-brand-blue to-brand-cyan
           text-white font-medium
           transition-all duration-300 ease-out
           hover:-translate-y-0.5
-          hover:shadow-lg hover:shadow-orange-500/30
+          hover:shadow-lg hover:shadow-purple-500/20
           active:scale-[0.97]
           sm:flex-1
           w-full flex-1 sm:w-auto cursor-pointer
@@ -37,10 +37,9 @@ const ButtonGlobal: React.FC<ButtonGlobalProps> = ({
         <span
           className="
             absolute inset-0
-            bg-gradient-to-r from-purple-600 to-indigo-600
-            -translate-x-full
-            group-hover:translate-x-0
-            transition-transform duration-500 ease-out
+            bg-gradient-to-r from-brand-cyan via-brand-blue to-brand-purple
+            opacity-0 group-hover:opacity-100
+            transition-opacity duration-500 ease-out
           "
         />
 
@@ -70,27 +69,16 @@ const ButtonGlobal: React.FC<ButtonGlobalProps> = ({
         flex items-center justify-center
         px-5 py-3
         rounded-xl
-        border border-white
-        text-white font-medium
+        border border-slate-200 bg-slate-50
+        text-slate-700 font-medium
         transition-all duration-300 ease-out
-        hover:-translate-y-0.5 hover:shadow-lg
+        hover:-translate-y-0.5 hover:shadow-lg hover:bg-slate-100 hover:border-slate-300
         active:scale-[0.97]
         sm:flex-1
         w-full flex-1 sm:w-auto cursor-pointer
       "
     >
-      {/* SLIDING LIGHT LAYER */}
-      <span
-        className="
-          absolute inset-0
-          bg-white
-          -translate-x-full
-          group-hover:translate-x-0
-          transition-transform duration-500 ease-out
-        "
-      />
-
-      <span className="relative z-10 transition-colors duration-300 group-hover:text-black">
+      <span className="relative z-10 transition-colors duration-300">
         {text}
       </span>
     </button>

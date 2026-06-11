@@ -20,19 +20,8 @@ import { sms_platform } from "@/Global/platform";
 export default function Sms() {
   return (
     <div className="bg-white sm:text-left text-center ">
-      <div className="relative pb-[0%] bg-[#39006B]">
-        <div className="absolute inset-0 bg-gradient-to-b from-[#571C96] to-[#39006B] opacity-80" />
-
-        <div
-          className="absolute inset-0 bg-cover bg-center opacity-[0.1]"
-          style={{ backgroundImage: "url(/imgs/background.png)" }}
-        />
-
-        <div className="relative z-10">
-        <NavBar />
-        <ServiceHero title="Compliant, Reliable SMS API for Verification & Customer Engagement" description="<b>Engage Your Customers at Every Step of Their Journey</b><br />An all-in-one messaging platform by Vialogue for OTPs, alerts & potifications, promotional and loyalty messaging-built for scale, security, and performance." hero_img="./imgs/hm/sms.png" off_nav={true} />
-      </div>
-      </div>
+      <NavBar />
+      <ServiceHero title="Compliant, Reliable SMS API for Verification & Customer Engagement" description="<b>Engage Your Customers at Every Step of Their Journey</b><br />An all-in-one messaging platform by Vialogue for OTPs, alerts & potifications, promotional and loyalty messaging-built for scale, security, and performance." hero_img="./imgs/hm/sms.png" off_nav={true} />
       <section id="overview"></section>
       <CWC heading="Connect with customers at every touchpoint" list={sms_list} />
       <section id="platform"></section>

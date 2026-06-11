@@ -19,7 +19,7 @@ const GetInTouch: React.FC = () => {
   };
 
   return (
-    <section className="sm:mb-0 py-16 sm:py-0 px-4 sm:px-0 mb-0 sm:text-left text-center bg-gray-200 sm:bg-[linear-gradient(45deg,#250010,#250052)]">
+    <section className="sm:mb-0 py-16 sm:py-0 px-4 sm:px-0 mb-0 sm:text-left text-center bg-gradient-to-r from-brand-purple via-brand-blue to-brand-cyan">
       <div className="grid lg:grid-cols-2 gap-0 lg:gap-0 items-center mx-auto">
         
         <motion.div
@@ -51,7 +51,7 @@ const GetInTouch: React.FC = () => {
     whileInView={{ opacity: 1, y: 0 }}
     viewport={{ once: true }}
     transition={{ duration: 0.6 }}
-    className="text-xl sm:text-2xl lg:text-3xl font-semibold text-purple-600 mb-4 sm:mb-5"
+    className="text-xl sm:text-2xl lg:text-3xl font-semibold text-gradient mb-4 sm:mb-5"
   >
     Get in touch
   </motion.h2>
@@ -131,11 +131,13 @@ const GetInTouch: React.FC = () => {
       whileInView="visible"
       viewport={{ once: true }}
       onClick={handleSubmit}
-      className="w-full mt-2 rounded-lg py-2.5 text-white font-medium text-sm
-                 bg-gradient-to-r from-purple-500 to-purple-700
-                 hover:opacity-90 transition-opacity duration-200 cursor-pointer sm:col-span-1 col-span-2"
+      className="group relative overflow-hidden w-full mt-2 rounded-lg py-2.5 text-white font-medium text-sm
+                 bg-gradient-to-r from-brand-purple via-brand-blue to-brand-cyan
+                 shadow-[0_4px_20px_rgba(124,58,237,0.15)] hover:shadow-[0_4px_30px_rgba(0,229,255,0.25)]
+                 transition-all duration-300 cursor-pointer sm:col-span-1 col-span-2"
     >
-      Send Message
+      <span className="absolute inset-0 bg-gradient-to-r from-brand-cyan via-brand-blue to-brand-purple opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+      <span className="relative z-10">Send Message</span>
     </motion.button>
   </div>
 </motion.div>

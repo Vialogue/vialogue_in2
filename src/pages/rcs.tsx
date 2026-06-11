@@ -29,24 +29,13 @@ import AnimatedFeatureGrid from "@/Global/FeatureItem";
 export default function RCS() {
   return (
     <div className="bg-white sm:text-left text-center ">
-      <div className="relative pb-[0%] bg-[#39006B]">
-        <div className="absolute inset-0 bg-gradient-to-b from-[#571C96] to-[#39006B] opacity-80" />
-
-        <div
-          className="absolute inset-0 bg-cover bg-center opacity-[0.1]"
-          style={{ backgroundImage: "url(/imgs/background.png)" }}
-        />
-
-        <div className="relative z-10">
-          <NavBar />
-          <ServiceHero
-            title="Boost Customer Engagement with RCS Business Messaging"
-            description="Boost Customer Engagement with RCS Business Messaging"
-            hero_img={"./imgs/hm/rcs.png"}
-            off_nav={true}
-          />
-        </div>
-      </div>
+      <NavBar />
+      <ServiceHero
+        title="Boost Customer Engagement with RCS Business Messaging"
+        description="Boost Customer Engagement with RCS Business Messaging"
+        hero_img={"./imgs/hm/rcs.png"}
+        off_nav={true}
+      />
       <section id="overview"></section>
       <LIRC
         title="Transform “Texting” into “Connecting”"

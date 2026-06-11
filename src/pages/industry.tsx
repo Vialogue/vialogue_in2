@@ -25,20 +25,9 @@ import ServiceHero from "@/Global/ServiceHero";
 export default function Home() {
   return (
     <div className="bg-white overflow-hidden">
-      <div className="relative pb-[0%] bg-[#39006B]">
-        <div className="absolute inset-0 bg-gradient-to-b from-[#571C96] to-[#39006B] opacity-80" />
-
-        <div
-          className="absolute inset-0 bg-cover bg-center opacity-[0.1]"
-          style={{ backgroundImage: "url(/imgs/background.png)" }}
-        />
-
-        <div className="relative z-10">
-        <NavBar />
-        <ServiceHero title="Communication Built for
+      <NavBar />
+      <ServiceHero title="Communication Built for
 Every Industry" description="Vialogue delivers channel-native messaging solutions across five of India's fastest-growing sectors" hero_img="./industry.png" off_nav={false} ind={true} />
-      </div>
-      </div>
       <div id="BFSI"></div>
       <BFSISection />
       <div id="E-Commerce"></div>

@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useRef, useState } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import Image from "next/image";
 import {
   ChevronDown,
@@ -34,6 +34,39 @@ const NavBar = () => {
   const [open, setOpen] = useState(false);
 
   const router = useRouter();
+
+  const closeMenuInstant = () => {
+    setOpen(false);
+    if (closeTimeout.current) clearTimeout(closeTimeout.current);
+    gsap.set(panelRef.current, { display: "none", opacity: 1 });
+  };
+
+  // Close menu on path change
+  useEffect(() => {
+    closeMenuInstant();
+    setMobileMenu(false);
+    setMobilePlatform(false);
+  }, [router.asPath]);
+
+  // Close menu on click outside
+  useEffect(() => {
+    const handleGlobalClick = (event: MouseEvent) => {
+      if (!open) return;
+      const panel = panelRef.current;
+      const trigger = document.getElementById("platform-menu-trigger");
+      if (
+        panel &&
+        !panel.contains(event.target as Node) &&
+        trigger &&
+        !trigger.contains(event.target as Node)
+      ) {
+        closeMenu();
+      }
+    };
+
+    document.addEventListener("click", handleGlobalClick);
+    return () => document.removeEventListener("click", handleGlobalClick);
+  }, [open]);
 
   /* DESKTOP MEGA MENU */
 
@@ -187,13 +220,17 @@ const NavBar = () => {
             priority
             unoptimized
             className="cursor-pointer"
-            onClick={() => router.push("/")}
+            onClick={() => {
+              closeMenuInstant();
+              router.push("/");
+            }}
           />
 
           {/* DESKTOP MENU */}
 
           <div className="hidden lg:flex gap-10 items-center text-slate-600">
             <div
+              id="platform-menu-trigger"
               className="relative flex items-center gap-1 cursor-pointer font-medium transition-colors py-2 group text-slate-600 hover:text-slate-950"
               onMouseEnter={openMenu}
               onClick={open ? closeMenu : openMenu}
@@ -208,7 +245,11 @@ const NavBar = () => {
 
             <div
               className="relative cursor-pointer hover:text-slate-950 font-medium transition-colors py-2 group"
-              onClick={() => router.push("/industry")}
+              onMouseEnter={closeMenu}
+              onClick={() => {
+                closeMenuInstant();
+                router.push("/industry");
+              }}
             >
               Industry
               <span className="absolute bottom-0 left-0 w-full h-[2px] bg-brand-purple scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left" />
@@ -216,7 +257,11 @@ const NavBar = () => {
 
             <div
               className="relative cursor-pointer hover:text-slate-950 font-medium transition-colors py-2 group"
-              onClick={() => router.push("/about")}
+              onMouseEnter={closeMenu}
+              onClick={() => {
+                closeMenuInstant();
+                router.push("/about");
+              }}
             >
               About
               <span className="absolute bottom-0 left-0 w-full h-[2px] bg-brand-purple scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left" />
@@ -224,7 +269,11 @@ const NavBar = () => {
 
             <div
               className="relative cursor-pointer hover:text-slate-950 font-medium transition-colors py-2 group"
-              onClick={() => router.push("/contact")}
+              onMouseEnter={closeMenu}
+              onClick={() => {
+                closeMenuInstant();
+                router.push("/contact");
+              }}
             >
               Contact
               <span className="absolute bottom-0 left-0 w-full h-[2px] bg-brand-purple scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left" />

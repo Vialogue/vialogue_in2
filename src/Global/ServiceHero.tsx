@@ -104,14 +104,27 @@ const ServiceHero: React.FC<ServiceHeroProp> = ({
   return (
     <section
       ref={heroRef}
-      className="w-full pt-16 sm:pt-16 px-4 sm:px-10 lg:px-40 pb-16 overflow-hidden"
+      className="relative w-full pt-16 sm:pt-20 px-4 sm:px-10 lg:px-40 pb-16 overflow-hidden bg-white text-slate-800"
     >
-      <div className="mx-auto flex flex-col lg:flex-row gap-10 mt-1 lg:gap-0 items-center">
+      {/* Background Gradients */}
+      <div className="absolute top-[-10%] left-[-10%] w-[50%] h-[50%] rounded-full bg-brand-purple/5 blur-[120px] pointer-events-none animate-pulse-glow" />
+      <div className="absolute bottom-[-10%] right-[-10%] w-[50%] h-[50%] rounded-full bg-brand-cyan/5 blur-[120px] pointer-events-none animate-pulse-glow" />
+
+      {/* Visual background grid pattern */}
+      <div
+        className="absolute inset-0 opacity-[0.03] pointer-events-none"
+        style={{
+          backgroundImage: `radial-gradient(circle at 1px 1px, #0F172A 1px, transparent 0)`,
+          backgroundSize: "24px 24px"
+        }}
+      />
+
+      <div className="mx-auto flex flex-col lg:flex-row gap-10 mt-1 lg:gap-0 items-center relative z-10">
         {/* LEFT */}
         <div className="flex-1 space-y-4">
           <h1
             ref={titleRef}
-            className="text-white text-center sm:text-left uppercase font-medium sm:leading-[1.5] font-semibold text-2xl sm:text-4xl"
+            className="text-slate-900 text-center sm:text-left uppercase font-semibold sm:leading-[1.5] text-2xl sm:text-4xl"
           >
             {title}
           </h1>
@@ -120,7 +133,7 @@ const ServiceHero: React.FC<ServiceHeroProp> = ({
 
           <p
             ref={subtitleRef}
-            className="text-white/80 text-sm sm:text-base lg:text-lg sm:leading-[2] subheading"
+            className="text-slate-600 text-sm sm:text-base lg:text-lg sm:leading-[2] subheading font-light"
             dangerouslySetInnerHTML={{ __html: description }}
           />
 

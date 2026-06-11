@@ -36,24 +36,13 @@ import ServiceHero from "@/Global/ServiceHero";
 export default function Bots() {
   return (
     <div className="bg-white overflow-x-hidden sm:text-left text-center ">
-      <div className="relative pb-[0%] bg-[#39006B]">
-        <div className="absolute inset-0 bg-gradient-to-b from-[#571C96] to-[#39006B] opacity-80" />
-
-        <div
-          className="absolute inset-0 bg-cover bg-center opacity-[0.1]"
-          style={{ backgroundImage: "url(/imgs/background.png)" }}
-        />
-
-        <div className="relative z-10">
-          <NavBar />
-          <ServiceHero
-            title="Bots for WhatsApp, SMS & RCS Marketing | Vialogue"
-            description="Build powerful omnichannel messaging campaigns using Vialogue Bots. Create, schedule, automate and track WhatsApp, SMS & RCS campaigns with analytics."
-            hero_img={"./services/feature_three.png"}
-            off_nav={false}
-          />
-        </div>
-      </div>
+      <NavBar />
+      <ServiceHero
+        title="Bots for WhatsApp, SMS & RCS Marketing | Vialogue"
+        description="Build powerful omnichannel messaging campaigns using Vialogue Bots. Create, schedule, automate and track WhatsApp, SMS & RCS campaigns with analytics."
+        hero_img={"./services/feature_three.png"}
+        off_nav={false}
+      />
       <GlobalOverview data={Omni} />
       <GlobalOverviewRev data={BuildBottomRev} />
       <br className="block sm:hidden" />

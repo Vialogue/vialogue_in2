@@ -28,24 +28,13 @@ import AnimatedFeatureGrid from "@/Global/FeatureItem";
 export default function Voice() {
   return (
     <div className="bg-white sm:text-left text-center ">
-      <div className="relative pb-[0%] bg-[#39006B]">
-        <div className="absolute inset-0 bg-gradient-to-b from-[#571C96] to-[#39006B] opacity-80" />
-
-        <div
-          className="absolute inset-0 bg-cover bg-center opacity-[0.1]"
-          style={{ backgroundImage: "url(/imgs/background.png)" }}
-        />
-
-        <div className="relative z-10">
-          <NavBar />
-          <ServiceHero
-            title="Automate Customer Communication with Smart Voice Solutions"
-            description="Vialogue Voice enables businesses to communicate with customers at scale using a unified voice platform designed for <b>speed, reliability, personalization, and automation.</b>"
-            hero_img="./imgs/hm/voice.png"
-            off_nav={true}
-          />
-        </div>
-      </div>
+      <NavBar />
+      <ServiceHero
+        title="Automate Customer Communication with Smart Voice Solutions"
+        description="Vialogue Voice enables businesses to communicate with customers at scale using a unified voice platform designed for <b>speed, reliability, personalization, and automation.</b>"
+        hero_img="./imgs/hm/voice.png"
+        off_nav={true}
+      />
       <section id="overview"></section>
       <GlobalOverview data={voiceOverviewData} />
       <CWC heading="Use Cases" list={voiceUseCasesData} />

@@ -33,24 +33,13 @@ import ServiceHero from "@/Global/ServiceHero";
 export default function Agent() {
   return (
     <div className="bg-white bg-gray-50 overflow-x-hidden sm:text-left text-center">
-      <div className="relative pb-[0%] bg-[#39006B]">
-        <div className="absolute inset-0 bg-gradient-to-b from-[#571C96] to-[#39006B] opacity-80" />
-
-        <div
-          className="absolute inset-0 bg-cover bg-center opacity-[0.1]"
-          style={{ backgroundImage: "url(/imgs/background.png)" }}
-        />
-
-        <div className="relative z-10">
-          <NavBar />
-          <ServiceHero
-            title="AI Agent Assist Software for Customer Support Teams | Vialogue"
-            description="Boost agent productivity and reduce response time using Vialogue AI Agent Assist. Provide faster, smarter, and more consistent customer support across channels."
-            hero_img={"./services/feature_one.png"}
-            off_nav={false}
-          />
-        </div>
-      </div>
+      <NavBar />
+      <ServiceHero
+        title="AI Agent Assist Software for Customer Support Teams | Vialogue"
+        description="Boost agent productivity and reduce response time using Vialogue AI Agent Assist. Provide faster, smarter, and more consistent customer support across channels."
+        hero_img={"./services/feature_one.png"}
+        off_nav={false}
+      />
       <GlobalOverview data={AgentOverview} />
       <hr className="border-gray-200 mb-0 block" />
       <Flow />

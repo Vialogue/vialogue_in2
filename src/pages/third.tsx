@@ -30,24 +30,13 @@ import ServiceHero from "@/Global/ServiceHero";
 export default function Third() {
   return (
     <div className="bg-white sm:text-left text-center ">
-      <div className="relative pb-[0%] bg-[#39006B]">
-        <div className="absolute inset-0 bg-gradient-to-b from-[#571C96] to-[#39006B] opacity-80" />
-
-        <div
-          className="absolute inset-0 bg-cover bg-center opacity-[0.1]"
-          style={{ backgroundImage: "url(/imgs/background.png)" }}
-        />
-
-        <div className="relative z-10">
-        <NavBar />
-        <ServiceHero
-          title="API & CRM Integrations for Messaging Automation | Vialogue"
-          description="Integrate Vialogue with CRMs, databases and business tools via APIs and webhooks. Automate messaging workflows and sync customer data seamlessly."
-          hero_img={"./services/feature_two.png"}
-          off_nav={false}
-        />
-        </div>
-      </div>
+      <NavBar />
+      <ServiceHero
+        title="API & CRM Integrations for Messaging Automation | Vialogue"
+        description="Integrate Vialogue with CRMs, databases and business tools via APIs and webhooks. Automate messaging workflows and sync customer data seamlessly."
+        hero_img={"./services/feature_two.png"}
+        off_nav={false}
+      />
       <GlobalOverview data={ThirdOverview} />
       <Why />
       <KeyFeatures heading="Key Integration Capabilities" features={crmIntegrations} />

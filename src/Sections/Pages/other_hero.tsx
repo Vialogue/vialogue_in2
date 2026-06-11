@@ -55,15 +55,28 @@ const OtherHero: React.FC = () => {
   }, []);
 
   return (
-    <section className="w-full pt-12 sm:pt-16 lg:pt-20 px-4 sm:px-10 lg:px-40">
-      <div className="mx-auto flex flex-col lg:flex-row gap-10 lg:gap-16 items-center">
+    <section className="relative w-full pt-12 sm:pt-16 lg:pt-20 px-4 sm:px-10 lg:px-40 pb-16 overflow-hidden bg-white text-slate-800">
+      {/* Background Gradients */}
+      <div className="absolute top-[-10%] left-[-10%] w-[50%] h-[50%] rounded-full bg-brand-purple/5 blur-[120px] pointer-events-none animate-pulse-glow" />
+      <div className="absolute bottom-[-10%] right-[-10%] w-[50%] h-[50%] rounded-full bg-brand-cyan/5 blur-[120px] pointer-events-none animate-pulse-glow" />
+
+      {/* Visual background grid pattern */}
+      <div
+        className="absolute inset-0 opacity-[0.03] pointer-events-none"
+        style={{
+          backgroundImage: `radial-gradient(circle at 1px 1px, #0F172A 1px, transparent 0)`,
+          backgroundSize: "24px 24px"
+        }}
+      />
+
+      <div className="mx-auto flex flex-col lg:flex-row gap-10 lg:gap-16 items-center relative z-10">
 
         {/* ================= LEFT ================= */}
         <div className="flex-1 space-y-6">
           <h1
             ref={titleRef}
             className="
-              text-white font-medium leading-tight text-center sm:text-left
+              text-slate-900 font-semibold leading-tight text-center sm:text-left
               text-[clamp(1.8rem,3.5vw,3rem)]
             "
           >
@@ -75,7 +88,7 @@ const OtherHero: React.FC = () => {
           <p
             ref={subtitleRef}
             className="
-              text-white/80
+              text-slate-600
               text-sm sm:text-base lg:text-lg
               leading-relaxed
               max-w-xl text-center sm:text-left

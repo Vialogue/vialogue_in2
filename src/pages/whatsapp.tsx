@@ -20,24 +20,13 @@ import AnimatedFeatureGrid from "@/Global/FeatureItem";
 export default function Service() {
   return (
     <div className="bg-white ">
-      <div className="relative pb-[0%] bg-[#39006B]">
-        <div className="absolute inset-0 bg-gradient-to-b from-[#571C96] to-[#39006B] opacity-80" />
-
-        <div
-          className="absolute inset-0 bg-cover bg-center opacity-[0.1]"
-          style={{ backgroundImage: "url(/imgs/background.png)" }}
-        />
-
-        <div className="relative z-100">
-          <NavBar />
-          <ServiceHero
-            title="Boost Customer Engagement with WhatsApp Business"
-            description="Send secure OTPs, transactional alerts, customer support messages, and promotional updates on the world’s most trusted messaging platform."
-            hero_img="./imgs/hm/wapp.png"
-            off_nav={true}
-          />
-        </div>
-      </div>
+      <NavBar />
+      <ServiceHero
+        title="Boost Customer Engagement with WhatsApp Business"
+        description="Send secure OTPs, transactional alerts, customer support messages, and promotional updates on the world’s most trusted messaging platform."
+        hero_img="./imgs/hm/wapp.png"
+        off_nav={true}
+      />
       <section id="overview"></section>
       <CWC
         heading="Real Business Use Cases for WhatsApp Business API"
