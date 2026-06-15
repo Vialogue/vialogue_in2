@@ -8,14 +8,14 @@ import Link from "next/link";
 export default function CTASection() {
   return (
     <section className="py-24 bg-[#FFFFFF] relative z-10">
-      <div className="container mx-auto px-6 lg:px-20">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl relative z-10">
         
         {/* Large Gradient Card */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="relative rounded-[32px] overflow-hidden bg-gradient-to-r from-brand-purple via-brand-blue to-brand-cyan p-8 sm:p-16 text-center shadow-[0_12px_40px_rgba(124,58,237,0.25)]"
+          className="relative rounded-[32px] overflow-hidden bg-gradient-to-r from-[#7C3AED] to-pink-300 p-8 sm:p-16 text-center shadow-[0_12px_40px_rgba(124,58,237,0.25)]"
         >
           {/* Subtle overlay grid for tech visual texture */}
           <div 

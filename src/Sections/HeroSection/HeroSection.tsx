@@ -211,7 +211,7 @@ export default function HeroSection() {
   };
 
   return (
-    <section className="relative min-h-[90vh] flex items-center pt-24 pb-20 overflow-hidden bg-[#FFFFFF]">
+    <section className="relative min-h-[90vh] flex items-center pt-16 pb-20 overflow-hidden bg-[#FDF7FF]">
       {/* Background Gradients */}
       <div className="absolute top-[-10%] left-[-10%] w-[50%] h-[50%] rounded-full bg-brand-purple/5 blur-[120px] pointer-events-none animate-pulse-glow" />
       <div className="absolute bottom-[-10%] right-[-10%] w-[50%] h-[50%] rounded-full bg-brand-cyan/5 blur-[120px] pointer-events-none animate-pulse-glow" />
@@ -225,7 +225,7 @@ export default function HeroSection() {
         }}
       />
 
-      <div className="container mx-auto px-6 lg:px-20 relative z-10">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
 
           {/* LEFT CONTENT */}
@@ -235,10 +235,9 @@ export default function HeroSection() {
               initial={{ opacity: 0, y: 15 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
-              className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-slate-50 border border-slate-200"
+              className="inline-flex items-center gap-2 mb-4"
             >
-              <Sparkles className="w-4 h-4 text-brand-purple" />
-              <span className="text-xs font-semibold tracking-wide text-slate-600 uppercase">
+              <span className="text-sm font-bold tracking-[0.15em] text-[#9b51e0] uppercase">
                 Next-Gen AI Messaging Infrastructure
               </span>
             </motion.div>
@@ -248,10 +247,10 @@ export default function HeroSection() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.1 }}
-              className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-slate-900 leading-tight uppercase"
+              className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-[#1a1a1a] leading-[1.1] mb-6"
             >
               Powering Enterprise Messaging Across{" "}
-              <span className="text-gradient">SMS, WhatsApp, RCS & Voice</span>
+              <span className="bg-gradient-to-r from-[#ff4d6d] to-[#9b51e0] text-transparent bg-clip-text">SMS, WhatsApp, RCS & Voice</span>
             </motion.h1>
 
             {/* Subheadline */}
@@ -259,7 +258,7 @@ export default function HeroSection() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
-              className="text-lg text-slate-600 max-w-2xl mx-auto lg:mx-0 leading-relaxed font-light"
+              className="text-xl text-slate-600 max-w-2xl mx-auto lg:mx-0 leading-relaxed font-medium mb-8"
             >
               Automate customer conversations, authenticate securely with low-latency OTP routing, and orchestrate campaigns globally via one unified enterprise API built for high deliverability.
             </motion.p>
@@ -271,11 +270,11 @@ export default function HeroSection() {
               transition={{ duration: 0.8, delay: 0.3 }}
               className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start pt-2"
             >
-              <Link href="/contact" className="group relative overflow-hidden flex items-center justify-center gap-2 px-8 py-4 rounded-xl bg-gradient-to-r from-brand-purple via-brand-blue to-brand-cyan text-white font-medium shadow-[0_4px_20px_rgba(124,58,237,0.15)] hover:shadow-[0_4px_30px_rgba(0,229,255,0.25)] transition-all duration-300 active:scale-95">
+              <Link href="/contact" className="group relative overflow-hidden flex items-center justify-center gap-2 px-8 py-4 rounded-xl bg-gradient-to-r from-[#7C3AED] to-pink-300 text-white font-medium shadow-[0_4px_20px_rgba(124,58,237,0.15)] hover:shadow-[0_4px_30px_rgba(0,229,255,0.25)] transition-all duration-300 active:scale-95">
                 <span className="relative z-10 flex items-center gap-2">
                   Book Demo <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
                 </span>
-                <span className="absolute inset-0 bg-gradient-to-r from-brand-cyan via-brand-blue to-brand-purple opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                <span className="absolute inset-0 bg-gradient-to-r from-pink-300 to-[#7C3AED] opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
               </Link>
 
               <Link href="/contact" className="flex items-center justify-center gap-2 px-8 py-4 rounded-xl bg-slate-50 border border-slate-200 hover:border-slate-350 hover:bg-slate-100 text-slate-700 font-medium transition-all active:scale-95">
@@ -310,7 +309,7 @@ export default function HeroSection() {
             initial={{ opacity: 0, scale: 0.95, y: 30 }}
             animate={{ opacity: 1, scale: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.2 }}
-            className="lg:col-span-5 relative w-full max-w-[540px] mx-auto lg:mx-0"
+            className="lg:col-span-5 relative w-full max-w-[540px] mx-auto lg:ml-auto lg:mr-0 -mt-5"
           >
             {/* Router Active Badge */}
             <div className="absolute -top-4 -right-4 bg-white border border-slate-200/80 px-4 py-2 rounded-2xl flex items-center gap-2 text-xs font-semibold text-slate-800 shadow-[0_4px_12px_rgba(0,0,0,0.04)] z-20 select-none">
@@ -412,7 +411,7 @@ export default function HeroSection() {
                             {msg.isTemplate ? (
                               <div className="bg-white rounded-xl shadow-md border border-slate-200/40 overflow-hidden text-[10.5px] text-slate-700 w-full max-w-[260px] self-start">
                                 {/* Header Image */}
-                                <div className="bg-gradient-to-br from-brand-purple to-brand-blue h-12 flex items-center justify-center text-white text-[9.5px] font-bold font-mono px-3 text-center select-none">
+                                <div className="bg-gradient-to-br from-[#7C3AED] to-pink-300 h-12 flex items-center justify-center text-white text-[9.5px] font-bold font-mono px-3 text-center select-none">
                                   VIALOGUE CONFIRMATION
                                 </div>
                                 {/* Body */}
@@ -584,7 +583,7 @@ export default function HeroSection() {
                             {msg.isTemplate ? (
                               <div className="bg-white rounded-xl shadow-md border border-slate-200/85 overflow-hidden w-full max-w-[260px] text-[10px] self-start">
                                 {/* Cover Image Placeholder */}
-                                <div className="h-16 bg-gradient-to-tr from-brand-purple/20 via-brand-blue/15 to-brand-cyan/20 flex flex-col items-center justify-center p-2 text-center border-b border-slate-100 select-none">
+                                <div className="h-16 bg-gradient-to-tr from-[#7C3AED]/20 to-pink-300/20 flex flex-col items-center justify-center p-2 text-center border-b border-slate-100 select-none">
                                   <span className="text-[7.5px] font-bold text-brand-purple bg-purple-50 px-2 py-0.5 rounded border border-purple-100">PROMOTION</span>
                                 </div>
                                 <div className="p-3.5 space-y-1">

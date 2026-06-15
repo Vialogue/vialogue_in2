@@ -9,7 +9,7 @@ export default function FeaturesBento() {
 
   return (
     <section className="py-24 bg-[#FFFFFF] relative z-10">
-      <div className="container mx-auto px-6 lg:px-20">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl relative z-10">
         
         {/* Section Heading */}
         <div className="max-w-3xl mb-16 space-y-4">
@@ -18,10 +18,10 @@ export default function FeaturesBento() {
               Platform Features
             </span>
           </div>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold uppercase tracking-tight text-slate-900">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold uppercase tracking-tight text-slate-950">
             Built for Advanced <span className="text-gradient">Communications</span>
           </h2>
-          <p className="text-slate-600 text-base sm:text-lg font-light max-w-xl">
+          <p className="text-slate-800 text-base sm:text-lg font-normal max-w-xl">
             Everything your team needs to deliver reliable, secure messaging at a global scale.
           </p>
         </div>
@@ -39,11 +39,11 @@ export default function FeaturesBento() {
           >
             <div className="flex justify-between items-start">
               <div>
-                <span className="text-brand-purple p-2.5 rounded-lg bg-slate-50 border border-slate-200/60 inline-block mb-4">
+                <span className="text-white p-2.5 rounded-xl bg-gradient-to-br from-[#7C3AED] to-pink-300 shadow-md shadow-purple-200/50 inline-block mb-4 border-none">
                   <Layers size={20} />
                 </span>
-                <h3 className="text-lg font-bold text-slate-800 mb-2">Multi-channel Messaging</h3>
-                <p className="text-xs text-slate-500 max-w-md font-light leading-relaxed">
+                <h3 className="text-lg font-extrabold text-slate-900 mb-2">Multi-channel Messaging</h3>
+                <p className="text-sm text-slate-700 max-w-md font-normal leading-relaxed">
                   Route notifications via WhatsApp, RCS, and SMS from a single API call with intelligent fallback logic to guarantee delivery.
                 </p>
               </div>
@@ -79,11 +79,11 @@ export default function FeaturesBento() {
             className="rounded-2xl glass-card p-6 flex flex-col justify-between overflow-hidden relative group"
           >
             <div>
-              <span className="text-brand-purple p-2.5 rounded-lg bg-slate-50 border border-slate-200/60 inline-block mb-4">
+              <span className="text-white p-2.5 rounded-xl bg-gradient-to-br from-[#7C3AED] to-pink-300 shadow-md shadow-purple-200/50 inline-block mb-4 border-none">
                 <BarChart3 size={20} />
               </span>
-              <h3 className="text-lg font-bold text-slate-800 mb-2">Real-time Analytics</h3>
-              <p className="text-xs text-slate-500 font-light leading-relaxed">
+              <h3 className="text-lg font-extrabold text-slate-900 mb-2">Real-time Analytics</h3>
+              <p className="text-sm text-slate-700 font-normal leading-relaxed">
                 Monitor live delivery rates, read confirmations, latency spikes, and link click-through metrics instantly.
               </p>
             </div>
@@ -108,11 +108,11 @@ export default function FeaturesBento() {
             className="rounded-2xl glass-card p-6 flex flex-col justify-between overflow-hidden relative group"
           >
             <div>
-              <span className="text-brand-purple p-2.5 rounded-lg bg-slate-50 border border-slate-200/60 inline-block mb-4">
+              <span className="text-white p-2.5 rounded-xl bg-gradient-to-br from-[#7C3AED] to-pink-300 shadow-md shadow-purple-200/50 inline-block mb-4 border-none">
                 <Calendar size={20} />
               </span>
-              <h3 className="text-lg font-bold text-slate-800 mb-2">Campaign Manager</h3>
-              <p className="text-xs text-slate-500 font-light leading-relaxed">
+              <h3 className="text-lg font-extrabold text-slate-900 mb-2">Campaign Manager</h3>
+              <p className="text-sm text-slate-700 font-normal leading-relaxed">
                 Orchestrate blast alerts, recurring notification pipelines, and custom event-based sequences with ease.
               </p>
             </div>
@@ -142,11 +142,11 @@ export default function FeaturesBento() {
           >
             <div className="flex justify-between items-start">
               <div>
-                <span className="text-brand-purple p-2.5 rounded-lg bg-slate-50 border border-slate-200/60 inline-block mb-4">
+                <span className="text-white p-2.5 rounded-xl bg-gradient-to-br from-[#7C3AED] to-pink-300 shadow-md shadow-purple-200/50 inline-block mb-4 border-none">
                   <Code2 size={20} />
                 </span>
-                <h3 className="text-lg font-bold text-slate-800 mb-2">Robust Developer APIs</h3>
-                <p className="text-xs text-slate-500 max-w-sm font-light leading-relaxed">
+                <h3 className="text-lg font-extrabold text-slate-900 mb-2">Robust Developer APIs</h3>
+                <p className="text-sm text-slate-700 max-w-sm font-normal leading-relaxed">
                   Integrate your Node.js, Python, or Go systems in minutes. We support REST APIs, webhooks, and secure HMAC authentication.
                 </p>
               </div>
@@ -171,11 +171,11 @@ export default function FeaturesBento() {
             className="rounded-2xl glass-card p-6 flex flex-col justify-between overflow-hidden relative group"
           >
             <div>
-              <span className="text-brand-purple p-2.5 rounded-lg bg-slate-50 border border-slate-200/60 inline-block mb-4">
+              <span className="text-white p-2.5 rounded-xl bg-gradient-to-br from-[#7C3AED] to-pink-300 shadow-md shadow-purple-200/50 inline-block mb-4 border-none">
                 <Cpu size={20} />
               </span>
-              <h3 className="text-lg font-bold text-slate-800 mb-2">AI Automation</h3>
-              <p className="text-xs text-slate-500 font-light leading-relaxed">
+              <h3 className="text-lg font-extrabold text-slate-900 mb-2">AI Automation</h3>
+              <p className="text-sm text-slate-700 font-normal leading-relaxed">
                 Connect NLP models and automated agents to handle tier-1 FAQ answers and user requests without human touch.
               </p>
             </div>
@@ -196,11 +196,11 @@ export default function FeaturesBento() {
             className="rounded-2xl glass-card p-6 flex flex-col justify-between overflow-hidden relative group"
           >
             <div>
-              <span className="text-brand-purple p-2.5 rounded-lg bg-slate-50 border border-slate-200/60 inline-block mb-4">
+              <span className="text-white p-2.5 rounded-xl bg-gradient-to-br from-[#7C3AED] to-pink-300 shadow-md shadow-purple-200/50 inline-block mb-4 border-none">
                 <CheckCircle2 size={20} />
               </span>
-              <h3 className="text-lg font-bold text-slate-800 mb-2">Delivery Tracking</h3>
-              <p className="text-xs text-slate-500 font-light leading-relaxed">
+              <h3 className="text-lg font-extrabold text-slate-900 mb-2">Delivery Tracking</h3>
+              <p className="text-sm text-slate-700 font-normal leading-relaxed">
                 Trace messages from pipeline to endpoint with explicit delivered/read timelines and carrier logs.
               </p>
             </div>

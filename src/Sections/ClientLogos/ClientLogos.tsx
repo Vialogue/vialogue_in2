@@ -20,7 +20,7 @@ export default function ClientLogos() {
 
   return (
     <section className="py-12 bg-[#FFFFFF] overflow-hidden border-y border-slate-200/60 relative z-10">
-      <div className="container mx-auto px-6 text-center mb-8">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl relative z-10 text-center mb-6">
         <p className="text-xs font-semibold tracking-wider text-brand-purple uppercase">
           Trusted by Enterprise Innovators Globally
         </p>

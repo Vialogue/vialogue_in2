@@ -50,7 +50,7 @@ export default function TestimonialsCarousel() {
 
   return (
     <section className="py-24 bg-[#FFFFFF] relative z-10">
-      <div className="container mx-auto px-6 lg:px-20">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl relative z-10">
         
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
@@ -59,10 +59,10 @@ export default function TestimonialsCarousel() {
               Client Feedback
             </span>
           </div>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold uppercase tracking-tight text-slate-900">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold uppercase tracking-tight text-slate-950">
             Trusted by Industry <span className="text-gradient">Leaders</span>
           </h2>
-          <p className="text-slate-600 text-base sm:text-lg font-light max-w-xl mx-auto">
+          <p className="text-slate-800 text-base sm:text-lg font-normal max-w-xl mx-auto">
             Read how Vialogue enables companies to automate messaging, secure OTP alerts, and scale communications.
           </p>
         </div>

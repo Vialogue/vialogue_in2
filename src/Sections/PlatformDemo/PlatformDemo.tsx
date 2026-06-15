@@ -41,7 +41,7 @@ export default function PlatformDemo() {
 
   return (
     <section className="py-24 bg-[#FFFFFF] relative z-10">
-      <div className="container mx-auto px-6 lg:px-20">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl relative z-10">
         
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
@@ -50,10 +50,10 @@ export default function PlatformDemo() {
               Interactive Console
             </span>
           </div>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold uppercase tracking-tight text-slate-900">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold uppercase tracking-tight text-slate-950">
             Conversations in <span className="text-gradient">Action</span>
           </h2>
-          <p className="text-slate-600 text-base sm:text-lg font-light max-w-xl mx-auto">
+          <p className="text-slate-800 text-base sm:text-lg font-normal max-w-xl mx-auto">
             Explore our platform interface. Toggle between workflow design, campaign metrics, and live log streaming.
           </p>
         </div>
@@ -70,14 +70,14 @@ export default function PlatformDemo() {
               className={`p-6 rounded-2xl border text-left cursor-pointer transition-all duration-300 ${
                 activeTab === "workflow"
                   ? "bg-slate-50 border-brand-purple text-slate-900 shadow-sm"
-                  : "bg-transparent border-slate-200/60 text-slate-500 hover:text-slate-950 hover:border-slate-300"
+                  : "bg-transparent border-slate-200/60 text-slate-600 font-medium hover:text-slate-950 hover:border-slate-300"
               }`}
             >
               <div className="flex items-center gap-3 mb-2">
                 <GitFork className={activeTab === "workflow" ? "text-brand-purple" : "text-slate-400"} size={20} />
-                <h3 className="font-bold text-sm sm:text-base">Messaging Workflows</h3>
+                <h3 className="font-extrabold text-slate-900 text-sm sm:text-base">Messaging Workflows</h3>
               </div>
-              <p className="text-xs text-slate-500 font-light leading-relaxed">
+              <p className="text-sm text-slate-700 font-normal leading-relaxed">
                 Design custom routing paths visually. Automate fallbacks if a customer is offline on WhatsApp.
               </p>
             </button>
@@ -88,14 +88,14 @@ export default function PlatformDemo() {
               className={`p-6 rounded-2xl border text-left cursor-pointer transition-all duration-300 ${
                 activeTab === "analytics"
                   ? "bg-slate-50 border-brand-purple text-slate-900 shadow-sm"
-                  : "bg-transparent border-slate-200/60 text-slate-500 hover:text-slate-950 hover:border-slate-300"
+                  : "bg-transparent border-slate-200/60 text-slate-600 font-medium hover:text-slate-950 hover:border-slate-300"
               }`}
             >
               <div className="flex items-center gap-3 mb-2">
                 <BarChart3 className={activeTab === "analytics" ? "text-brand-purple" : "text-slate-400"} size={20} />
-                <h3 className="font-bold text-sm sm:text-base">Campaign Builder</h3>
+                <h3 className="font-extrabold text-slate-900 text-sm sm:text-base">Campaign Builder</h3>
               </div>
-              <p className="text-xs text-slate-500 font-light leading-relaxed">
+              <p className="text-sm text-slate-700 font-normal leading-relaxed">
                 Review delivery, open, and response statistics across channels in an integrated analytics panel.
               </p>
             </button>
@@ -106,14 +106,14 @@ export default function PlatformDemo() {
               className={`p-6 rounded-2xl border text-left cursor-pointer transition-all duration-300 ${
                 activeTab === "logs"
                   ? "bg-slate-50 border-brand-purple text-slate-900 shadow-sm"
-                  : "bg-transparent border-slate-200/60 text-slate-500 hover:text-slate-950 hover:border-slate-300"
+                  : "bg-transparent border-slate-200/60 text-slate-600 font-medium hover:text-slate-950 hover:border-slate-300"
               }`}
             >
               <div className="flex items-center gap-3 mb-2">
                 <Terminal className={activeTab === "logs" ? "text-brand-purple" : "text-slate-400"} size={20} />
-                <h3 className="font-bold text-sm sm:text-base">Real-time Logs</h3>
+                <h3 className="font-extrabold text-slate-900 text-sm sm:text-base">Real-time Logs</h3>
               </div>
-              <p className="text-xs text-slate-500 font-light leading-relaxed">
+              <p className="text-sm text-slate-700 font-normal leading-relaxed">
                 Watch inbound webhooks and API call validations update in real-time as notifications stream through.
               </p>
             </button>
@@ -125,8 +125,8 @@ export default function PlatformDemo() {
             <div className="glass-panel border border-slate-200/80 rounded-3xl p-6 sm:p-8 min-h-[400px] flex flex-col justify-between relative overflow-hidden shadow-xl h-full">
               
               {/* Top controls mockup */}
-              <div className="flex items-center gap-2 pb-4 border-b border-slate-100 mb-6 text-xs text-slate-400 font-mono">
-                <span className="w-2.5 h-2.5 rounded-full bg-slate-200" />
+              <div className="flex items-center gap-2 pb-4 border-b border-slate-300 mb-6 text-xs text-slate-600 font-mono font-medium">
+                <span className="w-2.5 h-2.5 rounded-full bg-slate-400" />
                 <span>VIALOGUE CONTROL HUB // {activeTab.toUpperCase()}</span>
               </div>
 
@@ -142,31 +142,31 @@ export default function PlatformDemo() {
                     {/* Visual Node Diagram */}
                     <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
                       {/* Node 1 */}
-                      <div className="bg-slate-50 border border-slate-200 px-4 py-3 rounded-xl text-center text-xs w-40">
-                        <span className="text-slate-500 block mb-0.5">Trigger Event</span>
-                        <span className="font-bold text-slate-800 uppercase">User Signed Up</span>
+                      <div className="bg-white border-2 border-slate-300 px-4 py-3 rounded-xl text-center text-xs w-40 shadow-sm">
+                        <span className="text-slate-600 font-medium block mb-0.5">Trigger Event</span>
+                        <span className="font-extrabold text-slate-950 uppercase">User Signed Up</span>
                       </div>
                       
                       {/* Arrow */}
-                      <span className="text-slate-400 font-mono rotate-90 sm:rotate-0">→</span>
+                      <span className="text-slate-500 font-bold font-mono text-lg rotate-90 sm:rotate-0">→</span>
 
                       {/* Node 2 */}
-                      <div className="bg-slate-50 border border-brand-purple/40 px-4 py-3 rounded-xl text-center text-xs w-44 shadow-sm">
-                        <span className="text-brand-purple block mb-0.5 font-semibold">1st Attempt</span>
-                        <span className="font-bold text-slate-800 uppercase">WhatsApp Message</span>
+                      <div className="bg-purple-50 border-2 border-[#7C3AED]/60 px-4 py-3 rounded-xl text-center text-xs w-44 shadow-sm">
+                        <span className="text-[#7C3AED] block mb-0.5 font-bold">1st Attempt</span>
+                        <span className="font-extrabold text-slate-950 uppercase">WhatsApp Message</span>
                       </div>
 
                       {/* Arrow */}
-                      <span className="text-slate-400 font-mono rotate-90 sm:rotate-0">→</span>
+                      <span className="text-slate-500 font-bold font-mono text-lg rotate-90 sm:rotate-0">→</span>
 
                       {/* Node 3 */}
-                      <div className="bg-slate-100 border border-slate-200 px-4 py-3 rounded-xl text-xs w-48 space-y-1.5">
-                        <div className="flex justify-between items-center text-[10px] text-slate-500">
+                      <div className="bg-slate-50 border-2 border-slate-300 px-4 py-3 rounded-xl text-xs w-48 space-y-1.5 shadow-sm">
+                        <div className="flex justify-between items-center text-xs text-slate-600 font-medium">
                           <span>Status Check</span>
                           <span className="text-amber-600 animate-pulse font-bold">Pending</span>
                         </div>
-                        <div className="text-[10px] text-slate-700">
-                          Offline? → <span className="text-brand-purple font-semibold">SMS Fallback</span>
+                        <div className="text-xs text-slate-800 font-medium">
+                          Offline? → <span className="text-[#7C3AED] font-bold">SMS Fallback</span>
                         </div>
                       </div>
                     </div>
@@ -184,31 +184,31 @@ export default function PlatformDemo() {
                     {/* Stats Mockup Grid */}
                     <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
                       <div className="bg-slate-50 p-4 rounded-xl border border-slate-200">
-                        <span className="text-[10px] text-slate-500 block uppercase">Recipients</span>
-                        <span className="text-lg font-bold text-slate-800">48,204</span>
+                        <span className="text-xs text-slate-600 block font-medium uppercase">Recipients</span>
+                        <span className="text-lg font-extrabold text-slate-950">48,204</span>
                       </div>
                       <div className="bg-slate-50 p-4 rounded-xl border border-slate-200">
-                        <span className="text-[10px] text-slate-500 block uppercase">Delivered</span>
+                        <span className="text-xs text-slate-600 block font-medium uppercase">Delivered</span>
                         <span className="text-lg font-bold text-emerald-600">99.8%</span>
                       </div>
                       <div className="bg-slate-50 p-4 rounded-xl border border-slate-200">
-                        <span className="text-[10px] text-slate-500 block uppercase">Read Rate</span>
+                        <span className="text-xs text-slate-600 block font-medium uppercase">Read Rate</span>
                         <span className="text-lg font-bold text-brand-purple">84.2%</span>
                       </div>
                       <div className="bg-slate-50 p-4 rounded-xl border border-slate-200">
-                        <span className="text-[10px] text-slate-500 block uppercase">CTR</span>
+                        <span className="text-xs text-slate-600 block font-medium uppercase">CTR</span>
                         <span className="text-lg font-bold text-brand-purple">22.5%</span>
                       </div>
                     </div>
 
                     {/* Progress Bar campaign preview */}
                     <div className="space-y-2">
-                      <div className="flex justify-between text-xs text-slate-500">
+                      <div className="flex justify-between text-xs text-slate-700 font-medium">
                         <span>Campaign: Product Launch Alert</span>
                         <span>Completed (100%)</span>
                       </div>
                       <div className="w-full bg-slate-100 h-2 rounded-full overflow-hidden">
-                        <div className="bg-gradient-to-r from-brand-purple via-brand-blue to-brand-cyan h-full w-full" />
+                        <div className="bg-gradient-to-r from-[#7C3AED] to-pink-300 h-full w-full" />
                       </div>
                     </div>
                   </motion.div>

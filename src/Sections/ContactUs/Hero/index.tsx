@@ -50,7 +50,7 @@ const ContactHero: React.FC = () => {
   return (
     <section
       ref={heroRef}
-      className="relative min-h-fit w-full py-16 sm:py-24 px-4 sm:px-20 lg:px-40 flex justify-center overflow-hidden bg-white text-slate-800"
+      className="relative min-h-fit w-full py-16 sm:py-24 px-4 sm:px-20 lg:px-40 flex justify-center overflow-hidden bg-transparent text-slate-800"
     >
       {/* Background Gradients */}
       <div className="absolute top-[-10%] left-[-10%] w-[50%] h-[50%] rounded-full bg-brand-purple/5 blur-[120px] pointer-events-none" />

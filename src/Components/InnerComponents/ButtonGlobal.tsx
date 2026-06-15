@@ -23,7 +23,7 @@ const ButtonGlobal: React.FC<ButtonGlobalProps> = ({
           flex items-center justify-center gap-3
           px-5 py-3
           rounded-xl
-          bg-gradient-to-r from-brand-purple via-brand-blue to-brand-cyan
+          bg-gradient-to-r from-[#7C3AED] to-pink-300
           text-white font-medium
           transition-all duration-300 ease-out
           hover:-translate-y-0.5
@@ -37,7 +37,7 @@ const ButtonGlobal: React.FC<ButtonGlobalProps> = ({
         <span
           className="
             absolute inset-0
-            bg-gradient-to-r from-brand-cyan via-brand-blue to-brand-purple
+            bg-gradient-to-r from-pink-300 to-[#7C3AED]
             opacity-0 group-hover:opacity-100
             transition-opacity duration-500 ease-out
           "

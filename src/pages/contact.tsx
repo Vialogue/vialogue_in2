@@ -6,7 +6,7 @@ import MapSection from "@/Sections/Pages/Components/Map";
 
 export default function Contact() {
   return (
-    <div className="space-y-0 bg-white">
+    <div className="space-y-0 bg-[#FAF3FF]">
       <NavBar />
       <ContactHero />
       <ContactUs />

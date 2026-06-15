@@ -1,8 +1,7 @@
 "use client";
 
 import React from "react";
-import { MessageSquare, MessageCircle, Send, Key, Megaphone, Bot, ArrowUpRight, Check } from "lucide-react";
-import Link from "next/link";
+import { MessageSquare, MessageCircle, Send, Key, Megaphone, Bot } from "lucide-react";
 
 const solutions = [
   {
@@ -88,7 +87,7 @@ const solutions = [
 export default function ProductSolutions() {
   return (
     <section className="py-24 bg-[#FFFFFF] relative z-10 border-t border-slate-100">
-      <div className="container mx-auto px-6 lg:px-20">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl relative z-10">
         
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
@@ -97,10 +96,10 @@ export default function ProductSolutions() {
               Unified Solutions
             </span>
           </div>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold uppercase tracking-tight text-slate-900 leading-tight">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold uppercase tracking-tight text-slate-950 leading-tight">
             Powering Every Conversational Channel
           </h2>
-          <p className="text-slate-600 text-base sm:text-lg max-w-2xl mx-auto font-light">
+          <p className="text-slate-800 text-base sm:text-lg max-w-2xl mx-auto font-normal">
             Deploy scalable messaging APIs and smart campaign tools designed to drive higher conversions, build client trust, and scale with ease.
           </p>
         </div>
@@ -112,54 +111,22 @@ export default function ProductSolutions() {
             return (
               <div
                 key={idx}
-                className="group bg-white border border-slate-200/85 rounded-2xl p-6 sm:p-8 shadow-[0_4px_20px_rgba(15,23,42,0.015)] hover:shadow-[0_12px_30px_rgba(15,23,42,0.05)] hover:border-slate-300 transition-all duration-300 flex flex-col justify-between relative"
+                className="bg-white rounded-3xl p-8 sm:p-10 shadow-[0_8px_30px_rgb(0,0,0,0.06)] hover:shadow-[0_20px_40px_rgb(0,0,0,0.12)] transition-all duration-300 flex flex-col items-center text-center border border-slate-100"
               >
-                {/* Accent Top Border */}
-                <div className="absolute top-0 left-0 right-0 h-1 rounded-t-2xl bg-slate-100 group-hover:bg-gradient-to-r group-hover:from-brand-purple group-hover:to-brand-cyan transition-colors" />
-
-                <div>
-                  {/* Card Header (Icon, Title, Badge) */}
-                  <div className="flex justify-between items-start mb-6 select-none">
-                    <div className={`w-12 h-12 rounded-xl flex items-center justify-center border ${item.color} shadow-xs`}>
-                      <Icon size={24} />
-                    </div>
-                    {item.badge && (
-                      <span className="text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-full bg-slate-100 text-slate-700 border border-slate-250">
-                        {item.badge}
-                      </span>
-                    )}
-                  </div>
-
-                  {/* Title & Description */}
-                  <h3 className="text-lg font-bold text-slate-900 mb-3">
-                    {item.title}
-                  </h3>
-                  <p className="text-sm text-slate-500 leading-relaxed font-light mb-6">
-                    {item.description}
-                  </p>
-
-                  {/* Feature List */}
-                  <ul className="space-y-3 mb-8">
-                    {item.features.map((feature, fIdx) => (
-                      <li key={fIdx} className="flex items-start gap-2.5 text-xs text-slate-600 select-none">
-                        <div className="w-4 h-4 rounded-full bg-emerald-50 border border-emerald-100 flex items-center justify-center shrink-0 mt-0.5">
-                          <Check size={10} className="text-emerald-600 font-bold" />
-                        </div>
-                        <span>{feature}</span>
-                      </li>
-                    ))}
-                  </ul>
+                {/* Icon */}
+                <div className="w-16 h-16 rounded-2xl flex items-center justify-center mb-6 bg-gradient-to-br from-[#7C3AED] to-pink-300 text-white shadow-lg shadow-purple-200/50">
+                  <Icon size={28} strokeWidth={2} />
                 </div>
 
-                {/* Footer CTA */}
-                <div className="pt-5 border-t border-slate-100">
-                  <Link 
-                    href={item.link} 
-                    className="w-full inline-flex items-center justify-center gap-1.5 px-4 py-2.5 rounded-xl border border-slate-200 hover:border-slate-350 hover:bg-slate-50 text-xs font-bold text-slate-700 hover:text-slate-900 transition-all cursor-pointer"
-                  >
-                    Explore Channel <ArrowUpRight size={14} />
-                  </Link>
-                </div>
+                {/* Title */}
+                <h3 className="text-xl sm:text-2xl font-extrabold text-slate-950 mb-4">
+                  {item.title}
+                </h3>
+                
+                {/* Description */}
+                <p className="text-base sm:text-lg text-slate-800 leading-relaxed font-medium">
+                  {item.description}
+                </p>
               </div>
             );
           })}

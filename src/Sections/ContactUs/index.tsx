@@ -37,13 +37,13 @@ export default function ContactUs() {
         {/* Card */}
         <div className="rounded-3xl bg-white/80 backdrop-blur-xl border border-slate-200/60 shadow-[0_20px_50px_rgba(15,23,42,0.06)] overflow-hidden">
           <div className="grid md:grid-cols-5">
-            
+
             {/* LEFT PANEL */}
             <div className="md:col-span-2 relative bg-gradient-to-br from-[#571C96] via-[#7C3AED] to-[#00E5FF] p-8 sm:p-12 text-white h-full flex flex-col justify-between overflow-hidden">
               {/* Background elements */}
               <div className="absolute top-[-10%] left-[-10%] w-[50%] h-[50%] rounded-full bg-white/10 blur-[80px] pointer-events-none" />
               <div className="absolute bottom-[-10%] right-[-10%] w-[50%] h-[50%] rounded-full bg-white/20 blur-[80px] pointer-events-none" />
-              
+
               <div className="relative z-10">
                 <h3 className="text-3xl font-medium tracking-tight">Contact Information</h3>
                 <p className="mt-2 text-lg text-white/80 font-light">

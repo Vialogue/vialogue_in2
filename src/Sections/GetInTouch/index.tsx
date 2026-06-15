@@ -19,7 +19,7 @@ const GetInTouch: React.FC = () => {
   };
 
   return (
-    <section className="sm:mb-0 py-16 sm:py-0 px-4 sm:px-0 mb-0 sm:text-left text-center bg-gradient-to-r from-brand-purple via-brand-blue to-brand-cyan">
+    <section className="sm:mb-0 py-16 sm:py-0 px-4 sm:px-0 mb-0 sm:text-left text-center bg-gradient-to-r from-[#7C3AED] to-pink-300">
       <div className="grid lg:grid-cols-2 gap-0 lg:gap-0 items-center mx-auto">
         
         <motion.div
@@ -132,11 +132,11 @@ const GetInTouch: React.FC = () => {
       viewport={{ once: true }}
       onClick={handleSubmit}
       className="group relative overflow-hidden w-full mt-2 rounded-lg py-2.5 text-white font-medium text-sm
-                 bg-gradient-to-r from-brand-purple via-brand-blue to-brand-cyan
+                 bg-gradient-to-r from-[#7C3AED] to-pink-300
                  shadow-[0_4px_20px_rgba(124,58,237,0.15)] hover:shadow-[0_4px_30px_rgba(0,229,255,0.25)]
                  transition-all duration-300 cursor-pointer sm:col-span-1 col-span-2"
     >
-      <span className="absolute inset-0 bg-gradient-to-r from-brand-cyan via-brand-blue to-brand-purple opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+      <span className="absolute inset-0 bg-gradient-to-r from-pink-300 to-[#7C3AED] opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
       <span className="relative z-10">Send Message</span>
     </motion.button>
   </div>

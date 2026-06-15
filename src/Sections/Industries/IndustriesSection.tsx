@@ -98,8 +98,8 @@ export default function IndustriesSection() {
   const IconActive = activeInd.icon;
 
   return (
-    <section className="py-24 bg-[#FFFFFF] relative z-10">
-      <div className="container mx-auto px-6 lg:px-20">
+    <section className="py-24 bg-slate-50 border-y border-slate-200/60 relative z-10">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl relative z-10">
         
         {/* Heading */}
         <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
@@ -108,10 +108,10 @@ export default function IndustriesSection() {
               Industry Verticals
             </span>
           </div>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold uppercase tracking-tight text-slate-900">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold uppercase tracking-tight text-slate-950">
             Tailored for Every <span className="text-gradient">Sector</span>
           </h2>
-          <p className="text-slate-600 text-base sm:text-lg font-light max-w-xl mx-auto">
+          <p className="text-slate-800 text-base sm:text-lg font-normal max-w-xl mx-auto">
             See how enterprise leaders drive conversion and build trust using customized messaging flows.
           </p>
         </div>
@@ -130,11 +130,11 @@ export default function IndustriesSection() {
                   className={`w-full text-left flex items-center gap-4 px-6 py-4 rounded-2xl border transition-all duration-300 cursor-pointer ${
                     activeTab === idx
                       ? "bg-slate-50 border-brand-purple text-slate-900 shadow-sm"
-                      : "bg-transparent border-slate-200/60 text-slate-500 hover:text-slate-900 hover:border-slate-300"
+                      : "bg-transparent border-slate-200/60 text-slate-600 font-medium hover:text-slate-900 hover:border-slate-300"
                   }`}
                 >
                   <span className={`p-2.5 rounded-xl transition-colors ${
-                    activeTab === idx ? "bg-purple-100 text-brand-purple" : "bg-slate-100 text-slate-500"
+                    activeTab === idx ? "bg-gradient-to-br from-[#7C3AED] to-pink-300 text-white shadow-md shadow-purple-200/50" : "bg-slate-100 text-slate-500"
                   }`}>
                     <IndIcon size={20} />
                   </span>
@@ -165,26 +165,26 @@ export default function IndustriesSection() {
                   <div className="space-y-4">
                     {/* Header */}
                     <div className="flex items-center gap-3">
-                      <span className="p-3 rounded-2xl bg-purple-100 text-brand-purple">
+                      <span className="p-3 rounded-2xl bg-gradient-to-br from-[#7C3AED] to-pink-300 text-white shadow-md shadow-purple-200/50">
                         <IconActive size={24} />
                       </span>
-                      <h3 className="text-xl sm:text-2xl font-bold text-slate-900 uppercase">{activeInd.title}</h3>
+                      <h3 className="text-xl sm:text-2xl font-extrabold text-slate-950 uppercase">{activeInd.title}</h3>
                     </div>
 
                     {/* Description */}
-                    <p className="text-slate-600 text-sm sm:text-base font-light leading-relaxed">
+                    <p className="text-slate-700 text-sm sm:text-base font-normal leading-relaxed">
                       {activeInd.description}
                     </p>
 
                     {/* Stats Metric */}
                     <div className="pt-2 flex flex-wrap gap-6">
                       <div className="bg-slate-50 px-4 py-2.5 rounded-xl border border-slate-200">
-                        <span className="text-xs text-slate-500 block mb-0.5">Key Stat</span>
+                        <span className="text-xs text-slate-600 font-medium block mb-0.5">Key Stat</span>
                         <span className="text-sm font-bold text-brand-purple">{activeInd.stats}</span>
                       </div>
                       <div className="bg-slate-50 px-4 py-2.5 rounded-xl border border-slate-200">
-                        <span className="text-xs text-slate-500 block mb-0.5">Use Cases</span>
-                        <span className="text-xs text-slate-750 block font-light">{activeInd.useCase}</span>
+                        <span className="text-xs text-slate-600 font-medium block mb-0.5">Use Cases</span>
+                        <span className="text-xs text-slate-800 block font-normal">{activeInd.useCase}</span>
                       </div>
                     </div>
                   </div>
@@ -192,7 +192,7 @@ export default function IndustriesSection() {
                   {/* Visual mockup of phone notification */}
                   <div className="mt-8 border-t border-slate-200 pt-6">
                     <div className="max-w-md bg-slate-50 rounded-2xl border border-slate-200 p-4 shadow-sm flex gap-3 items-start">
-                      <span className="p-2.5 rounded-xl bg-slate-100 border border-slate-200/60 text-brand-purple">
+                      <span className="p-2.5 rounded-xl bg-gradient-to-br from-[#7C3AED] to-pink-300 text-white shadow-md shadow-purple-200/50 border-none">
                         <Smartphone size={18} />
                       </span>
                       <div className="flex-1 space-y-1">
@@ -201,7 +201,7 @@ export default function IndustriesSection() {
                           <span className="text-[10px] text-slate-400 font-mono">now</span>
                         </div>
                         <h4 className="text-xs font-semibold text-brand-purple">{activeInd.mockMessage.title}</h4>
-                        <p className="text-xs text-slate-600 font-light leading-relaxed">{activeInd.mockMessage.body}</p>
+                        <p className="text-xs text-slate-700 font-normal leading-relaxed">{activeInd.mockMessage.body}</p>
                       </div>
                     </div>
                   </div>

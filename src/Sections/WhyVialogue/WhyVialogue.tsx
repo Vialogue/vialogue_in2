@@ -41,7 +41,7 @@ export default function WhyVialogue() {
       {/* Visual background gradient blobbies */}
       <div className="absolute bottom-10 left-10 w-[400px] h-[400px] rounded-full bg-brand-purple/5 blur-[120px] pointer-events-none" />
 
-      <div className="container mx-auto px-6 lg:px-20">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl relative z-10">
         
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
@@ -50,10 +50,10 @@ export default function WhyVialogue() {
               Why Partner With Us
             </span>
           </div>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold uppercase tracking-tight text-slate-900">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold uppercase tracking-tight text-slate-950">
             Engineered for <span className="text-gradient">Reliability</span>
           </h2>
-          <p className="text-slate-600 text-base sm:text-lg font-light max-w-xl mx-auto">
+          <p className="text-slate-800 text-base sm:text-lg font-normal max-w-xl mx-auto">
             Vialogue is built from the ground up to handle high-volume enterprise communications securely.
           </p>
         </div>
