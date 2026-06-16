@@ -9,7 +9,6 @@ const brands = [
   "brand_3.png",
   "brand_4.png",
   "brand_5.png",
-  "brand_6.png",
   "brand_7.png",
   "brand_8.png",
 ];
@@ -22,7 +21,7 @@ export default function ClientLogos() {
     <section className="py-12 bg-[#FFFFFF] overflow-hidden border-y border-slate-200/60 relative z-10">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl relative z-10 text-center mb-6">
         <p className="text-xs font-semibold tracking-wider text-brand-purple uppercase">
-          Trusted by Enterprise Innovators Globally
+          Trusted by Leading Brands
         </p>
       </div>
 

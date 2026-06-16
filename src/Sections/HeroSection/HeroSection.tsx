@@ -250,7 +250,7 @@ export default function HeroSection() {
               className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-[#1a1a1a] leading-[1.1] mb-6"
             >
               Powering Enterprise Messaging Across{" "}
-              <span className="bg-gradient-to-r from-[#ff4d6d] to-[#9b51e0] text-transparent bg-clip-text">SMS, WhatsApp, RCS & Voice</span>
+              <span className="text-gradient">SMS, WhatsApp, RCS & Voice</span>
             </motion.h1>
 
             {/* Subheadline */}

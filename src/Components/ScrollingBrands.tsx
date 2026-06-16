@@ -10,7 +10,6 @@ const brand = [
   "brand_3.png",
   "brand_4.png",
   "brand_5.png",
-  "brand_6.png",
   "brand_7.png",
   "brand_8.png",
 ];

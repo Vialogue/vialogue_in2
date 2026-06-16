@@ -51,7 +51,7 @@ export default function EngineeringGrowthAbsolute() {
           </p>
 
           <h2 className="text-4xl sm:text-5xl font-medium text-gray-900 mt-4 leading-tight">
-            Engineering Growth, <br /> Step-by-Step
+            Engineering Growth, <br /> <span className="text-gradient">Step-by-Step</span>
           </h2>
 
           <p className="mt-4 text-gray-600">

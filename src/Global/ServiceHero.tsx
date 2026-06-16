@@ -12,7 +12,7 @@ import SectionSwitcherTwo from "./SectionSwitcher2";
 gsap.registerPlugin(ScrollTrigger);
 
 interface ServiceHeroProp {
-  title: string;
+  title: string | React.ReactNode;
   description: string;
   hero_img: string;
   off_nav: boolean;
@@ -104,7 +104,7 @@ const ServiceHero: React.FC<ServiceHeroProp> = ({
   return (
     <section
       ref={heroRef}
-      className="relative w-full pt-16 sm:pt-20 px-4 sm:px-10 lg:px-40 pb-16 overflow-hidden bg-white text-slate-800"
+      className="relative w-full pt-16 sm:pt-20 px-4 sm:px-10 lg:px-40 pb-16 overflow-hidden bg-[#FDF7FF] text-slate-800"
     >
       {/* Background Gradients */}
       <div className="absolute top-[-10%] left-[-10%] w-[50%] h-[50%] rounded-full bg-brand-purple/5 blur-[120px] pointer-events-none animate-pulse-glow" />

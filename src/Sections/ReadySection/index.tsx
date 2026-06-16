@@ -52,10 +52,12 @@ const ReadySection: React.FC<ReadySectionProps> = ({ heading = "Ready to Start a
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true }}
-        className="rounded-0 sm:rounded-3xl px-4 py-14 sm:px-16 sm:py-16 text-center bg-cover bg-center"
-        style={{ backgroundImage: "url(/imgs/bg.png)" }}
+        className="rounded-0 sm:rounded-3xl px-4 py-14 sm:px-16 sm:py-16 text-center bg-gradient-to-br from-[#7C3AED] to-[#F9A8D4] relative overflow-hidden shadow-xl"
       >
-        <motion.div variants={item} className="mb-4 max-w-4xl mx-auto">
+        <div className="absolute top-[-10%] left-[-10%] w-[50%] h-[50%] rounded-full bg-white/20 blur-[80px] pointer-events-none" />
+        <div className="absolute bottom-[-10%] right-[-10%] w-[50%] h-[50%] rounded-full bg-white/20 blur-[80px] pointer-events-none" />
+
+        <motion.div variants={item} className="mb-4 max-w-4xl mx-auto relative z-10">
           <h2 className="heading-two text-white">{heading}</h2>
         </motion.div>
 
@@ -73,7 +75,7 @@ const ReadySection: React.FC<ReadySectionProps> = ({ heading = "Ready to Start a
             variants={button}
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.96 }}
-            className="w-full cursor-pointer sm:w-auto px-8 py-3 rounded-xl text-white bg-[#6A47F2] text-base sm:text-lg"
+            className="w-full cursor-pointer sm:w-auto px-8 py-3 rounded-xl text-[#7C3AED] font-medium bg-white hover:bg-white/90 transition-colors shadow-sm text-base sm:text-lg"
             onClick={()=>route.push("/contact")}
           >
             {btn1}
@@ -83,7 +85,7 @@ const ReadySection: React.FC<ReadySectionProps> = ({ heading = "Ready to Start a
             variants={button}
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.96 }}
-            className="w-full cursor-pointer sm:w-auto px-8 py-3 rounded-xl text-white border border-[#ffffff84] flex items-center justify-center gap-2 text-base sm:text-lg"
+            className="w-full cursor-pointer sm:w-auto px-8 py-3 rounded-xl text-white border border-white/40 bg-white/10 hover:bg-white/20 transition-colors flex items-center justify-center gap-2 text-base sm:text-lg"
             onClick={()=>route.push("/contact")}
           >
             <Sparkles size={18} strokeWidth={1} />

@@ -39,7 +39,7 @@ export default function ContactUs() {
           <div className="grid md:grid-cols-5">
 
             {/* LEFT PANEL */}
-            <div className="md:col-span-2 relative bg-gradient-to-br from-[#571C96] via-[#7C3AED] to-[#00E5FF] p-8 sm:p-12 text-white h-full flex flex-col justify-between overflow-hidden">
+            <div className="md:col-span-2 relative bg-gradient-to-br from-[#7C3AED] to-[#F9A8D4] p-8 sm:p-12 text-white h-full flex flex-col justify-between overflow-hidden">
               {/* Background elements */}
               <div className="absolute top-[-10%] left-[-10%] w-[50%] h-[50%] rounded-full bg-white/10 blur-[80px] pointer-events-none" />
               <div className="absolute bottom-[-10%] right-[-10%] w-[50%] h-[50%] rounded-full bg-white/20 blur-[80px] pointer-events-none" />
@@ -51,24 +51,32 @@ export default function ContactUs() {
                 </p>
 
                 <div className="space-y-6 text-base mt-12">
-                  <div className="flex items-center gap-4">
-                    <Phone size={20} className="text-white/80" />
-                    <span className="font-light">+91 84480 12300</span>
+                  <div className="flex items-center gap-4 group cursor-pointer">
+                    <div className="p-2.5 bg-white/10 rounded-xl group-hover:bg-white/20 transition-colors backdrop-blur-sm">
+                      <Phone size={20} className="text-white" />
+                    </div>
+                    <span className="font-light tracking-wide">+91 84480 12300</span>
                   </div>
 
-                  <div className="flex items-center gap-4">
-                    <Mail size={20} className="text-white/80" />
-                    <span className="font-light">contact@vialogue.in</span>
+                  <div className="flex items-center gap-4 group cursor-pointer">
+                    <div className="p-2.5 bg-white/10 rounded-xl group-hover:bg-white/20 transition-colors backdrop-blur-sm">
+                      <Mail size={20} className="text-white" />
+                    </div>
+                    <span className="font-light tracking-wide">contact@vialogue.in</span>
                   </div>
 
-                  <div className="flex items-center gap-4">
-                    <Globe size={20} className="text-white/80" />
-                    <span className="font-light">vialogue.in</span>
+                  <div className="flex items-center gap-4 group cursor-pointer">
+                    <div className="p-2.5 bg-white/10 rounded-xl group-hover:bg-white/20 transition-colors backdrop-blur-sm">
+                      <Globe size={20} className="text-white" />
+                    </div>
+                    <span className="font-light tracking-wide">vialogue.in</span>
                   </div>
 
-                  <div className="flex items-start gap-4">
-                    <MapPin size={20} className="mt-1 text-white/80" />
-                    <span className="font-light leading-relaxed">
+                  <div className="flex items-start gap-4 group cursor-pointer">
+                    <div className="p-2.5 bg-white/10 rounded-xl group-hover:bg-white/20 transition-colors backdrop-blur-sm mt-1">
+                      <MapPin size={20} className="text-white" />
+                    </div>
+                    <span className="font-light leading-relaxed tracking-wide mt-1">
                       1st Floor, Landmark Cyber Park, <br />
                       Sector 67, Gurugram, 122101, Haryana
                     </span>

@@ -9,7 +9,6 @@ const brands = [
   "/imgs/brand_3.png",
   "/imgs/brand_4.png",
   "/imgs/brand_1.png",
-  "/imgs/brand_6.png",
   "/imgs/brand_7.png",
   "/imgs/brand_8.png",
 ];

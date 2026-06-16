@@ -24,7 +24,7 @@ export default function BFSISection() {
   };
 
   return (
-    <section className="w-full bg-[#f5f7fb] py-14 sm:py-16 md:py-20 px-4 sm:px-20 md:px-40 overflow-hidden">
+    <section className="w-full bg-white py-14 sm:py-16 md:py-20 px-4 sm:px-20 md:px-40 overflow-hidden">
       <div className="max-w-7xl mx-auto">
         {/* Heading */}
         <motion.div
@@ -38,7 +38,7 @@ export default function BFSISection() {
             BFSI
           </p>
 
-          <h2 className="heading-two">
+          <h2 className="heading-two text-gradient">
             Banking, Financial Services & Insurance
           </h2>
 

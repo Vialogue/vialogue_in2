@@ -8,7 +8,7 @@ import TestimonialSection from "@/Sections/TestimonialSection";
 import Footer from "@/Components/Footer";
 import GetInTouch from "@/Sections/GetInTouch";
 import EngagementScaleSection from "@/Components/EngagementScaleSection";
-import ScrollingBrandsSection from "@/Components/ScrollingBrands";
+import ClientLogos from "@/Sections/ClientLogos/ClientLogos";
 import BrandPromiseSection from "@/Components/BrandPromiseSection";
 import ProductImageStatic from "@/Components/ProductImageStatic";
 import IndustryCommunicationPage from "@/Global/Industry/section_one";
@@ -26,8 +26,7 @@ export default function Home() {
   return (
     <div className="bg-white overflow-hidden">
       <NavBar />
-      <ServiceHero title="Communication Built for
-Every Industry" description="Vialogue delivers channel-native messaging solutions across five of India's fastest-growing sectors" hero_img="./industry.png" off_nav={false} ind={true} />
+      <ServiceHero title={<>Communication Built for <br className="hidden sm:block" /><span className="text-gradient">Every Industry</span></>} description="Vialogue delivers channel-native messaging solutions across five of India's fastest-growing sectors" hero_img="./industry.png" off_nav={false} ind={true} />
       <div id="BFSI"></div>
       <BFSISection />
       <div id="E-Commerce"></div>
@@ -38,6 +37,9 @@ Every Industry" description="Vialogue delivers channel-native messaging solution
       <FoodBeveragesSection />
       <div id="Healthcare"></div>
       <HealthcareSection />
+      <div className="bg-white">
+        <ClientLogos />
+      </div>
       <FAQSection data={industryFaq} />
       <hr className="border-t border-gray-300" />
       <ReadySection heading="Unlock Unmatched Conversions. Get Started Now With Vialogue" paragraph="See how Vialogue adapts to your industry and scales with your business" btn2="Talk to an expert"/>

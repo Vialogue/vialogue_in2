@@ -55,7 +55,7 @@ const OtherHero: React.FC = () => {
   }, []);
 
   return (
-    <section className="relative w-full pt-12 sm:pt-16 lg:pt-20 px-4 sm:px-10 lg:px-40 pb-16 overflow-hidden bg-white text-slate-800">
+    <section className="relative w-full pt-12 sm:pt-16 lg:pt-20 px-4 sm:px-10 lg:px-40 pb-16 overflow-hidden bg-[#FDF7FF] text-slate-800">
       {/* Background Gradients */}
       <div className="absolute top-[-10%] left-[-10%] w-[50%] h-[50%] rounded-full bg-brand-purple/5 blur-[120px] pointer-events-none animate-pulse-glow" />
       <div className="absolute bottom-[-10%] right-[-10%] w-[50%] h-[50%] rounded-full bg-brand-cyan/5 blur-[120px] pointer-events-none animate-pulse-glow" />
@@ -75,12 +75,9 @@ const OtherHero: React.FC = () => {
         <div className="flex-1 space-y-6">
           <h1
             ref={titleRef}
-            className="
-              text-slate-900 font-semibold leading-tight text-center sm:text-left
-              text-[clamp(1.8rem,3.5vw,3rem)]
-            "
+            className="text-2xl sm:text-4xl uppercase text-slate-900 sm:leading-[1.5] font-semibold text-center sm:text-left"
           >
-            Powering Conversations That Drive Business Growth
+            POWERING CONVERSATIONS <span className="text-gradient">THAT DRIVE BUSINESS GROWTH</span>
           </h1>
 
           <AnimatedDivider />

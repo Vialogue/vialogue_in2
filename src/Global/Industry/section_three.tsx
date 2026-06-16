@@ -26,7 +26,7 @@ export default function EcommerceRetailSection() {
   };
 
   return (
-    <section className="w-full bg-white py-14 sm:py-16 md:py-20 px-4 sm:px-20 md:px-40 overflow-hidden">
+    <section className="w-full bg-[#FDF7FF] py-14 sm:py-16 md:py-20 px-4 sm:px-20 md:px-40 overflow-hidden">
       <div className="max-w-7xl mx-auto">
         {/* Heading */}
         <motion.div
@@ -40,8 +40,8 @@ export default function EcommerceRetailSection() {
             E-Commerce & Retail
           </p>
 
-          <h2 className="heading-two">
-            Powering Growth for E-Commerce Brands
+          <h2 className="heading-two text-gradient">
+            E-commerce & Retail
           </h2>
 
           <p className="mt-4 text-[#6b7280] text-sm sm:text-base md:text-lg subheading max-w-2xl mx-auto leading-relaxed">

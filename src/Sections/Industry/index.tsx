@@ -158,10 +158,10 @@ const IndustrySection: React.FC<IndustrySectionProps> = ({ bgColor }) => {
               gap-2
               px-4 py-6 sm:px-6 sm:py-8
               rounded-2xl
+              bg-gradient-to-br from-[#7C3AED]/5 to-[#F9A8D4]/5 
+              border border-slate-200/60 shadow-sm
+              backdrop-blur-md hover:border-[#7C3AED]/30 transition-all
             "
-            style={{
-              background: `linear-gradient(45deg, ${e.c1}, ${e.c2})`,
-            }}
           >
             <AnimatedNumber value={e.value} inView={inView} />
             <div className="text-xs sm:text-sm lg:text-base text-gray-800">
