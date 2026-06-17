@@ -41,7 +41,7 @@ export default function FoodBeveragesSection() {
             FOOD & BEVERAGES
           </p>
 
-          <h2 className="heading-two text-gradient">
+          <h2 className="heading-two text-slate-900">
             Food & Beverages
           </h2>
 

@@ -14,17 +14,19 @@ gsap.registerPlugin(ScrollTrigger);
 interface ServiceHeroProp {
   title: string | React.ReactNode;
   description: string;
-  hero_img: string;
-  off_nav: boolean;
+  hero_img?: string;
+  off_nav?: boolean;
   ind?: boolean;
+  customRightElement?: React.ReactNode;
 }
 
 const ServiceHero: React.FC<ServiceHeroProp> = ({
   title,
   description,
-  hero_img,
-  off_nav,
+  hero_img = "",
+  off_nav = false,
   ind = false,
+  customRightElement,
 }) => {
   const heroRef = useRef<HTMLDivElement>(null);
   const titleRef = useRef<HTMLHeadingElement>(null);
@@ -151,22 +153,18 @@ const ServiceHero: React.FC<ServiceHeroProp> = ({
           {off_nav ? <SectionSwitcher /> : null}
           {ind ? <SectionSwitcherTwo /> : null}
 
-          <Image
-            ref={imageRef}
-            src={hero_img}
-            alt="service hero"
-            priority
-            width={1000}
-            height={700}
-            className={`w-full z-10 max-h-[400px] mt-auto ${
-              off_nav ? "max-h-[400px]" : "max-h-full"
-            }`}
-            style={
-              off_nav
-                ? { marginBottom: "0px", marginTop: "0px" }
-                : { marginBottom: "0px", marginTop: "-0px" }
-            }
-          />
+          <div ref={imageRef as any} className={`w-full z-10 ${off_nav ? "max-h-[400px]" : "max-h-full"} mt-auto`} style={off_nav ? { marginBottom: "0px", marginTop: "0px" } : { marginBottom: "0px", marginTop: "-0px" }}>
+             {customRightElement ? customRightElement : (
+               <Image
+                 src={hero_img}
+                 alt="service hero"
+                 priority
+                 width={1000}
+                 height={700}
+                 className="w-full h-auto object-contain max-h-[400px]"
+               />
+             )}
+          </div>
         </div>
       </div>
     </section>

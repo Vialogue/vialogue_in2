@@ -86,7 +86,7 @@ const solutions = [
 
 export default function ProductSolutions() {
   return (
-    <section className="py-24 bg-[#FFFFFF] relative z-10 border-t border-slate-100">
+    <section className="py-24 bg-transparent relative z-10 border-t border-slate-100">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl relative z-10">
         
         {/* Header */}
@@ -111,8 +111,11 @@ export default function ProductSolutions() {
             return (
               <div
                 key={idx}
-                className="bg-white rounded-3xl p-8 sm:p-10 shadow-[0_8px_30px_rgb(0,0,0,0.06)] hover:shadow-[0_20px_40px_rgb(0,0,0,0.12)] transition-all duration-300 flex flex-col items-center text-center border border-slate-100"
+                className="group relative bg-white rounded-3xl p-8 sm:p-10 shadow-[0_8px_30px_rgb(0,0,0,0.06)] hover:-translate-y-1 hover:shadow-[0_20px_40px_rgba(124,58,237,0.1)] transition-all duration-300 flex flex-col items-center text-center border border-slate-100 overflow-hidden"
               >
+                {/* Hover Gradient Top Border */}
+                <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-[#7C3AED] to-[#F9A8D4] opacity-0 group-hover:opacity-100 transition-all duration-300"></div>
+
                 {/* Icon */}
                 <div className="w-16 h-16 rounded-2xl flex items-center justify-center mb-6 bg-gradient-to-br from-[#7C3AED] to-pink-300 text-white shadow-lg shadow-purple-200/50">
                   <Icon size={28} strokeWidth={2} />

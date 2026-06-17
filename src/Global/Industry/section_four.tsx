@@ -40,7 +40,7 @@ export default function EducationSection() {
             EDUCATION
           </p>
 
-          <h2 className="heading-two text-gradient">
+          <h2 className="heading-two text-slate-900">
             Ed-Tech & Education
           </h2>
 

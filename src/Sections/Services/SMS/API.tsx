@@ -4,6 +4,7 @@ import React, { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import SplitType from "split-type";
+import { Layers } from "lucide-react";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -55,17 +56,19 @@ const API: React.FC = () => {
       );
 
       /* RIGHT HEADING POP */
-      tl.from(
-        rightHeadingRef.current,
-        {
-          opacity: 0,
-          y: 30,
-          scale: 0.95,
-          duration: 0.5,
-          ease: "back.out(1.7)",
-        },
-        "-=0.4",
-      );
+      if (rightHeadingRef.current) {
+        tl.from(
+          rightHeadingRef.current,
+          {
+            opacity: 0,
+            y: 30,
+            scale: 0.95,
+            duration: 0.5,
+            ease: "back.out(1.7)",
+          },
+          "-=0.4",
+        );
+      }
 
       /* DESCRIPTION WORD REVEAL */
       tl.from(
@@ -104,46 +107,41 @@ const API: React.FC = () => {
   }, []);
 
   return (
-    <div ref={sectionRef} className="px-6 md:px-40 py-16">
-      {/* Tag line */}
-      {/* <div className="flex gap-2 text-md font-medium text-[#8C41F5] items-center mb-4 justify-center">
-        <div className="h-[0.5px] w-10 bg-[#8C41F5]"></div>
-        API INFRA
-        <div className="h-[0.5px] w-10 bg-[#8C41F5]"></div>
-      </div> */}
-
-      {/* Heading */}
-      <h1
-        ref={headingRef}
-        className="text-2xl md:text-4xl font-medium max-w-3xl mb-16 m-auto text-center heading-two"
-      >
-        Scalable SMS API Infrastructure for Businesses
-      </h1>
+    <div ref={sectionRef} className="px-6 md:px-40 py-24 bg-[#fafbfd]">
+      
+      {/* Top Heading */}
+      <div className="text-center mb-20 max-w-4xl mx-auto">
+        <div className="inline-flex items-center gap-2 px-4 py-2 mb-6 rounded-full bg-slate-50 border border-slate-200 shadow-sm">
+          <Layers size={16} className="text-[#7C3AED]" />
+          <span className="text-sm font-semibold uppercase tracking-wider text-slate-700">Robust Architecture</span>
+        </div>
+        <h1
+          ref={headingRef}
+          className="text-3xl md:text-5xl font-extrabold text-slate-900 heading-two transition-all duration-300 hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r hover:from-[#7C3AED] hover:to-[#F9A8D4] cursor-default"
+        >
+          Scalable SMS API Infrastructure For Businesses
+        </h1>
+      </div>
 
       {/* Content Section */}
-      <div className="grid grid-cols-1 md:grid-cols-2 items-center">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
         {/* Image */}
-        <div className="flex justify-space">
+        <div className="flex justify-center relative">
+          <div className="absolute inset-0 bg-gradient-to-r from-[#7C3AED]/10 to-[#F9A8D4]/10 blur-[80px] rounded-full pointer-events-none"></div>
           <img
             ref={imgRef}
             src="/services/sms/api.png"
             alt="API Infrastructure"
-            className="rounded-2xl h-[320px] sm:max-h-[500px] sm:h-[450px] m-auto mb-12 sm:mb-0 object-contain"
+            className="rounded-3xl h-[320px] sm:max-h-[500px] sm:h-[450px] m-auto object-contain relative z-10 filter drop-shadow-xl"
           />
         </div>
 
         {/* Text Content */}
-        <div className="flex sm:py-16 flex-col rounded-xl h-fit gap-10">
-          {/* <h1
-            ref={rightHeadingRef}
-            className="text-2xl md:text-4xl heading-two font-medium mb-3"
-          >
-            Reliable, Secure & Scalable SMS APIs
-          </h1> */}
-
+        <div className="flex sm:py-4 flex-col rounded-xl h-fit gap-8">
+          
           <p
             ref={descRef}
-            className="text-gray-700 paragraph mb:text-2xl leading-relaxed text-justify"
+            className="text-slate-600 paragraph text-lg md:text-[19px] leading-relaxed text-justify font-medium"
           >
             Vialogue offers robust SMS API infrastructure designed to help
             businesses send transactional alerts, OTPs, and promotional messages
@@ -153,7 +151,7 @@ const API: React.FC = () => {
           </p>
 
           {/* Tabs */}
-          <div className="flex mt-auto justify-center sm:justify-start flex-wrap gap-3">
+          <div className="flex mt-6 justify-start flex-wrap gap-3">
             {[
               "Overview",
               "Core Features",
@@ -171,12 +169,14 @@ const API: React.FC = () => {
                 ref={(el) => {
                   tabsRef.current[index] = el;
                 }}
-                className="px-4 py-2 text-sm md:text-base font-medium rounded-full
-                bg-gray-100 text-gray-700
-                hover:bg-[#6a00ff] hover:text-white
-                transition-all duration-300"
+                className="px-4 py-2 text-sm md:text-sm font-bold rounded-lg
+                bg-purple-50 border border-purple-100
+                hover:border-purple-200 hover:shadow-sm
+                transition-all duration-300 group"
               >
-                {tab}
+                <span className="text-brand-purple group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-[#7C3AED] group-hover:to-[#F9A8D4] transition-all duration-300">
+                  {tab}
+                </span>
               </button>
             ))}
           </div>

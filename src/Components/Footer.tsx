@@ -99,21 +99,18 @@ const Footer: React.FC = () => {
         </div>
 
         <div className="border-t border-slate-200 mt-12 pt-6 flex flex-col sm:flex-row justify-between items-center sm:items-center text-sm gap-4">
-          <div className="flex text-white gap-3 sm:gap-4 mt-8 sm:mt-0 justify-center w-fit sm:justify-left sm:max-w-[280px]">
-                <Link href="#" aria-label="Facebook" className="hover:text-brand-purple transition-colors">
-                  <FaFacebookSquare strokeWidth={2} size={28} className="w-[18px] h-[18px] sm:w-[22px] sm:h-[22px] text-slate-400 hover:text-brand-purple transition-colors" />
+          <div className="flex text-white gap-2 sm:gap-3 mt-8 sm:mt-0 justify-center w-fit sm:justify-left sm:max-w-[280px]">
+                <Link href="#" aria-label="Instagram" className="w-8 h-8 bg-slate-100 hover:bg-gradient-to-br hover:from-[#7C3AED] hover:to-[#F9A8D4] border border-slate-200 hover:border-transparent rounded-lg flex items-center justify-center cursor-pointer transition-all duration-300 group">
+                  <Instagram size={16} className="text-slate-500 group-hover:text-white transition-colors" />
                 </Link>
-                <Link href="#" aria-label="LinkedIn" className="hover:text-brand-purple transition-colors">
-                  <FaLinkedin strokeWidth={2} size={28} className="w-[18px] h-[18px] sm:w-[22px] sm:h-[22px] text-slate-400 hover:text-brand-purple transition-colors" />
+                <Link href="#" aria-label="Twitter" className="w-8 h-8 bg-slate-100 hover:bg-gradient-to-br hover:from-[#7C3AED] hover:to-[#F9A8D4] border border-slate-200 hover:border-transparent rounded-lg flex items-center justify-center cursor-pointer transition-all duration-300 group">
+                  <Twitter size={16} className="text-slate-500 group-hover:text-white transition-colors" />
                 </Link>
-                <Link href="#" aria-label="Instagram" className="hover:text-brand-purple transition-colors">
-                  <FaInstagramSquare strokeWidth={2} size={28} className="w-[18px] h-[18px] sm:w-[22px] sm:h-[22px] text-slate-400 hover:text-brand-purple transition-colors" />
+                <Link href="#" aria-label="LinkedIn" className="w-8 h-8 bg-slate-100 hover:bg-gradient-to-br hover:from-[#7C3AED] hover:to-[#F9A8D4] border border-slate-200 hover:border-transparent rounded-lg flex items-center justify-center cursor-pointer transition-all duration-300 group">
+                  <Linkedin size={16} className="text-slate-500 group-hover:text-white transition-colors" />
                 </Link>
-                <Link href="#" aria-label="Twitter" className="hover:text-brand-purple transition-colors">
-                  <FaTwitter strokeWidth={2} size={28} className="w-[18px] h-[18px] sm:w-[22px] sm:h-[22px] text-slate-400 hover:text-brand-purple transition-colors" />
-                </Link>
-                <Link href="#" aria-label="YouTube" className="hover:text-brand-purple transition-colors">
-                  <FaYoutubeSquare strokeWidth={2} size={28} className="w-[18px] h-[18px] sm:w-[22px] sm:h-[22px] text-slate-400 hover:text-brand-purple transition-colors" />
+                <Link href="#" aria-label="Facebook" className="w-8 h-8 bg-slate-100 hover:bg-gradient-to-br hover:from-[#7C3AED] hover:to-[#F9A8D4] border border-slate-200 hover:border-transparent rounded-lg flex items-center justify-center cursor-pointer transition-all duration-300 group">
+                  <Facebook size={16} className="text-slate-500 group-hover:text-white transition-colors" />
                 </Link>
               </div>
           <p className="text-center sm:text-left text-slate-500">© 2026 Vialogue. All Rights Reserved.</p>

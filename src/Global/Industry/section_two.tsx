@@ -38,7 +38,7 @@ export default function BFSISection() {
             BFSI
           </p>
 
-          <h2 className="heading-two text-gradient">
+          <h2 className="heading-two text-slate-900">
             Banking, Financial Services & Insurance
           </h2>
 

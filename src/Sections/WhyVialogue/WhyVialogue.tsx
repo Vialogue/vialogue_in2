@@ -37,7 +37,7 @@ const stats = [
 
 export default function WhyVialogue() {
   return (
-    <section className="py-24 bg-[#FFFFFF] relative z-10">
+    <section className="py-24 bg-transparent relative z-10">
       {/* Visual background gradient blobbies */}
       <div className="absolute bottom-10 left-10 w-[400px] h-[400px] rounded-full bg-brand-purple/5 blur-[120px] pointer-events-none" />
 

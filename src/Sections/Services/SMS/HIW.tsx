@@ -67,7 +67,7 @@ const HowSMSWorks: React.FC = () => {
         transition={{ duration: 0.6 }}
         className="text-2xl heading-two md:text-4xl font-medium text-center mb-16"
       >
-        How the SMS API Works
+        Advanced API Capabilities
       </motion.h1>
 
       {/* DESKTOP */}

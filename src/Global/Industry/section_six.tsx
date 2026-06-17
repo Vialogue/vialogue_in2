@@ -40,7 +40,7 @@ export default function HealthcareSection() {
             HEALTHCARE
           </p>
 
-          <h2 className="heading-two text-gradient">
+          <h2 className="heading-two text-slate-900">
             Compliant Patient Communication at Scale
           </h2>
 

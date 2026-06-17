@@ -49,7 +49,7 @@ export default function TestimonialsCarousel() {
   const active = testimonials[current];
 
   return (
-    <section className="py-24 bg-[#FFFFFF] relative z-10">
+    <section className="py-24 bg-transparent relative z-10">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl relative z-10">
         
         {/* Header */}

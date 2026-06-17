@@ -31,6 +31,13 @@ const CWC: React.FC<CWCProp> = ({ heading, list }) => {
     return () => observer.disconnect();
   }, []);
 
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setActive((prev) => (prev + 1) % list.length);
+    }, 3000);
+    return () => clearInterval(interval);
+  }, [list.length]);
+
   return (
     <div
       ref={ref}
@@ -185,7 +192,7 @@ const CWC: React.FC<CWCProp> = ({ heading, list }) => {
             </p>
 
             <div className="mt-4">
-              <Image
+               <Image
                 src={item.img}
                 alt={item.title}
                 width={600}

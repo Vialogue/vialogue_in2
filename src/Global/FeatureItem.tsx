@@ -2,9 +2,9 @@
 
 import Image from "next/image";
 import React, { useEffect, useRef } from "react";
+import { Layers } from "lucide-react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import SplitType from "split-type";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -31,62 +31,29 @@ const AnimatedFeatureGrid: React.FC<Props> = ({
 
   useEffect(() => {
     const ctx = gsap.context(() => {
-      cardsRef.current.forEach((card) => {
+      cardsRef.current.forEach((card, index) => {
         if (!card) return;
 
-        const img = card.querySelector(".card-img");
-        const title = card.querySelector(".card-title");
-        const desc = card.querySelector(".card-desc");
-
-        if (!title || !desc) return;
-
-        const split = new SplitType(desc as HTMLElement, { types: "words" });
-
-        gsap.set(img, { opacity: 0, y: 40 });
-        gsap.set(title, { opacity: 0, y: 20 });
-        gsap.set(split.words, { opacity: 0, y: 10 });
-
-        const tl = gsap.timeline({
-          scrollTrigger: {
-            trigger: card,
-            start: "top 85%",
-            once: true,
-          },
-          onComplete: () => split.revert(),
-        });
-
-        tl.to(img, {
-          opacity: 1,
-          y: 0,
-          duration: 0.45,
-          ease: "power2.out",
-        })
-          .to(
-            title,
-            {
-              opacity: 1,
-              y: 0,
-              duration: 0.4,
-              ease: "power2.out",
-            },
-            "-=0.25"
-          )
-          .to(
-            split.words,
-            {
-              opacity: 1,
-              y: 0,
-              stagger: 0.015,
-              duration: 0.25,
-              ease: "power2.out",
-            },
-            "-=0.2"
-          );
+        gsap.fromTo(card, 
+          { opacity: 0, y: 30 },
+          { 
+            opacity: 1, 
+            y: 0, 
+            duration: 0.6, 
+            delay: (index % columns) * 0.1,
+            ease: "power2.out",
+            scrollTrigger: {
+              trigger: card,
+              start: "top 85%",
+              once: true,
+            }
+          }
+        );
       });
     });
 
     return () => ctx.revert();
-  }, []);
+  }, [columns]);
 
   const gridCols =
     columns === 4
@@ -96,45 +63,39 @@ const AnimatedFeatureGrid: React.FC<Props> = ({
       : "md:grid-cols-3";
 
   return (
-    <section className="px-4 md:px-40 py-16">
-      {/* HEADER */}
-      <div className="text-center mb-12">
-        <h1 className="text-xl md:text-4xl font-medium heading-two">{title}</h1>
-
-        {description && (
-          <p className="mt-4 text-lg md:text-xl text-gray-600 subheading" dangerouslySetInnerHTML={{ __html: description }} />
-        )}
-      </div>
-
-      {/* GRID */}
-      <div
-        className={`grid grid-cols-1 sm:grid-cols-2 ${gridCols} gap-8`}
-      >
-        {items.map((item, i) => (
-          <div
-            key={i}
-            ref={(el) => {
-              cardsRef.current[i] = el;
-            }}
-            className="bg-white rounded-xl shadow-lg transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 will-change-transform"
-          >
-            <Image
-              src={item.img}
-              alt={item.title}
-              className="card-img w-full h-fit rounded-xl"
-              width={400}
-              height={300}
-            />
-
-            <div className="p-6">
-              <h2 className="card-title text-xl md:text-xl font-semibold leading-tight mb-2">
-                {item.title}
-              </h2>
-
-              <p className="card-desc text-gray-600 leading-tight text-sm" dangerouslySetInnerHTML={{ __html: item.desc }} />
-            </div>
+    <section className="px-4 bg-[#FDF7FF] md:px-40 py-24 relative z-10">
+      <div className="container mx-auto max-w-7xl">
+        {/* HEADER */}
+        <div className="text-center max-w-3xl mx-auto mb-16">
+          <div className="inline-block px-3 py-1 mb-4 rounded-full bg-brand-purple/10 border border-brand-purple/20">
+            <span className="text-xs font-semibold uppercase tracking-wider text-brand-purple">Platform Capabilities</span>
           </div>
-        ))}
+          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 mb-6 heading-two">{title}</h1>
+          {description && (
+            <p className="text-lg text-slate-600 subheading" dangerouslySetInnerHTML={{ __html: description }} />
+          )}
+        </div>
+
+        {/* GRID */}
+        <div className={`grid grid-cols-1 sm:grid-cols-2 ${gridCols} gap-6`}>
+          {items.map((item, i) => (
+            <div
+              key={i}
+              ref={(el) => {
+                cardsRef.current[i] = el;
+              }}
+              className="glass-card p-6 rounded-2xl border border-slate-200/60 flex flex-col items-start hover:-translate-y-1 transition-transform duration-300 group bg-white shadow-[0_4px_20px_rgba(15,23,42,0.04)] hover:shadow-[0_8px_30px_rgba(124,58,237,0.1)]"
+            >
+              <div className="text-white p-3 rounded-xl bg-gradient-to-br from-[#7C3AED] to-pink-300 shadow-md mb-5 group-hover:scale-110 transition-transform">
+                <Layers size={20} />
+              </div>
+              <h3 className="card-title text-lg font-bold text-slate-900 mb-2">
+                {item.title}
+              </h3>
+              <p className="card-desc text-sm text-slate-600 leading-relaxed flex-1 font-medium" dangerouslySetInnerHTML={{ __html: item.desc }} />
+            </div>
+          ))}
+        </div>
       </div>
     </section>
   );

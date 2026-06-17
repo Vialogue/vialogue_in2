@@ -21,12 +21,19 @@ import ReadySection from "@/Sections/ReadySection";
 import FAQSection from "@/Global/FaqSection";
 import { industryFaq } from "@/Global/faqData";
 import ServiceHero from "@/Global/ServiceHero";
+import IndustryPreviewUI from "@/Sections/Industry/IndustryPreviewUI";
 
 export default function Home() {
   return (
     <div className="bg-white overflow-hidden">
       <NavBar />
-      <ServiceHero title={<>Communication Built for <br className="hidden sm:block" /><span className="text-gradient">Every Industry</span></>} description="Vialogue delivers channel-native messaging solutions across five of India's fastest-growing sectors" hero_img="./industry.png" off_nav={false} ind={true} />
+      <ServiceHero 
+        title={<span className="text-3xl sm:text-5xl lg:text-[46px] leading-tight block">COMMUNICATION BUILT FOR <br className="hidden sm:block" /><span className="text-gradient">EVERY INDUSTRY</span></span>} 
+        description="Vialogue delivers channel-native messaging solutions across five of India's fastest-growing sectors" 
+        customRightElement={<IndustryPreviewUI />}
+        off_nav={false} 
+        ind={true} 
+      />
       <div id="BFSI"></div>
       <BFSISection />
       <div id="E-Commerce"></div>

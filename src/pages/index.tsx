@@ -36,26 +36,40 @@ export default function Home() {
         {/* 2. Client Logos Slider */}
         <ClientLogos />
 
-        {/* 3. Product Solutions */}
-        <ProductSolutions />
+        {/* 3. Product Solutions — WHITE */}
+        <div className="bg-white">
+          <ProductSolutions />
+        </div>
 
-        {/* 4. Features Bento Grid */}
-        <FeaturesBento />
+        {/* 4. Features Bento Grid — #FAF3FE */}
+        <div className="bg-[#FAF3FE]">
+          <FeaturesBento />
+        </div>
 
-        {/* 5. Industries Section */}
-        <IndustriesSection />
+        {/* 5. Industries Section — WHITE */}
+        <div className="bg-white">
+          <IndustriesSection />
+        </div>
 
-        {/* 6. Platform Demo Section */}
-        <PlatformDemo />
+        {/* 6. Platform Demo Section — #FAF3FE */}
+        <div className="bg-[#FAF3FE]">
+          <PlatformDemo />
+        </div>
 
-        {/* 7. Why Vialogue (Stats) */}
-        <WhyVialogue />
+        {/* 7. Why Vialogue (Stats) — WHITE */}
+        <div className="bg-white">
+          <WhyVialogue />
+        </div>
 
-        {/* 8. Testimonials Carousel */}
-        <TestimonialsCarousel />
+        {/* 8. Testimonials Carousel — #FAF3FE */}
+        <div className="bg-[#FAF3FE]">
+          <TestimonialsCarousel />
+        </div>
 
         {/* FAQ Section */}
-        <FAQSection />
+        <div className="bg-white">
+          <FAQSection />
+        </div>
 
         {/* 9. CTA Section */}
         <CTASection />

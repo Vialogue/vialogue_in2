@@ -40,7 +40,7 @@ export default function EcommerceRetailSection() {
             E-Commerce & Retail
           </p>
 
-          <h2 className="heading-two text-gradient">
+          <h2 className="heading-two text-slate-900">
             E-commerce & Retail
           </h2>
 
