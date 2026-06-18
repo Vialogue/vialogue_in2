@@ -117,7 +117,7 @@ export default function ProductSolutions() {
                 <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-[#7C3AED] to-[#F9A8D4] opacity-0 group-hover:opacity-100 transition-all duration-300"></div>
 
                 {/* Icon */}
-                <div className="w-16 h-16 rounded-2xl flex items-center justify-center mb-6 bg-gradient-to-br from-[#7C3AED] to-pink-300 text-white shadow-lg shadow-purple-200/50">
+                <div className="w-16 h-16 rounded-2xl flex items-center justify-center mb-6 bg-gradient-to-br from-[#7C3AED] to-purple-400 text-white shadow-lg shadow-purple-200/50">
                   <Icon size={28} strokeWidth={2} />
                 </div>
 

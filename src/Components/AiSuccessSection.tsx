@@ -40,8 +40,8 @@ const features = [
     description:
       "Automate personalized voice calls and scalable IVR systems.",
     icon: Phone,
-    gradient: "from-pink-200 via-pink-100 to-pink-50",
-    button: "bg-pink-500 hover:bg-pink-600",
+    gradient: "from-purple-200 via-purple-100 to-purple-50",
+    button: "bg-purple-500 hover:bg-purple-600",
     img: "/voice.png"
   },
 ];

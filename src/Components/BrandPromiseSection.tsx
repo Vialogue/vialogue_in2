@@ -91,7 +91,7 @@ const smsFeatures = [
     description:
       "Seamless API integration and rapid deployment to get your campaigns running within minutes.",
     icon: Plug,
-    iconBg: "bg-pink-100 text-pink-600",
+    iconBg: "bg-purple-100 text-purple-600",
   },
 ];
 

@@ -76,3 +76,30 @@ export const whatsapp_list:CWCListProp[] = [
     img: "/services/wapp/cwc/img6.png",
   },
 ];
+
+export const voice_list: CWCListProp[] = [
+  {
+    title: "Transactional & Critical Alerts",
+    description:
+      "Deliver time-sensitive voice notifications like payment confirmations and delivery updates instantly. Ensure critical customer communication reaches fast, clearly, and reliably every time.",
+    img: "/services/voice/usecase1.png",
+  },
+  {
+    title: "Customer Support & Self-Service",
+    description:
+      "Enable customers to resolve queries quickly through automated voice interactions, self-service options, and guided call flows without waiting for an agent.",
+    img: "/services/voice/usecase2.png",
+  },
+  {
+    title: "Sales & Marketing Voice Bots",
+    description:
+      "Run promotional voice campaigns, product announcements, and personalized offers to engage customers and drive conversions through high-impact voice communication.",
+    img: "/services/voice/usecase3.png",
+  },
+  {
+    title: "Operations & Internal Communication",
+    description:
+      "Streamline internal alerts, team notifications, and operational updates to ensure employees receive important information instantly and stay coordinated.",
+    img: "/services/voice/usecase4.png",
+  },
+];

@@ -86,7 +86,7 @@ const AnimatedFeatureGrid: React.FC<Props> = ({
               }}
               className="glass-card p-6 rounded-2xl border border-slate-200/60 flex flex-col items-start hover:-translate-y-1 transition-transform duration-300 group bg-white shadow-[0_4px_20px_rgba(15,23,42,0.04)] hover:shadow-[0_8px_30px_rgba(124,58,237,0.1)]"
             >
-              <div className="text-white p-3 rounded-xl bg-gradient-to-br from-[#7C3AED] to-pink-300 shadow-md mb-5 group-hover:scale-110 transition-transform">
+              <div className="text-white p-3 rounded-xl bg-gradient-to-br from-[#7C3AED] to-purple-400 shadow-md mb-5 group-hover:scale-110 transition-transform">
                 <Layers size={20} />
               </div>
               <h3 className="card-title text-lg font-bold text-slate-900 mb-2">

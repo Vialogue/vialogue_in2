@@ -15,7 +15,7 @@ export default function CTASection() {
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="relative rounded-[32px] overflow-hidden bg-gradient-to-r from-[#7C3AED] to-pink-300 p-8 sm:p-16 text-center shadow-[0_12px_40px_rgba(124,58,237,0.25)]"
+          className="relative rounded-[32px] overflow-hidden bg-gradient-to-r from-[#7C3AED] to-purple-400 p-8 sm:p-16 text-center shadow-[0_12px_40px_rgba(124,58,237,0.25)]"
         >
           {/* Subtle overlay grid for tech visual texture */}
           <div 

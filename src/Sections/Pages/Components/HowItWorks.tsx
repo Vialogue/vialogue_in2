@@ -114,7 +114,7 @@ export default function HowItWorks() {
           transition={{ duration: 0.45 }}
           className="flex justify-center"
         >
-          <div className="rounded-2xl bg-gradient-to-br from-[#7C3AED] to-pink-300 p-[2px]">
+          <div className="rounded-2xl bg-gradient-to-br from-[#7C3AED] to-purple-400 p-[2px]">
             <div className="bg-white rounded-2xl p-4 flex items-center justify-center h-[280px] sm:h-[320px]">
               <img
                 src={steps[activeStep].image}

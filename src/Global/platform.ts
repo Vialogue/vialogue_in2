@@ -49,42 +49,75 @@ export const sms_platform = [
 export const whatsapp_platform = [
   {
     title: "Official Onboarding & Setup",
-    desc: "Get guided onboarding with WhatsApp Business API approval support, number verification, Facebook Business Manager assistance, and template submission with full compliance checks.",
+    desc: "Fast-track your WhatsApp Business API approval, number verification, and compliant template submissions.",
     img: "/services/wapp/img1.png",
   },
   {
     title: "Template Management",
-    desc: "Create and manage utility templates (OTP, alerts, reminders) and marketing templates (offers, launches, campaigns) with real-time approval status tracking.",
+    desc: "Easily manage utility and marketing templates with real-time approval tracking.",
     img: "/services/wapp/img2.png",
   },
   {
     title: "Broadcast & Bots Manager",
-    desc: "Run policy-compliant WhatsApp campaigns with audience targeting, segmentation, promotional broadcasts, rich media messaging, CTA buttons, and detailed performance tracking.",
+    desc: "Run targeted WhatsApp campaigns with rich media and interactive CTA buttons.",
     img: "/services/wapp/img3.png",
   },
   {
     title: "Automation Journeys",
-    desc: "Build automated customer journeys including welcome series, cart reminders, payment follow-ups, appointment reminders, and service updates.",
+    desc: "Create automated customer flows for cart reminders, payments, and appointments.",
     img: "/services/wapp/img4.png",
   },
   {
     title: "Team Inbox (Two-Way Conversations)",
-    desc: "Manage inbound conversations using a shared team inbox with chat assignment, tags, internal notes, customer history visibility, and faster resolution workflows.",
+    desc: "Manage support via a shared inbox with chat assignment and internal notes.",
     img: "/services/wapp/img5.png",
   },
   {
     title: "AI Chatbot + Live Agent",
-    desc: "Combine AI automation and human assistance with 24/7 chatbot support, smooth agent takeover for complex queries, seamless context transfer, and reduced support workload.",
+    desc: "Deploy 24/7 AI chatbots with seamless human handoff for complex queries.",
     img: "/services/wapp/img6.png",
   },
   {
     title: "Reports & Analytics Dashboard",
-    desc: "Track sent, delivered, read, and failed message stats along with campaign insights, agent productivity reports, and exportable performance data.",
+    desc: "Monitor message delivery, campaign performance, and agent productivity in real-time.",
     img: "/services/wapp/img7.png",
   },
   {
-    title: "Enterprise Grade Security & Compliance",
-    desc: "Ensure secure communication with end-to-end encrypted messaging, opt-in and consent management, WhatsApp policy compliance, and audit-ready secure workflows.",
+    title: "Enterprise Security & Compliance",
+    desc: "End-to-end encryption with strict WhatsApp policy and consent compliance.",
     img: "/services/wapp/img8.png",
+  },
+];
+
+export const voice_platform = [
+  {
+    title: "Voice OTP & Verification Calls",
+    desc: "Secure and reliable OTP voice calls for authentication. Best for account login verification, onboarding validation, and fraud prevention.",
+    img: "/services/voice/features/Path 2.png",
+  },
+  {
+    title: "Automated Voice Alerts & Notifications",
+    desc: "Send critical updates instantly including delivery status, service reminders, payment due notifications, and compliance alerts.",
+    img: "/services/voice/features/Path 3.png",
+  },
+  {
+    title: "Bulk Voice Broadcasting",
+    desc: "Run voice campaigns at scale for promotions and announcements. Best for festival offers, sale launches, and reactivation campaigns.",
+    img: "/services/voice/features/Path 4.png",
+  },
+  {
+    title: "Interactive Voice Response (IVR)",
+    desc: "Create IVR journeys to automate support — press 1 for order status, press 2 for payment support, or press 3 to talk to an agent.",
+    img: "/services/voice/features/Path 5.png",
+  },
+  {
+    title: "Custom Call Flow & Template Management",
+    desc: "Manage voice scripts, templates, flow sequencing, and campaign-level configurations for multi-step campaigns.",
+    img: "/services/voice/features/Path 1.png",
+  },
+  {
+    title: "Analytics, Reporting & Optimization",
+    desc: "Optimize results using data-driven performance insights with real-time analytics and detailed campaign reporting.",
+    img: "/services/voice/features/Path 6.png",
   },
 ];

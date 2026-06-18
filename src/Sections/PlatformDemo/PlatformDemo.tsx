@@ -208,7 +208,7 @@ export default function PlatformDemo() {
                         <span>Completed (100%)</span>
                       </div>
                       <div className="w-full bg-slate-100 h-2 rounded-full overflow-hidden">
-                        <div className="bg-gradient-to-r from-[#7C3AED] to-pink-300 h-full w-full" />
+                        <div className="bg-gradient-to-r from-[#7C3AED] to-purple-400 h-full w-full" />
                       </div>
                     </div>
                   </motion.div>

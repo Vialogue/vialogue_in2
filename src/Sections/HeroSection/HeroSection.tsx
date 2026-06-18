@@ -270,11 +270,11 @@ export default function HeroSection() {
               transition={{ duration: 0.8, delay: 0.3 }}
               className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start pt-2"
             >
-              <Link href="/contact" className="group relative overflow-hidden flex items-center justify-center gap-2 px-8 py-4 rounded-xl bg-gradient-to-r from-[#7C3AED] to-pink-300 text-white font-medium shadow-[0_4px_20px_rgba(124,58,237,0.15)] hover:shadow-[0_4px_30px_rgba(0,229,255,0.25)] transition-all duration-300 active:scale-95">
+              <Link href="/contact" className="group relative overflow-hidden flex items-center justify-center gap-2 px-8 py-4 rounded-xl bg-gradient-to-r from-[#7C3AED] to-purple-400 text-white font-medium shadow-[0_4px_20px_rgba(124,58,237,0.15)] hover:shadow-[0_4px_30px_rgba(0,229,255,0.25)] transition-all duration-300 active:scale-95">
                 <span className="relative z-10 flex items-center gap-2">
                   Book Demo <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
                 </span>
-                <span className="absolute inset-0 bg-gradient-to-r from-pink-300 to-[#7C3AED] opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                <span className="absolute inset-0 bg-gradient-to-r from-purple-400 to-[#7C3AED] opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
               </Link>
 
               <Link href="/contact" className="flex items-center justify-center gap-2 px-8 py-4 rounded-xl bg-slate-50 border border-slate-200 hover:border-slate-350 hover:bg-slate-100 text-slate-700 font-medium transition-all active:scale-95">
@@ -411,7 +411,7 @@ export default function HeroSection() {
                             {msg.isTemplate ? (
                               <div className="bg-white rounded-xl shadow-md border border-slate-200/40 overflow-hidden text-[10.5px] text-slate-700 w-full max-w-[260px] self-start">
                                 {/* Header Image */}
-                                <div className="bg-gradient-to-br from-[#7C3AED] to-pink-300 h-12 flex items-center justify-center text-white text-[9.5px] font-bold font-mono px-3 text-center select-none">
+                                <div className="bg-gradient-to-br from-[#7C3AED] to-purple-400 h-12 flex items-center justify-center text-white text-[9.5px] font-bold font-mono px-3 text-center select-none">
                                   VIALOGUE CONFIRMATION
                                 </div>
                                 {/* Body */}
@@ -583,7 +583,7 @@ export default function HeroSection() {
                             {msg.isTemplate ? (
                               <div className="bg-white rounded-xl shadow-md border border-slate-200/85 overflow-hidden w-full max-w-[260px] text-[10px] self-start">
                                 {/* Cover Image Placeholder */}
-                                <div className="h-16 bg-gradient-to-tr from-[#7C3AED]/20 to-pink-300/20 flex flex-col items-center justify-center p-2 text-center border-b border-slate-100 select-none">
+                                <div className="h-16 bg-gradient-to-tr from-[#7C3AED]/20 to-purple-400/20 flex flex-col items-center justify-center p-2 text-center border-b border-slate-100 select-none">
                                   <span className="text-[7.5px] font-bold text-brand-purple bg-purple-50 px-2 py-0.5 rounded border border-purple-100">PROMOTION</span>
                                 </div>
                                 <div className="p-3.5 space-y-1">

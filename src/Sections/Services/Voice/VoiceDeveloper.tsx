@@ -9,7 +9,7 @@ import { Code2, Terminal } from "lucide-react";
 const snippets: Record<string, string> = {
   Python: `import requests
 
-url = "https://sms.vialogue.io/"
+url = "https://voice.vialogue.io/call"
 
 headers = {
   "Authorization": "Bearer <API_KEY>",
@@ -17,10 +17,11 @@ headers = {
 }
 
 payload = {
-  "from": "<from_number>",
+  "from": "<caller_id>",
   "to": "<destination_number>",
-  "message": "Your Vialogue OTP is 482931. Valid for 5 minutes.",
-  "callback_url": "https://example.com/sms/status"
+  "type": "otp",
+  "message": "Your Vialogue OTP is 7 3 8 2. Press 1 to repeat.",
+  "callback_url": "https://example.com/voice/status"
 }
 
 response = requests.post(url, json=payload, headers=headers)
@@ -29,13 +30,14 @@ print(response.json())`,
 
   "Node.js": `import axios from "axios";
 
-const url = "https://sms.vialogue.io/";
+const url = "https://voice.vialogue.io/call";
 
 const payload = {
-  from: "<from_number>",
+  from: "<caller_id>",
   to: "<destination_number>",
-  message: "Your Vialogue OTP is 482931. Valid for 5 minutes.",
-  callback_url: "https://example.com/sms/status",
+  type: "otp",
+  message: "Your Vialogue OTP is 7 3 8 2. Press 1 to repeat.",
+  callback_url: "https://example.com/voice/status",
 };
 
 axios.post(url, payload, {
@@ -50,13 +52,14 @@ axios.post(url, payload, {
   Ruby: `require "net/http"
 require "json"
 
-uri = URI("https://sms.vialogue.io/")
+uri = URI("https://voice.vialogue.io/call")
 
 payload = {
-  from: "<from_number>",
+  from: "<caller_id>",
   to: "<destination_number>",
-  message: "Your Vialogue OTP is 482931. Valid for 5 minutes.",
-  callback_url: "https://example.com/sms/status"
+  type: "otp",
+  message: "Your Vialogue OTP is 7 3 8 2. Press 1 to repeat.",
+  callback_url: "https://example.com/voice/status"
 }
 
 req = Net::HTTP::Post.new(uri, "Content-Type" => "application/json",
@@ -78,13 +81,14 @@ import (
 )
 
 func main() {
-  url := "https://sms.vialogue.io/"
+  url := "https://voice.vialogue.io/call"
 
   payload := []byte(\`{
-    "from": "<from_number>",
+    "from": "<caller_id>",
     "to": "<destination_number>",
-    "message": "Your Vialogue OTP is 482931. Valid for 5 minutes.",
-    "callback_url": "https://example.com/sms/status"
+    "type": "otp",
+    "message": "Your Vialogue OTP is 7382. Press 1 to repeat.",
+    "callback_url": "https://example.com/voice/status"
   }\`)
 
   req, _ := http.NewRequest("POST", url, bytes.NewBuffer(payload))
@@ -97,27 +101,27 @@ func main() {
   fmt.Println(res.Status)
 }`,
 
-  cURL: `curl -X POST "https://sms.vialogue.io/" \\
+  cURL: `curl -X POST "https://voice.vialogue.io/call" \\
   -H "Authorization: Bearer <API_KEY>" \\
   -H "Content-Type: application/json" \\
   -d '{
-    "from": "<from_number>",
+    "from": "<caller_id>",
     "to": "<destination_number>",
-    "message": "Your Vialogue OTP is 482931. Valid for 5 minutes.",
-    "callback_url": "https://example.com/sms/status"
+    "type": "otp",
+    "message": "Your Vialogue OTP is 7382. Press 1 to repeat.",
+    "callback_url": "https://example.com/voice/status"
   }'`,
 };
 
 const languages = ["Python", "Node.js", "Ruby", "Go", "cURL"];
 
-const DeveloperIntegration: React.FC = () => {
+const VoiceDeveloper: React.FC = () => {
   const [langIndex, setLangIndex] = React.useState(0);
 
   React.useEffect(() => {
     const interval = setInterval(() => {
       setLangIndex((prev) => (prev + 1) % languages.length);
-    }, 4000); // Increased time slightly for better readability
-
+    }, 4000);
     return () => clearInterval(interval);
   }, []);
 
@@ -150,8 +154,8 @@ const DeveloperIntegration: React.FC = () => {
               {[
                 "Secure APIs",
                 "Fast Integration",
-                "OTP Delivery",
-                "Global Messaging",
+                "Voice OTP",
+                "IVR Support",
                 "Developer Friendly",
                 "Scalable Infra",
               ].map((item, index) => (
@@ -167,18 +171,18 @@ const DeveloperIntegration: React.FC = () => {
             {/* Content */}
             <p className="text-lg md:text-[19px] text-slate-600 leading-relaxed font-medium mb-10">
               Vialogue offers clean documentation, secure authentication, and
-              easy-to-use APIs so developers can integrate SMS messaging quickly
-              and reliably. From startups to large enterprises, our SMS APIs are
-              built to scale seamlessly with your business.
+              easy-to-use Voice APIs so developers can integrate automated calling
+              quickly and reliably. From OTP calls to bulk IVR campaigns, our
+              Voice APIs are built to scale with your business.
             </p>
 
-            {/* Extra Stats / Content */}
+            {/* Stats Grid */}
             <div className="grid grid-cols-2 gap-4">
               {[
                 { title: "99.9%", desc: "API Uptime" },
                 { title: "100%", desc: "Pan-India Coverage" },
                 { title: "24/7", desc: "Developer Support" },
-                { title: "< 2s", desc: "Average Delivery" },
+                { title: "< 2s", desc: "Call Connect Time" },
               ].map((stat, i) => (
                 <div key={i} className="bg-slate-50 border border-slate-100 rounded-[20px] p-5 shadow-sm hover:shadow-md transition-shadow duration-300">
                   <h3 className="text-3xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-[#7C3AED] to-purple-500 mb-1">
@@ -193,7 +197,7 @@ const DeveloperIntegration: React.FC = () => {
           {/* CODE CARD (macOS style window) */}
           <div className="lg:col-span-7 w-full">
             <div className="bg-[#0f172a] rounded-2xl shadow-[0_20px_50px_rgba(0,0,0,0.3)] border border-slate-800 overflow-hidden flex flex-col h-[520px]">
-              
+
               {/* Window Header */}
               <div className="bg-[#1e293b] px-4 py-3 flex items-center justify-between border-b border-slate-800/80">
                 {/* macOS traffic lights */}
@@ -202,17 +206,17 @@ const DeveloperIntegration: React.FC = () => {
                   <div className="w-3 h-3 rounded-full bg-[#ffbd2e]"></div>
                   <div className="w-3 h-3 rounded-full bg-[#27c93f]"></div>
                 </div>
-                
+
                 {/* Title */}
                 <div className="flex items-center gap-2 text-slate-400 text-xs font-mono">
                   <Terminal size={14} />
-                  <span>api_request.sh</span>
+                  <span>voice_api_request.sh</span>
                 </div>
-                
-                <div className="w-20"></div> {/* spacer for centering */}
+
+                <div className="w-20"></div>
               </div>
 
-              {/* Tabs Container */}
+              {/* Tabs */}
               <div className="px-6 py-4 bg-[#0f172a] border-b border-slate-800/50">
                 <div className="flex gap-2">
                   {languages.map((l, index) => (
@@ -270,4 +274,4 @@ const DeveloperIntegration: React.FC = () => {
   );
 };
 
-export default DeveloperIntegration;
+export default VoiceDeveloper;

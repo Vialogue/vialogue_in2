@@ -12,7 +12,7 @@ export const visionData = [
     description:
       "To build a platform that enables enterprises, startups, and fast-growing brands to communicate effortlessly at scale with enterprise-grade reliability.",
     image: "/imgs/bb1.png",
-    gradient: "from-[#7C3AED] to-pink-300",
+    gradient: "from-[#7C3AED] to-purple-400",
     isLarge: true,
   },
   {
@@ -21,7 +21,7 @@ export const visionData = [
     description:
       "Continuously evolving our platform to leverage emerging technologies and customer preferences.",
     image: "/imgs/bb2.svg",
-    gradient: "from-[#7C3AED] to-pink-300",
+    gradient: "from-[#7C3AED] to-purple-400",
   },
   {
     id: 3,
@@ -29,7 +29,7 @@ export const visionData = [
     description:
       "Building infrastructure you can trust for your most important customer communications.",
     image: "/imgs/bb3.svg",
-    gradient: "from-[#7C3AED] to-pink-300",
+    gradient: "from-[#7C3AED] to-purple-400",
   },
   {
     id: 4,
@@ -37,7 +37,7 @@ export const visionData = [
     description:
       "Your success metrics are our success metrics — we're partners in your growth journey.",
     image: "/imgs/bb4.svg",
-    gradient: "from-[#7C3AED] to-pink-300",
+    gradient: "from-[#7C3AED] to-purple-400",
   },
   {
     id: 5,
@@ -45,7 +45,7 @@ export const visionData = [
     description:
       "Making powerful technology intuitive and easy to implement.",
     image: "/imgs/bb5.svg",
-    gradient: "from-[#7C3AED] to-pink-300",
+    gradient: "from-[#7C3AED] to-purple-400",
   },
 ];
 

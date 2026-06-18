@@ -134,7 +134,7 @@ export default function IndustriesSection() {
                   }`}
                 >
                   <span className={`p-2.5 rounded-xl transition-colors ${
-                    activeTab === idx ? "bg-gradient-to-br from-[#7C3AED] to-pink-300 text-white shadow-md shadow-purple-200/50" : "bg-slate-100 text-slate-500"
+                    activeTab === idx ? "bg-gradient-to-br from-[#7C3AED] to-purple-400 text-white shadow-md shadow-purple-200/50" : "bg-slate-100 text-slate-500"
                   }`}>
                     <IndIcon size={20} />
                   </span>
@@ -165,7 +165,7 @@ export default function IndustriesSection() {
                   <div className="space-y-4">
                     {/* Header */}
                     <div className="flex items-center gap-3">
-                      <span className="p-3 rounded-2xl bg-gradient-to-br from-[#7C3AED] to-pink-300 text-white shadow-md shadow-purple-200/50">
+                      <span className="p-3 rounded-2xl bg-gradient-to-br from-[#7C3AED] to-purple-400 text-white shadow-md shadow-purple-200/50">
                         <IconActive size={24} />
                       </span>
                       <h3 className="text-xl sm:text-2xl font-extrabold text-slate-950 uppercase">{activeInd.title}</h3>
@@ -192,7 +192,7 @@ export default function IndustriesSection() {
                   {/* Visual mockup of phone notification */}
                   <div className="mt-8 border-t border-slate-200 pt-6">
                     <div className="max-w-md bg-slate-50 rounded-2xl border border-slate-200 p-4 shadow-sm flex gap-3 items-start">
-                      <span className="p-2.5 rounded-xl bg-gradient-to-br from-[#7C3AED] to-pink-300 text-white shadow-md shadow-purple-200/50 border-none">
+                      <span className="p-2.5 rounded-xl bg-gradient-to-br from-[#7C3AED] to-purple-400 text-white shadow-md shadow-purple-200/50 border-none">
                         <Smartphone size={18} />
                       </span>
                       <div className="flex-1 space-y-1">

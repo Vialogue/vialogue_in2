@@ -39,7 +39,7 @@ export default function FeaturesBento() {
           >
             <div className="flex justify-between items-start">
               <div>
-                <span className="text-white p-2.5 rounded-xl bg-gradient-to-br from-[#7C3AED] to-pink-300 shadow-md shadow-purple-200/50 inline-block mb-4 border-none">
+                <span className="text-white p-2.5 rounded-xl bg-gradient-to-br from-[#7C3AED] to-purple-400 shadow-md shadow-purple-200/50 inline-block mb-4 border-none">
                   <Layers size={20} />
                 </span>
                 <h3 className="text-lg font-extrabold text-slate-900 mb-2">Multi-channel Messaging</h3>
@@ -79,7 +79,7 @@ export default function FeaturesBento() {
             className="rounded-2xl glass-card p-6 flex flex-col justify-between overflow-hidden relative group"
           >
             <div>
-              <span className="text-white p-2.5 rounded-xl bg-gradient-to-br from-[#7C3AED] to-pink-300 shadow-md shadow-purple-200/50 inline-block mb-4 border-none">
+              <span className="text-white p-2.5 rounded-xl bg-gradient-to-br from-[#7C3AED] to-purple-400 shadow-md shadow-purple-200/50 inline-block mb-4 border-none">
                 <BarChart3 size={20} />
               </span>
               <h3 className="text-lg font-extrabold text-slate-900 mb-2">Real-time Analytics</h3>
@@ -108,7 +108,7 @@ export default function FeaturesBento() {
             className="rounded-2xl glass-card p-6 flex flex-col justify-between overflow-hidden relative group"
           >
             <div>
-              <span className="text-white p-2.5 rounded-xl bg-gradient-to-br from-[#7C3AED] to-pink-300 shadow-md shadow-purple-200/50 inline-block mb-4 border-none">
+              <span className="text-white p-2.5 rounded-xl bg-gradient-to-br from-[#7C3AED] to-purple-400 shadow-md shadow-purple-200/50 inline-block mb-4 border-none">
                 <Calendar size={20} />
               </span>
               <h3 className="text-lg font-extrabold text-slate-900 mb-2">Campaign Manager</h3>
@@ -142,7 +142,7 @@ export default function FeaturesBento() {
           >
             <div className="flex justify-between items-start">
               <div>
-                <span className="text-white p-2.5 rounded-xl bg-gradient-to-br from-[#7C3AED] to-pink-300 shadow-md shadow-purple-200/50 inline-block mb-4 border-none">
+                <span className="text-white p-2.5 rounded-xl bg-gradient-to-br from-[#7C3AED] to-purple-400 shadow-md shadow-purple-200/50 inline-block mb-4 border-none">
                   <Code2 size={20} />
                 </span>
                 <h3 className="text-lg font-extrabold text-slate-900 mb-2">Robust Developer APIs</h3>
@@ -171,7 +171,7 @@ export default function FeaturesBento() {
             className="rounded-2xl glass-card p-6 flex flex-col justify-between overflow-hidden relative group"
           >
             <div>
-              <span className="text-white p-2.5 rounded-xl bg-gradient-to-br from-[#7C3AED] to-pink-300 shadow-md shadow-purple-200/50 inline-block mb-4 border-none">
+              <span className="text-white p-2.5 rounded-xl bg-gradient-to-br from-[#7C3AED] to-purple-400 shadow-md shadow-purple-200/50 inline-block mb-4 border-none">
                 <Cpu size={20} />
               </span>
               <h3 className="text-lg font-extrabold text-slate-900 mb-2">AI Automation</h3>
@@ -196,7 +196,7 @@ export default function FeaturesBento() {
             className="rounded-2xl glass-card p-6 flex flex-col justify-between overflow-hidden relative group"
           >
             <div>
-              <span className="text-white p-2.5 rounded-xl bg-gradient-to-br from-[#7C3AED] to-pink-300 shadow-md shadow-purple-200/50 inline-block mb-4 border-none">
+              <span className="text-white p-2.5 rounded-xl bg-gradient-to-br from-[#7C3AED] to-purple-400 shadow-md shadow-purple-200/50 inline-block mb-4 border-none">
                 <CheckCircle2 size={20} />
               </span>
               <h3 className="text-lg font-extrabold text-slate-900 mb-2">Delivery Tracking</h3>
