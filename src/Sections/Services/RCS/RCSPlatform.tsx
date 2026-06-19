@@ -68,7 +68,7 @@ const RCSPlatform: React.FC = () => {
         {/* Text Content */}
         <div className="flex flex-col justify-center">
           <h2 className="text-3xl md:text-5xl font-extrabold text-slate-900 leading-tight mb-8">
-             <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-500">RCS Platform</span> Capabilities
+             <span className="text-[#884CED]">RCS Platform</span> Capabilities
           </h2>
           <p className="text-lg sm:text-xl text-slate-600 leading-relaxed font-medium mb-8">
             Vialogue is not just an API—it’s a <span className="font-bold text-blue-600">complete RCS engagement platform</span> that helps businesses manage next-generation messaging end-to-end.

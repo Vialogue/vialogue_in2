@@ -14,7 +14,7 @@ const RCS_One: React.FC = () => {
           <div className="max-w-xl">
             <h2 className="text-3xl md:text-5xl font-extrabold text-slate-900 leading-tight mb-6">
               Transform "Texting" into <br/>
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#7C3AED] to-purple-500">
+              <span className="text-[#884CED]">
                 "Connecting"
               </span>
             </h2>

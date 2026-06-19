@@ -83,7 +83,7 @@ const capabilities = [
            ))}
         </div>
         <div className="mt-8 text-center relative z-10 bg-white px-8 py-4 rounded-2xl shadow-sm border border-blue-50">
-          <div className="text-4xl font-black text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600">10M+</div>
+          <div className="text-4xl font-black text-[#884CED]">10M+</div>
           <div className="text-xs text-slate-500 font-bold uppercase mt-1 tracking-wider">Messages / Hour</div>
         </div>
       </div>

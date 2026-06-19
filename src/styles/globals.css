@@ -51,11 +51,7 @@ body {
 
 /* Text Gradients */
 .text-gradient {
-  background: linear-gradient(135deg, #5d15da 0%, #c084fc);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  color: transparent;
+  color: #884CED;
 }
 
 /* Animations */

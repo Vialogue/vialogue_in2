@@ -46,7 +46,7 @@ const VoicePreviewUI: React.FC = () => {
           </span>
         </div>
         <div className="flex items-end gap-1 mb-1">
-          <span className="text-2xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-[#7C3AED] to-purple-500">
+          <span className="text-2xl font-extrabold text-[#884CED]">
             98.7%
           </span>
           <TrendingUp size={14} className="text-emerald-500 mb-1" />

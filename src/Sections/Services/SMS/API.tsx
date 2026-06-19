@@ -117,7 +117,7 @@ const API: React.FC = () => {
         </div>
         <h1
           ref={headingRef}
-          className="text-3xl md:text-5xl font-extrabold text-slate-900 heading-two transition-all duration-300 hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r hover:from-[#7C3AED] hover:to-[#F9A8D4] cursor-default"
+          className="text-3xl md:text-5xl font-extrabold text-slate-900 heading-two transition-all duration-300 hover:text-[#884CED] cursor-default"
         >
           Scalable SMS API Infrastructure For Businesses
         </h1>
@@ -174,7 +174,7 @@ const API: React.FC = () => {
                 hover:border-purple-200 hover:shadow-sm
                 transition-all duration-300 group"
               >
-                <span className="text-brand-purple group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-[#7C3AED] group-hover:to-[#F9A8D4] transition-all duration-300">
+                <span className="text-brand-purple group-hover:text-[#884CED] transition-all duration-300">
                   {tab}
                 </span>
               </button>

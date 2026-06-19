@@ -105,7 +105,7 @@ const Choose: React.FC = () => {
           >
             <h1 className="text-3xl md:text-5xl font-extrabold text-slate-900 leading-tight mb-8">
               Why Choose Vialogue <br className="hidden lg:block" />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-purple to-purple-500">
+              <span className="text-[#884CED]">
                 WhatsApp Business API?
               </span>
             </h1>

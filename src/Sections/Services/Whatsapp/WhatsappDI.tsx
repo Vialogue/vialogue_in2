@@ -206,7 +206,7 @@ const WhatsappDI: React.FC = () => {
                 { title: "24/7", desc: "Developer Support" },
               ].map((stat, i) => (
                 <div key={i} className="bg-slate-50 border border-slate-100 rounded-[20px] p-5 shadow-sm hover:shadow-md transition-shadow duration-300">
-                  <h3 className="text-3xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-[#7C3AED] to-purple-500 mb-1">
+                  <h3 className="text-3xl font-extrabold text-[#884CED] mb-1">
                     {stat.title}
                   </h3>
                   <p className="text-sm font-medium text-slate-500">{stat.desc}</p>
