@@ -1,55 +1,46 @@
 import NavBar from "@/Components/NavBar";
 import Footer from "@/Components/Footer";
 import ReadySection from "@/Sections/ReadySection";
-import GlobalHero from "@/Global/Hero";
-import ASC from "@/Global/AutoScrollerContent";
-import {
-  AgentOverview,
-  AgentOverviewRev,
-  agentSlidingData,
-  industries,
-  keyFeatures,
-  steps,
-  voiceApiHighlights,
-  voiceApiInfra,
-  voiceFeaturesData,
-  whoShouldUse,
-} from "@/Global/data";
-import VerifiedBusinessMessaging from "@/Global/LeftSideIconTimeline";
-import CardSection from "@/Global/CardsSection";
 import FAQSection from "@/Global/FaqSection";
-import { agentAssistFaq, voiceFaq } from "@/Global/faqData";
-import GlobalOverview from "@/Global/OverView";
-import HowItWorks from "@/Global/HowItsWork";
-import { business, caseIndustry } from "@/Global/verifiedMessaging";
-import Flow from "@/Global/flow";
-import SlidingWithHeading from "@/Global/SliderWithHeading";
-import HowItWorksTwo from "@/Global/HowItsWorkTwo";
-import KeyFeatures from "@/Global/KeyFeatures";
-import Industries from "@/Global/Industries";
-import WhoShouldUse from "@/Global/WhoShouldUseItem";
+import { agentAssistFaq } from "@/Global/faqData";
 import ServiceHero from "@/Global/ServiceHero";
+
+// Custom Premium Agent Sections
+import AgentPreviewUI from "@/Sections/Services/Agent/AgentPreviewUI";
+import AgentOverviewSection from "@/Sections/Services/Agent/AgentOverviewSection";
+import AgentValueStatement from "@/Sections/Services/Agent/AgentValueStatement";
+import AgentSolution from "@/Sections/Services/Agent/AgentSolution";
+import AgentHowItWorks from "@/Sections/Services/Agent/AgentHowItWorks";
+import AgentKeyFeatures from "@/Sections/Services/Agent/AgentKeyFeatures";
+import AgentWhoShouldUse from "@/Sections/Services/Agent/AgentWhoShouldUse";
+import AgentProblems from "@/Sections/Services/Agent/AgentProblems";
+import AgentBusinessBenefits from "@/Sections/Services/Agent/AgentBusinessBenefits";
+import AgentIndustries from "@/Sections/Services/Agent/AgentIndustries";
 
 export default function Agent() {
   return (
     <div className="bg-white bg-gray-50 overflow-x-hidden sm:text-left text-center">
       <NavBar />
       <ServiceHero
-        title="AI Agent Assist Software for Customer Support Teams | Vialogue"
+        title={
+          <span className="text-3xl sm:text-5xl lg:text-[46px] leading-tight block uppercase">
+            AI AGENT ASSIST SOFTWARE FOR <span className="text-gradient">CUSTOMER SUPPORT TEAMS</span>
+          </span>
+        }
         description="Boost agent productivity and reduce response time using Vialogue AI Agent Assist. Provide faster, smarter, and more consistent customer support across channels."
-        hero_img={"./services/feature_one.png"}
+        customRightElement={<AgentPreviewUI />}
         off_nav={false}
       />
-      <GlobalOverview data={AgentOverview} />
+      <AgentOverviewSection />
       <hr className="border-gray-200 mb-0 block" />
-      <Flow />
-      <SlidingWithHeading capabilities={agentSlidingData} />
-      <GlobalOverview data={AgentOverviewRev} rev={true} />
-      <HowItWorksTwo heading="How It Works" steps={steps} />
-      <KeyFeatures heading="Key Features" features={keyFeatures} />
-      <VerifiedBusinessMessaging data={business} />
-      <WhoShouldUse items={whoShouldUse} />
-      <Industries items={industries} bgColor="bg-gray-100" />
+      <AgentValueStatement />
+      <AgentProblems />
+      <AgentSolution />
+      <AgentHowItWorks />
+      <AgentKeyFeatures />
+      <AgentBusinessBenefits />
+      <AgentWhoShouldUse />
+      <AgentIndustries />
       <FAQSection title="FAQs (Agent Assist)" data={agentAssistFaq} />
       <hr className="border-gray-200 mb-0 block" />
       <ReadySection
@@ -60,3 +51,4 @@ export default function Agent() {
     </div>
   );
 }
+
