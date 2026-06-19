@@ -3,7 +3,7 @@
 import React from "react";
 import { easeOut, motion } from "framer-motion";
 import { Sparkles } from "lucide-react";
-import { useRouter } from "next/navigation";
+import { useRouter } from "next/router";
 
 const container = {
   hidden: { opacity: 0, scale: 0.96 },

@@ -24,20 +24,20 @@ const RCS_One: React.FC = () => {
             
             <div className="space-y-4">
               <div className="flex items-center gap-3">
-                 <div className="w-8 h-8 rounded-full bg-purple-50 flex items-center justify-center">
-                    <ImageIcon size={16} className="text-[#7C3AED]" />
+                 <div className="w-8 h-8 rounded-full bg-[#884CED] text-white flex items-center justify-center shadow-sm shadow-purple-200/50">
+                    <ImageIcon size={14} />
                  </div>
                  <span className="text-slate-700 font-semibold">Rich Media & Visuals</span>
               </div>
               <div className="flex items-center gap-3">
-                 <div className="w-8 h-8 rounded-full bg-purple-50 flex items-center justify-center">
-                    <MousePointerClick size={16} className="text-[#7C3AED]" />
+                 <div className="w-8 h-8 rounded-full bg-[#884CED] text-white flex items-center justify-center shadow-sm shadow-purple-200/50">
+                    <MousePointerClick size={14} />
                  </div>
                  <span className="text-slate-700 font-semibold">Interactive Buttons</span>
               </div>
               <div className="flex items-center gap-3">
-                 <div className="w-8 h-8 rounded-full bg-emerald-50 flex items-center justify-center">
-                    <ShieldCheck size={16} className="text-emerald-600" />
+                 <div className="w-8 h-8 rounded-full bg-emerald-600 text-white flex items-center justify-center shadow-sm shadow-emerald-200/50">
+                    <ShieldCheck size={14} />
                  </div>
                  <span className="text-slate-700 font-semibold">Verified Sender Badges</span>
               </div>

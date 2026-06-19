@@ -27,7 +27,7 @@ export default function Service() {
         title={<span className="text-3xl sm:text-5xl lg:text-[46px] leading-tight block font-extrabold uppercase">BOOST CUSTOMER ENGAGEMENT WITH <span className="text-gradient">WHATSAPP BUSINESS</span></span>}
         description="Send secure OTPs, transactional alerts, customer support messages, and promotional updates on the world’s most trusted messaging platform."
         customRightElement={<WhatsappPreviewUI />}
-        off_nav={true}
+        off_nav={false}
       />
       <section id="overview"></section>
       <div className="bg-white">

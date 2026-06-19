@@ -24,7 +24,7 @@ export default function Sms() {
         title={<span className="text-3xl sm:text-5xl lg:text-[46px] leading-tight block">COMPLIANT, RELIABLE SMS API FOR VERIFICATION & <span className="text-gradient">CUSTOMER ENGAGEMENT</span></span>} 
         description="Engage Your Customers at Every Step of Their Journey<br />An all-in-one messaging platform by Vialogue for OTPs, alerts & potifications, promotional and loyalty messaging-built for scale, security, and performance."
         customRightElement={<SMSPreviewUI />} 
-        off_nav={true} 
+        off_nav={false} 
       />
       <section id="overview"></section>
       <div className="bg-white">

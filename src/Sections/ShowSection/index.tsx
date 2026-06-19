@@ -95,7 +95,8 @@ const ShowSection: React.FC = () => {
             <motion.div
               key={i}
               variants={card}
-              className={`rounded-3xl overflow-hidden bg-gradient-to-br ${e.gradient} shadow-md hover:shadow-xl transition-all duration-300 flex flex-col`}
+              onClick={() => router.push(e.link)}
+              className={`rounded-3xl overflow-hidden bg-gradient-to-br ${e.gradient} shadow-md hover:shadow-xl transition-all duration-300 flex flex-col cursor-pointer`}
             >
               {/* FULL COVER IMAGE */}
               <div className="relative w-full h-90 sm:h-70">
@@ -119,7 +120,10 @@ const ShowSection: React.FC = () => {
                 <br />
                 <button
                   className={`mt-auto w-full cursor-pointer py-2 text-white rounded-lg transition ${e.button}`}
-                  onClick={() => router.push(e.link)}
+                  onClick={(event) => {
+                    event.stopPropagation();
+                    router.push(e.link);
+                  }}
                 >
                   Explore
                 </button>

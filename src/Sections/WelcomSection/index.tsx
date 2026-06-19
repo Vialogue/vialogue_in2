@@ -4,7 +4,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
 import MorphPattern from "./morphpattern";
 import StaticPattern from "./morphPatternMobile";
-import { useRouter } from "next/navigation";
+import { useRouter } from "next/router";
 import { ChevronDown } from "lucide-react";
 import Image from "next/image";
 

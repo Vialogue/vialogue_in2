@@ -13,17 +13,17 @@ const RCSPreviewUI: React.FC = () => {
         initial={{ opacity: 0, x: 20, y: -20 }}
         animate={{ opacity: 1, x: 0, y: 0 }}
         transition={{ duration: 0.8, ease: "easeOut" }}
-        className="absolute right-[-5%] lg:right-[0%] top-[0%] w-[320px] bg-white/80 backdrop-blur-xl rounded-[24px] shadow-[0_8px_30px_rgba(124,58,237,0.08)] border border-purple-100 p-5 pb-8 z-0"
+        className="absolute right-[-18%] lg:right-[-10%] top-[0%] w-[320px] bg-white/80 backdrop-blur-xl rounded-[24px] shadow-[0_8px_30px_rgba(124,58,237,0.08)] border border-purple-100 p-5 pb-8 z-0"
       >
         <h4 className="font-bold text-slate-900 text-[18px] mb-6 text-center">Verified Sender</h4>
         <div className="flex flex-col items-center gap-3 mb-4">
-          <div className="w-16 h-16 bg-gradient-to-br from-[#7C3AED] to-purple-400 rounded-full flex items-center justify-center border-4 border-white shadow-lg">
+          <div className="w-16 h-16 bg-gradient-to-br from-blue-600 to-cyan-400 rounded-full flex items-center justify-center border-4 border-white shadow-lg">
             <span className="text-white font-bold text-xl tracking-widest">V</span>
           </div>
           <div className="text-center">
             <p className="text-sm font-bold text-slate-800 flex items-center justify-center gap-1">
               Vialogue
-              <span className="w-3.5 h-3.5 bg-purple-500 rounded-full flex items-center justify-center">
+              <span className="w-3.5 h-3.5 bg-blue-500 rounded-full flex items-center justify-center">
                 <CheckCircle size={8} className="text-white" strokeWidth={3}/>
               </span>
             </p>

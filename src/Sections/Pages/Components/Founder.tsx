@@ -3,7 +3,7 @@
 import Image from "next/image";
 import { motion, Variants } from "framer-motion";
 import { FaLinkedin } from "react-icons/fa";
-import { useRouter } from "next/navigation";
+import { useRouter } from "next/router";
 
 /* ================= ANIMATIONS ================= */
 

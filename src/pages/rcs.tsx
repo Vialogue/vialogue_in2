@@ -24,28 +24,28 @@ export default function RCS() {
         title={<span className="text-3xl sm:text-5xl lg:text-[46px] leading-tight block font-extrabold uppercase">BOOST CUSTOMER ENGAGEMENT WITH <span className="text-gradient">RCS BUSINESS MESSAGING</span></span>}
         description="Deliver rich, interactive, and verified messages natively to Android devices for unparalleled customer engagement."
         customRightElement={<RCSPreviewUI />}
-        off_nav={true}
+        off_nav={false}
       />
-      
+
       <RCS_One />
-      
+
       <CWC heading="Why RCS works better than SMS" list={rcsList} />
 
       <LSIRCC />
-      
+
       <VerifiedBusinessMessaging data={verifiedMessaging} />
 
       <RCSAPI />
-      
+
       <RCSDI />
 
       <FeatureCards
         title="RCS Features That Improve Clicks, Trust & Engagement"
         data={rcsFeaturesData}
       />
-      
+
       <FAQSection title="Frequently Asked Questions" data={rcsFaq} />
-      
+
       <hr className="border-gray-200 mb-0 block" />
       <ReadySection />
       <Footer />

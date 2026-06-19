@@ -121,6 +121,17 @@ const ServiceHero: React.FC<ServiceHeroProp> = ({
         }}
       />
 
+      {off_nav ? (
+        <div className="w-full flex justify-center mb-10 relative z-20 select-none">
+          <SectionSwitcher />
+        </div>
+      ) : null}
+      {ind ? (
+        <div className="w-full flex justify-center mb-10 relative z-20 select-none">
+          <SectionSwitcherTwo />
+        </div>
+      ) : null}
+
       <div className="mx-auto flex flex-col lg:flex-row gap-10 mt-1 lg:gap-0 items-center relative z-10">
         {/* LEFT */}
         <div className="flex-1 space-y-4">
@@ -150,8 +161,6 @@ const ServiceHero: React.FC<ServiceHeroProp> = ({
 
         {/* RIGHT */}
         <div className="flex-1 mb-0 sm:mb-0 flex flex-col relative justify-center will-change-transform">
-          {off_nav ? <SectionSwitcher /> : null}
-          {ind ? <SectionSwitcherTwo /> : null}
 
           <div ref={imageRef as any} className={`w-full z-10 ${off_nav ? "max-h-[400px]" : "max-h-full"} mt-auto`} style={off_nav ? { marginBottom: "0px", marginTop: "0px" } : { marginBottom: "0px", marginTop: "-0px" }}>
              {customRightElement ? customRightElement : (

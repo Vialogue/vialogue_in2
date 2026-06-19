@@ -56,20 +56,20 @@ const SectionSwitcher = () => {
   return (
     <div
       ref={containerRef}
-      className="grid sm:grid-cols-4 md:grid-cols-4 grid-cols-4 mb-10 justify-around gap-6 text-white font-medium m-auto w-fit"
+      className="grid sm:grid-cols-4 md:grid-cols-4 grid-cols-4 mb-0 justify-around gap-8 text-slate-800 font-semibold m-auto w-fit"
     >
       {links.map((item) => (
         <button
           key={item.id}
           onClick={() => handleScroll(item.id)}
-          className={`nav-link relative pb-1 transition cursor-pointer ${
-            active === item.id ? "text-white" : "text-white/60"
+          className={`nav-link relative pb-1.5 transition duration-300 cursor-pointer text-sm ${
+            active === item.id ? "text-[#884CED]" : "text-slate-500 hover:text-slate-800"
           }`}
         >
           {item.label}
 
           {active === item.id && (
-            <span className="absolute left-0 bottom-0 h-[2px] w-full bg-white" />
+            <span className="absolute left-0 bottom-0 h-[2.5px] w-full bg-[#884CED] rounded-full" />
           )}
         </button>
       ))}

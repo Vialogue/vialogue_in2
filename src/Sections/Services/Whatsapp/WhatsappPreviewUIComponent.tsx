@@ -8,16 +8,16 @@ const WhatsappPreviewUI: React.FC = () => {
   return (
     <div className="relative w-full h-[400px] flex items-center justify-center font-sans mt-0 lg:-mt-10 translate-x-0 lg:translate-x-10 scale-[0.80] origin-center lg:origin-left">
       
-      {/* Back Card: API Infrastructure */}
+      {/* Back Card: Business Profile */}
       <motion.div 
         initial={{ opacity: 0, x: 20, y: -20 }}
         animate={{ opacity: 1, x: 0, y: 0 }}
         transition={{ duration: 0.8, ease: "easeOut" }}
-        className="absolute right-[-5%] lg:right-[0%] top-[0%] w-[320px] bg-white/80 backdrop-blur-xl rounded-[24px] shadow-[0_8px_30px_rgba(124,58,237,0.08)] border border-purple-100 p-5 pb-8 z-0"
+        className="absolute right-[-12%] lg:right-[-6%] top-[-10%] w-[320px] bg-white/80 backdrop-blur-xl rounded-[24px] shadow-[0_8px_30px_rgba(16,185,129,0.08)] border border-emerald-100 p-5 pb-8 z-0"
       >
         <h4 className="font-bold text-slate-900 text-[18px] mb-6 text-center">Business Profile</h4>
         <div className="flex flex-col items-center gap-3 mb-4">
-          <div className="w-16 h-16 bg-gradient-to-br from-[#7C3AED] to-purple-400 rounded-full flex items-center justify-center border-4 border-white shadow-lg">
+          <div className="w-16 h-16 bg-gradient-to-br from-[#00a884] to-emerald-400 rounded-full flex items-center justify-center border-4 border-white shadow-lg">
             <span className="text-white font-bold text-xl tracking-widest">V</span>
           </div>
           <div className="text-center">
@@ -37,7 +37,7 @@ const WhatsappPreviewUI: React.FC = () => {
            </div>
            <div className="flex justify-between items-center text-xs">
               <span className="text-slate-500">Catalog</span>
-              <span className="font-medium text-brand-purple cursor-pointer">View Products</span>
+              <span className="font-medium text-[#00a884] cursor-pointer">View Products</span>
            </div>
         </div>
       </motion.div>
@@ -47,7 +47,7 @@ const WhatsappPreviewUI: React.FC = () => {
         initial={{ opacity: 0, x: -20, y: 20 }}
         animate={{ opacity: 1, x: 0, y: 0 }}
         transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
-        className="absolute left-[0%] lg:left-[5%] bottom-[-5%] lg:bottom-[0%] w-[350px] bg-[#efeae2] rounded-[24px] shadow-[0_20px_50px_rgba(124,58,237,0.15)] border border-purple-100 overflow-hidden z-10 flex flex-col"
+        className="absolute left-[-5%] lg:left-[0%] bottom-[-5%] lg:bottom-[0%] w-[320px] bg-[#efeae2] rounded-[24px] shadow-[0_20px_50px_rgba(16,185,129,0.15)] border border-emerald-100 overflow-hidden z-10 flex flex-col"
       >
         {/* Chat Header */}
         <div className="bg-[#075e54] text-white p-3 flex items-center justify-between">
@@ -68,8 +68,8 @@ const WhatsappPreviewUI: React.FC = () => {
            {/* Message Bubble: Notification */}
            <div className="bg-white rounded-lg rounded-tl-none p-3 max-w-[85%] shadow-sm border border-slate-100">
              <div className="flex items-center gap-2 mb-2">
-               <span className="w-5 h-5 bg-purple-100 rounded-md flex items-center justify-center">
-                 <Smartphone size={12} className="text-brand-purple" />
+               <span className="w-5 h-5 bg-emerald-50 rounded-md flex items-center justify-center">
+                 <Smartphone size={12} className="text-[#00a884]" />
                </span>
                <span className="text-xs font-bold text-slate-800">Login Alert</span>
              </div>
@@ -81,8 +81,9 @@ const WhatsappPreviewUI: React.FC = () => {
            
            {/* Message Bubble: Promotional/Template */}
            <div className="bg-white rounded-lg rounded-tl-none p-3 max-w-[85%] shadow-sm border border-slate-100">
-             <div className="w-full h-24 bg-gradient-to-r from-purple-400 to-[#7C3AED] rounded-md mb-2 flex items-center justify-center">
-                <span className="text-white font-bold text-xs uppercase tracking-widest bg-white/20 px-2 py-1 rounded backdrop-blur-sm">Special Offer</span>
+             <div className="w-full h-24 rounded-md mb-2 overflow-hidden relative border border-slate-100">
+                <img src="/services/wapp/special_offer.png" className="w-full h-full object-cover" alt="Special Offer" />
+                <span className="absolute top-2 left-2 text-white font-bold text-[9px] uppercase tracking-widest bg-black/45 px-1.5 py-0.5 rounded backdrop-blur-sm">Special Offer</span>
              </div>
              <p className="text-[13px] text-slate-700 leading-snug">
                Upgrade your plan today and get 50% off for the first 3 months! 🎉

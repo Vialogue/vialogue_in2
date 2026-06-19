@@ -12,7 +12,7 @@ import { motion } from "framer-motion";
 
 const VoicePreviewUI: React.FC = () => {
   return (
-    <div className="relative w-full h-[440px] flex items-center justify-center font-sans select-none">
+    <div className="relative w-full h-[400px] flex items-center justify-center font-sans select-none mt-0 lg:-mt-10 translate-x-0 lg:translate-x-10 scale-[0.80] origin-center lg:origin-left">
 
       {/* ── Main Hero Image ── */}
       <motion.div

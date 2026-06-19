@@ -410,9 +410,13 @@ export default function HeroSection() {
                           >
                             {msg.isTemplate ? (
                               <div className="bg-white rounded-xl shadow-md border border-slate-200/40 overflow-hidden text-[10.5px] text-slate-700 w-full max-w-[260px] self-start">
-                                {/* Header Image */}
-                                <div className="bg-gradient-to-br from-[#7C3AED] to-purple-400 h-12 flex items-center justify-center text-white text-[9.5px] font-bold font-mono px-3 text-center select-none">
+                                {/* Header */}
+                                <div className="bg-gradient-to-r from-[#075E54] to-[#128C7E] h-12 flex items-center justify-center text-white text-[9.5px] font-bold font-mono px-3 text-center select-none">
                                   VIALOGUE CONFIRMATION
+                                </div>
+                                {/* Header Image */}
+                                <div className="h-28 w-full overflow-hidden relative border-b border-slate-100">
+                                  <img src="/services/wapp/delivery.png" className="w-full h-full object-cover" alt="Delivery" />
                                 </div>
                                 {/* Body */}
                                 <div className="p-3.5 space-y-1.5">
@@ -582,9 +586,10 @@ export default function HeroSection() {
                           >
                             {msg.isTemplate ? (
                               <div className="bg-white rounded-xl shadow-md border border-slate-200/85 overflow-hidden w-full max-w-[260px] text-[10px] self-start">
-                                {/* Cover Image Placeholder */}
-                                <div className="h-16 bg-gradient-to-tr from-[#7C3AED]/20 to-purple-400/20 flex flex-col items-center justify-center p-2 text-center border-b border-slate-100 select-none">
-                                  <span className="text-[7.5px] font-bold text-brand-purple bg-purple-50 px-2 py-0.5 rounded border border-purple-100">PROMOTION</span>
+                                {/* Cover Image */}
+                                <div className="h-28 w-full overflow-hidden relative border-b border-slate-100">
+                                  <img src="/services/rcs/rcs_promo.png" className="w-full h-full object-cover" alt="Promotion" />
+                                  <span className="absolute top-2 left-2 text-[7.5px] font-bold text-brand-purple bg-purple-50 px-2 py-0.5 rounded border border-purple-100">PROMOTION</span>
                                 </div>
                                 <div className="p-3.5 space-y-1">
                                   <p className="font-bold text-slate-900 text-[10.5px]">{msg.templateData.title}</p>

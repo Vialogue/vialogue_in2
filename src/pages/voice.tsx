@@ -13,6 +13,68 @@ import { voice_platform } from "@/Global/platform";
 import FAQSection from "@/Global/FaqSection";
 import { voiceFaq } from "@/Global/faqData";
 import VoicePreviewUI from "@/Sections/Services/Voice/VoicePreviewUI";
+import { motion, Variants } from "framer-motion";
+import { Truck, CreditCard, Calendar, AlertTriangle, Megaphone } from "lucide-react";
+
+const overviewPoints = [
+  {
+    text: "Delivery confirmations",
+    icon: Truck,
+    iconColor: "text-emerald-600",
+    bgColor: "bg-emerald-50",
+    borderColor: "border-emerald-100 hover:border-emerald-200 hover:shadow-emerald-100/30",
+    glowColor: "bg-emerald-500",
+  },
+  {
+    text: "Payment reminders",
+    icon: CreditCard,
+    iconColor: "text-amber-600",
+    bgColor: "bg-amber-50",
+    borderColor: "border-amber-100 hover:border-amber-200 hover:shadow-amber-100/30",
+    glowColor: "bg-amber-500",
+  },
+  {
+    text: "Appointment confirmations",
+    icon: Calendar,
+    iconColor: "text-blue-600",
+    bgColor: "bg-blue-50",
+    borderColor: "border-blue-100 hover:border-blue-200 hover:shadow-blue-100/30",
+    glowColor: "bg-blue-500",
+  },
+  {
+    text: "Service outage alerts",
+    icon: AlertTriangle,
+    iconColor: "text-rose-600",
+    bgColor: "bg-rose-50",
+    borderColor: "border-rose-100 hover:border-rose-200 hover:shadow-rose-100/30",
+    glowColor: "bg-rose-500",
+  },
+  {
+    text: "Promotional voice broadcasts",
+    icon: Megaphone,
+    iconColor: "text-purple-600",
+    bgColor: "bg-purple-50",
+    borderColor: "border-purple-100 hover:border-purple-200 hover:shadow-purple-100/30",
+    glowColor: "bg-purple-500",
+  },
+];
+
+const containerVariants: Variants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: { staggerChildren: 0.1 },
+  },
+};
+
+const itemVariants: Variants = {
+  hidden: { opacity: 0, x: 40 },
+  visible: {
+    opacity: 1,
+    x: 0,
+    transition: { type: "spring", stiffness: 100, damping: 15 },
+  },
+};
 
 export default function Voice() {
   return (
@@ -29,63 +91,117 @@ export default function Voice() {
         }
         description="Vialogue Voice enables businesses to communicate with customers at scale using a unified voice platform designed for <b>speed, reliability, personalization, and automation.</b>"
         customRightElement={<VoicePreviewUI />}
-        off_nav={true}
+
       />
 
       {/* 2. OVERVIEW — Voice Communication That Customers Actually Respond To */}
       <section id="overview"></section>
-      <div className="bg-white">
-        <div className="px-4 md:px-40 py-16">
-          <div className="max-w-4xl mx-auto text-center mb-12">
-            <div className="inline-flex items-center gap-2 px-4 py-1.5 mb-6 rounded-full bg-purple-50 border border-purple-200">
+      <div className="bg-white overflow-hidden">
+        <motion.div
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-100px" }}
+          className="px-4 md:px-40 py-20 max-w-7xl mx-auto"
+        >
+          {/* Header */}
+          <div className="max-w-4xl mx-auto text-center mb-16">
+            <motion.div
+              initial={{ opacity: 0, y: -20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+              className="inline-flex items-center gap-2 px-4 py-1.5 mb-6 rounded-full bg-purple-50 border border-purple-200 shadow-sm"
+            >
               <span className="text-xs font-semibold uppercase tracking-wider text-brand-purple">Overview</span>
-            </div>
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 heading-two leading-tight mb-6">
+            </motion.div>
+
+            <motion.h2
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.7, delay: 0.1 }}
+              className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 heading-two leading-tight mb-6"
+            >
               Voice Communication That Customers{" "}
               <span className="text-gradient">Actually Respond To</span>
-            </h2>
-            <p className="text-lg text-slate-600 subheading leading-relaxed max-w-3xl mx-auto text-justify">
+            </motion.h2>
+
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.7, delay: 0.2 }}
+              className="text-lg text-slate-600 subheading leading-relaxed max-w-3xl mx-auto text-justify font-light"
+            >
               Voice is one of the most effective channels for urgent, high-importance customer
               communication because it reaches instantly and gets attention, works without internet
               or smartphone dependency, improves trust for transactional and security messages,
               and supports regional languages and accessibility.
-            </p>
+            </motion.p>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mt-12">
+          {/* Grid Content */}
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center mt-12">
             {/* Left — Image */}
-            <div className="flex justify-center relative">
-              <div className="absolute inset-0 bg-gradient-to-r from-[#7C3AED]/10 to-[#F9A8D4]/10 blur-[80px] rounded-full pointer-events-none" />
-              <img
-                src="/services/voice/overview.png"
-                alt="Voice Communication Overview"
-                className="rounded-3xl w-full max-w-[500px] object-contain filter drop-shadow-xl relative z-10"
-              />
-            </div>
+            <motion.div
+              initial={{ opacity: 0, x: -50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8, type: "spring", bounce: 0.2 }}
+              className="lg:col-span-6 flex justify-center relative group"
+            >
+              <div className="absolute inset-0 bg-gradient-to-r from-[#7C3AED]/10 to-[#F9A8D4]/10 blur-[80px] rounded-full pointer-events-none group-hover:scale-110 transition-transform duration-700" />
+              <motion.div
+                whileHover={{ scale: 1.03, rotate: 1.5 }}
+                transition={{ type: "spring", stiffness: 300, damping: 15 }}
+                className="relative z-10"
+              >
+                <img
+                  src="/services/voice/overview.png"
+                  alt="Voice Communication Overview"
+                  className="rounded-3xl w-full max-w-[500px] object-contain shadow-2xl border border-slate-100"
+                />
+              </motion.div>
+            </motion.div>
 
             {/* Right — Points */}
-            <div className="flex flex-col gap-4">
-              <p className="text-lg font-semibold text-slate-800 mb-2">
+            <div className="lg:col-span-6 flex flex-col gap-5">
+              <motion.p
+                initial={{ opacity: 0, x: 20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6 }}
+                className="text-lg font-bold text-slate-800 mb-2 border-l-4 border-[#884CED] pl-3"
+              >
                 Trusted by businesses for:
-              </p>
-              {[
-                "Delivery confirmations",
-                "Payment reminders",
-                "Appointment confirmations",
-                "Service outage alerts",
-                "Promotional voice broadcasts",
-              ].map((point, i) => (
-                <div
-                  key={i}
-                  className="flex items-center gap-3 px-5 py-3 rounded-xl bg-purple-50 border border-purple-100 hover:border-purple-300 transition-all duration-200 group"
-                >
-                  <span className="w-2.5 h-2.5 rounded-full bg-gradient-to-r from-[#7C3AED] to-purple-400 flex-shrink-0 group-hover:scale-125 transition-transform" />
-                  <span className="text-slate-700 font-medium capitalize">{point}</span>
-                </div>
-              ))}
+              </motion.p>
+
+              <motion.div
+                variants={containerVariants}
+                className="flex flex-col gap-4"
+              >
+                {overviewPoints.map((point, i) => (
+                  <motion.div
+                    key={i}
+                    variants={itemVariants}
+                    whileHover={{ y: -3, scale: 1.01 }}
+                    className={`flex items-center gap-4 px-5 py-4 rounded-2xl bg-white border ${point.borderColor} shadow-[0_4px_15px_rgba(0,0,0,0.02)] hover:shadow-md transition-all duration-300 group cursor-default`}
+                  >
+                    <div className={`w-11 h-11 rounded-xl ${point.bgColor} flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300 shadow-inner`}>
+                      <point.icon size={20} className={point.iconColor} />
+                    </div>
+                    <div className="flex-1">
+                      <span className="text-slate-700 font-semibold text-[15px] group-hover:text-[#884CED] transition-colors duration-300 capitalize">
+                        {point.text}
+                      </span>
+                    </div>
+                    <span className={`w-2.5 h-2.5 rounded-full ${point.glowColor} opacity-0 group-hover:opacity-100 group-hover:scale-110 transition-all duration-300 shadow-sm`} />
+                  </motion.div>
+                ))}
+              </motion.div>
             </div>
           </div>
-        </div>
+        </motion.div>
       </div>
 
       {/* 3. USE CASES */}
