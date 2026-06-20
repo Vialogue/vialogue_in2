@@ -7,9 +7,9 @@ import { motion } from "framer-motion";
 const SMSPreviewUI: React.FC = () => {
   return (
     <div className="relative w-full h-[400px] flex items-center justify-center font-sans mt-0 lg:-mt-10 translate-x-2 lg:translate-x-10">
-      
+
       {/* Back Card: Secure & Scalable Messaging */}
-      <motion.div 
+      <motion.div
         initial={{ opacity: 0, x: 20, y: -20 }}
         animate={{ opacity: 1, x: 0, y: 0 }}
         transition={{ duration: 0.8, ease: "easeOut" }}
@@ -30,32 +30,32 @@ const SMSPreviewUI: React.FC = () => {
           <div className="flex flex-col items-center gap-3 flex-1">
             <div className="w-[100px] h-[100px] bg-cyan-50/50 rounded-[20px] flex items-center justify-center relative overflow-hidden border border-cyan-100">
               <div className="w-12 h-12 bg-gradient-to-br from-cyan-400 to-blue-500 rounded-full flex items-center justify-center relative z-10 shadow-lg">
-                 <ShieldCheck size={28} className="text-white" strokeWidth={2.5} />
+                <ShieldCheck size={28} className="text-white" strokeWidth={2.5} />
               </div>
             </div>
             <p className="text-sm font-semibold text-cyan-600">Security</p>
           </div>
         </div>
-        
+
         {/* Decorative routing background block (bottom right of back card) */}
         <div className="absolute -right-[15%] bottom-[10%] w-[180px] h-[80px] bg-blue-50/80 backdrop-blur-sm border border-blue-100 rounded-2xl z-[-1] flex items-center justify-end pr-4">
-           <div className="flex flex-col gap-1.5 items-start pl-8">
-              <div className="flex items-center gap-1 text-purple-400"><ArrowRight size={12} strokeWidth={3}/><Radio size={14} strokeWidth={3}/></div>
-              <div className="flex items-center gap-1 text-blue-600"><ArrowRight size={12} strokeWidth={3}/><Radio size={14} strokeWidth={3}/></div>
-              <div className="flex items-center gap-1 text-cyan-400"><ArrowRight size={12} strokeWidth={3}/><Radio size={14} strokeWidth={3}/></div>
-           </div>
+          <div className="flex flex-col gap-1.5 items-start pl-8">
+            <div className="flex items-center gap-1 text-purple-400"><ArrowRight size={12} strokeWidth={3} /><Radio size={14} strokeWidth={3} /></div>
+            <div className="flex items-center gap-1 text-blue-600"><ArrowRight size={12} strokeWidth={3} /><Radio size={14} strokeWidth={3} /></div>
+            <div className="flex items-center gap-1 text-cyan-400"><ArrowRight size={12} strokeWidth={3} /><Radio size={14} strokeWidth={3} /></div>
+          </div>
         </div>
       </motion.div>
 
       {/* Front Card: SMS API Messaging */}
-      <motion.div 
+      <motion.div
         initial={{ opacity: 0, x: -20, y: 20 }}
         animate={{ opacity: 1, x: 0, y: 0 }}
         transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
         className="absolute left-[5%] lg:left-[5%] bottom-[5%] w-[380px] bg-white rounded-[24px] shadow-[0_20px_50px_rgba(37,99,235,0.12)] border border-blue-100 p-6 z-10"
       >
         <h3 className="font-extrabold text-slate-900 text-[20px] mb-6 text-center tracking-tight">SMS API Messaging</h3>
-        
+
         {/* Message Bubble */}
         <div className="relative bg-slate-50 rounded-2xl p-4 mb-8 border border-slate-100 shadow-sm">
           <div className="flex items-start gap-4">
@@ -63,7 +63,7 @@ const SMSPreviewUI: React.FC = () => {
               <span className="text-white font-bold text-lg leading-none mt-0.5">₹</span>
             </div>
             <p className="text-[15px] text-slate-700 font-medium leading-relaxed">
-              Your OTP is 123456. Valid<br/>for 5 mins. ₹0.50 charge.
+              Your OTP is 123456. Valid<br />for 5 mins. ₹0.50 charge.
             </p>
           </div>
 
@@ -95,9 +95,9 @@ const SMSPreviewUI: React.FC = () => {
               </div>
             </div>
           </div>
-          
+
           {/* Arrow Circle */}
-          <motion.div 
+          <motion.div
             whileHover={{ scale: 1.1 }}
             className="absolute right-[-40px] top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-gradient-to-r from-blue-600 to-indigo-600 flex items-center justify-center shadow-[0_4px_20px_rgba(37,99,235,0.4)] cursor-pointer"
           >

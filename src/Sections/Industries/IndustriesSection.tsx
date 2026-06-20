@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ShieldCheck, HeartPulse, ShoppingCart, GraduationCap, Building2, Truck, Smartphone } from "lucide-react";
 
@@ -17,6 +17,11 @@ const industries = [
       title: "Secure OTP Notification",
       body: "Vialogue Bank: Your security code is 840291. Valid for 3 minutes. Do not share this OTP.",
       sender: "BANKSEC",
+    },
+    theme: {
+      bg: "bg-blue-100",
+      text: "text-blue-800",
+      border: "border-blue-200",
     }
   },
   {
@@ -31,6 +36,11 @@ const industries = [
       title: "Clinic Reminder",
       body: "Hi Jane, your dental consult is tomorrow at 10:00 AM. Reply 1 to CONFIRM or 2 to RESCHEDULE.",
       sender: "MEDCARE",
+    },
+    theme: {
+      bg: "bg-emerald-100",
+      text: "text-emerald-800",
+      border: "border-emerald-200",
     }
   },
   {
@@ -45,6 +55,11 @@ const industries = [
       title: "Shipping Alert",
       body: "Your Vialogue Shop order #9480 has been shipped! Track delivery: https://vialogue.in/track/9480",
       sender: "SHOPPING",
+    },
+    theme: {
+      bg: "bg-amber-100",
+      text: "text-amber-800",
+      border: "border-amber-200",
     }
   },
   {
@@ -59,6 +74,11 @@ const industries = [
       title: "Campus Notification",
       body: "Dear Parent, the mid-term exam schedule has been published. View PDF online: https://vialogue.in/exams",
       sender: "ACADEMY",
+    },
+    theme: {
+      bg: "bg-purple-100",
+      text: "text-purple-800",
+      border: "border-purple-200",
     }
   },
   {
@@ -73,6 +93,11 @@ const industries = [
       title: "Property Viewing",
       body: "Hi Mark, your viewing for Apartment 4B is set for Saturday 2:00 PM. Meet agent Sarah: +1234567890.",
       sender: "ESTATES",
+    },
+    theme: {
+      bg: "bg-cyan-100",
+      text: "text-cyan-800",
+      border: "border-cyan-200",
     }
   },
   {
@@ -87,14 +112,36 @@ const industries = [
       title: "Courier Dispatch",
       body: "Package out for delivery today. Driver John is arriving shortly. Share delivery PIN: 5829.",
       sender: "LOGISTICS",
+    },
+    theme: {
+      bg: "bg-rose-100",
+      text: "text-rose-800",
+      border: "border-rose-200",
     }
   },
 ];
 
 export default function IndustriesSection() {
   const [activeTab, setActiveTab] = useState(0);
+  const [isAutoPlay, setIsAutoPlay] = useState(true);
 
-  const activeInd = industries[activeTab];
+  // Auto switch industries tabs
+  useEffect(() => {
+    if (!isAutoPlay) return;
+
+    const interval = setInterval(() => {
+      setActiveTab((prev) => (prev + 1) % industries.length);
+    }, 6000);
+
+    return () => clearInterval(interval);
+  }, [isAutoPlay]);
+
+  const handleTabClick = (idx: number) => {
+    setIsAutoPlay(false);
+    setActiveTab(idx);
+  };
+
+  const activeInd = industries[activeTab] as typeof industries[0] & { theme: { bg: string; text: string; border: string } };
   const IconActive = activeInd.icon;
 
   return (
@@ -123,23 +170,26 @@ export default function IndustriesSection() {
           <div className="lg:col-span-5 space-y-3">
             {industries.map((item, idx) => {
               const IndIcon = item.icon;
+              const isActive = activeTab === idx;
               return (
                 <button
                   key={item.id}
-                  onClick={() => setActiveTab(idx)}
+                  onClick={() => handleTabClick(idx)}
                   className={`w-full text-left flex items-center gap-4 px-6 py-4 rounded-2xl border transition-all duration-300 cursor-pointer ${
-                    activeTab === idx
-                      ? "bg-slate-50 border-brand-purple text-slate-900 shadow-sm"
-                      : "bg-transparent border-slate-200/60 text-slate-600 font-medium hover:text-slate-900 hover:border-slate-300"
+                    isActive
+                      ? "bg-slate-50 border-slate-900 text-slate-900 shadow-sm"
+                      : "bg-transparent border-slate-200/60 text-slate-600 font-medium hover:text-slate-900 hover:border-slate-350"
                   }`}
                 >
-                  <span className={`p-2.5 rounded-xl transition-colors ${
-                    activeTab === idx ? "bg-gradient-to-br from-[#7C3AED] to-purple-400 text-white shadow-md shadow-purple-200/50" : "bg-slate-100 text-slate-500"
+                  <span className={`p-2.5 rounded-xl transition-all duration-300 ${
+                    isActive
+                      ? `${item.theme.bg} ${item.theme.text} border ${item.theme.border} shadow-sm scale-105`
+                      : "bg-slate-100 text-slate-500 border border-transparent"
                   }`}>
                     <IndIcon size={20} />
                   </span>
                   <div>
-                    <h3 className="font-bold text-sm sm:text-base">{item.name}</h3>
+                    <h3 className={`font-bold text-sm sm:text-base ${isActive ? "text-slate-900" : "text-slate-600"}`}>{item.name}</h3>
                   </div>
                 </button>
               );
@@ -165,25 +215,25 @@ export default function IndustriesSection() {
                   <div className="space-y-4">
                     {/* Header */}
                     <div className="flex items-center gap-3">
-                      <span className="p-3 rounded-2xl bg-gradient-to-br from-[#7C3AED] to-purple-400 text-white shadow-md shadow-purple-200/50">
+                      <span className={`p-3 rounded-2xl ${activeInd.theme.bg} ${activeInd.theme.text} border ${activeInd.theme.border} shadow-sm`}>
                         <IconActive size={24} />
                       </span>
                       <h3 className="text-xl sm:text-2xl font-extrabold text-slate-950 uppercase">{activeInd.title}</h3>
                     </div>
 
                     {/* Description */}
-                    <p className="text-slate-700 text-sm sm:text-base font-normal leading-relaxed">
+                    <p className="text-slate-750 text-sm sm:text-base font-normal leading-relaxed">
                       {activeInd.description}
                     </p>
 
                     {/* Stats Metric */}
                     <div className="pt-2 flex flex-wrap gap-6">
                       <div className="bg-slate-50 px-4 py-2.5 rounded-xl border border-slate-200">
-                        <span className="text-xs text-slate-600 font-medium block mb-0.5">Key Stat</span>
-                        <span className="text-sm font-bold text-brand-purple">{activeInd.stats}</span>
+                        <span className="text-xs text-slate-650 font-medium block mb-0.5">Key Stat</span>
+                        <span className={`text-sm font-bold ${activeInd.theme.text}`}>{activeInd.stats}</span>
                       </div>
                       <div className="bg-slate-50 px-4 py-2.5 rounded-xl border border-slate-200">
-                        <span className="text-xs text-slate-600 font-medium block mb-0.5">Use Cases</span>
+                        <span className="text-xs text-slate-650 font-medium block mb-0.5">Use Cases</span>
                         <span className="text-xs text-slate-800 block font-normal">{activeInd.useCase}</span>
                       </div>
                     </div>
@@ -192,7 +242,7 @@ export default function IndustriesSection() {
                   {/* Visual mockup of phone notification */}
                   <div className="mt-8 border-t border-slate-200 pt-6">
                     <div className="max-w-md bg-slate-50 rounded-2xl border border-slate-200 p-4 shadow-sm flex gap-3 items-start">
-                      <span className="p-2.5 rounded-xl bg-gradient-to-br from-[#7C3AED] to-purple-400 text-white shadow-md shadow-purple-200/50 border-none">
+                      <span className={`p-2.5 rounded-xl ${activeInd.theme.bg} ${activeInd.theme.text} border ${activeInd.theme.border} shadow-sm`}>
                         <Smartphone size={18} />
                       </span>
                       <div className="flex-1 space-y-1">

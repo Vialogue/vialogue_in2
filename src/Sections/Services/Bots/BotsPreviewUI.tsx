@@ -5,7 +5,7 @@ import { motion, AnimatePresence, Variants } from "framer-motion";
 import { Sparkles, MessageSquare, Send, CheckCircle2, Award, Heart } from "lucide-react";
 
 const BotsPreviewUI: React.FC = () => {
-  const [step, setStep] = useState(0); 
+  const [step, setStep] = useState(0);
   const [progress, setProgress] = useState(0);
 
   useEffect(() => {
@@ -58,13 +58,13 @@ const BotsPreviewUI: React.FC = () => {
 
   return (
     <div className="relative w-full h-[440px] flex items-center justify-center font-sans mt-0 lg:-mt-6 select-none overflow-visible">
-      
+
       {/* Background Glow */}
       <div className="absolute w-[300px] h-[300px] rounded-full bg-purple-200/25 blur-3xl pointer-events-none" />
 
       {/* Scaling Container to prevent mobile overflow */}
       <div className="relative w-full h-full max-w-[420px] scale-[0.8] xxs:scale-[0.88] xs:scale-[0.95] sm:scale-100 flex items-center justify-center origin-center">
-        
+
         {/* Main Console Card */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -87,7 +87,7 @@ const BotsPreviewUI: React.FC = () => {
 
           {/* Campaign Settings Pane */}
           <div className="p-4 flex-1 flex flex-col gap-4 bg-slate-50/50">
-            
+
             {/* Field 1: Campaign details */}
             <div className="bg-white rounded-xl p-3 border border-slate-100 shadow-sm flex items-center justify-between text-[11px]">
               <div>
@@ -133,7 +133,7 @@ const BotsPreviewUI: React.FC = () => {
               {step === 1 && (
                 <div className="flex items-center justify-between">
                   <span className="text-[12px] font-bold text-slate-500">Ready to broadcast campaign?</span>
-                  <motion.button 
+                  <motion.button
                     animate={{ scale: 0.95 }}
                     className="px-3.5 py-1.5 bg-purple-700 text-white font-extrabold text-[11px] rounded-lg shadow-md"
                   >
@@ -149,7 +149,7 @@ const BotsPreviewUI: React.FC = () => {
                     <span>{progress}%</span>
                   </div>
                   <div className="w-full h-2 bg-slate-100 rounded-full overflow-hidden">
-                    <motion.div 
+                    <motion.div
                       className="h-full bg-gradient-to-r from-purple-500 to-indigo-600"
                       style={{ width: `${progress}%` }}
                     />

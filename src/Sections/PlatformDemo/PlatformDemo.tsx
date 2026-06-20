@@ -122,12 +122,40 @@ export default function PlatformDemo() {
 
           {/* RIGHT: Visual Console Display */}
           <div className="lg:col-span-8">
-            <div className="glass-panel border border-slate-200/80 rounded-3xl p-6 sm:p-8 min-h-[400px] flex flex-col justify-between relative overflow-hidden shadow-xl h-full">
+            <div className="glass-panel border border-slate-200/80 rounded-3xl p-6 sm:p-8 h-full flex flex-col justify-between relative overflow-hidden shadow-xl">
               
               {/* Top controls mockup */}
-              <div className="flex items-center gap-2 pb-4 border-b border-slate-300 mb-6 text-xs text-slate-600 font-mono font-medium">
-                <span className="w-2.5 h-2.5 rounded-full bg-slate-400" />
-                <span>VIALOGUE CONTROL HUB // {activeTab.toUpperCase()}</span>
+              <div className="flex items-center justify-between pb-4 border-b border-slate-200 mb-6 text-xs font-medium">
+                {/* Left side: Dots and Title */}
+                <div className="flex items-center gap-3">
+                  <div className="flex items-center gap-1.5 select-none">
+                    <span className="w-2.5 h-2.5 rounded-full bg-[#FF5F56] border border-[#E0443E]" />
+                    <span className="w-2.5 h-2.5 rounded-full bg-[#FFBD2E] border border-[#DEA123]" />
+                    <span className="w-2.5 h-2.5 rounded-full bg-[#27C93F] border border-[#1AAB29]" />
+                  </div>
+                  <div className="h-3.5 w-[1px] bg-slate-200 mx-1" />
+                  <span className="font-extrabold text-slate-900 tracking-wider uppercase text-[10px] sm:text-xs">
+                    VIALOGUE CONTROL HUB
+                  </span>
+                  <span className="text-slate-400 font-mono text-[9px] sm:text-[11px] font-normal">
+                    // {activeTab.toUpperCase()}
+                  </span>
+                </div>
+
+                {/* Right side: Status and Mock Address Info */}
+                <div className="flex items-center gap-2.5">
+                  <div className="hidden md:flex items-center gap-1.5 px-3 py-1 bg-slate-100/80 border border-slate-200/50 rounded-full font-mono text-[9px] text-slate-500">
+                    <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" />
+                    <span>console.vialogue.in/{activeTab}</span>
+                  </div>
+                  <span className="px-2 py-0.5 rounded-md bg-emerald-50 border border-emerald-200 text-emerald-700 text-[9px] font-extrabold tracking-wider uppercase flex items-center gap-1 select-none">
+                    <span className="w-1 h-1 rounded-full bg-emerald-500 animate-pulse" />
+                    Connected
+                  </span>
+                  <span className="hidden sm:inline-block px-2 py-0.5 rounded-md bg-purple-50 border border-purple-250/60 text-[#8141EF] text-[9px] font-bold tracking-wider uppercase font-mono select-none">
+                    v1.0.4
+                  </span>
+                </div>
               </div>
 
               <AnimatePresence mode="wait">
@@ -137,37 +165,70 @@ export default function PlatformDemo() {
                     initial={{ opacity: 0, scale: 0.98 }}
                     animate={{ opacity: 1, scale: 1 }}
                     exit={{ opacity: 0, scale: 0.98 }}
-                    className="flex-1 flex flex-col justify-center gap-4 py-4"
+                    className="flex-1 flex flex-col justify-between gap-4 py-4"
                   >
+                    {/* Execution Meta Header */}
+                    <div className="flex justify-between items-center text-[10px] sm:text-xs text-slate-500 font-mono border-b border-slate-200 pb-3">
+                      <div className="flex items-center gap-2">
+                        <span className="w-1.5 h-1.5 rounded-full bg-brand-purple" />
+                        <span>WORKFLOW ID: <strong className="text-slate-800 font-bold">wf_user_verification</strong></span>
+                      </div>
+                      <div className="flex items-center gap-1.5">
+                        <span>Status:</span>
+                        <span className="text-emerald-600 font-extrabold flex items-center gap-1.5">
+                          <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" />
+                          ACTIVE RUN
+                        </span>
+                      </div>
+                    </div>
+
                     {/* Visual Node Diagram */}
-                    <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-                      {/* Node 1 */}
-                      <div className="bg-white border-2 border-slate-300 px-4 py-3 rounded-xl text-center text-xs w-40 shadow-sm">
-                        <span className="text-slate-600 font-medium block mb-0.5">Trigger Event</span>
-                        <span className="font-extrabold text-slate-950 uppercase">User Signed Up</span>
-                      </div>
-                      
-                      {/* Arrow */}
-                      <span className="text-slate-500 font-bold font-mono text-lg rotate-90 sm:rotate-0">→</span>
-
-                      {/* Node 2 */}
-                      <div className="bg-purple-50 border-2 border-[#7C3AED]/60 px-4 py-3 rounded-xl text-center text-xs w-44 shadow-sm">
-                        <span className="text-[#7C3AED] block mb-0.5 font-bold">1st Attempt</span>
-                        <span className="font-extrabold text-slate-950 uppercase">WhatsApp Message</span>
-                      </div>
-
-                      {/* Arrow */}
-                      <span className="text-slate-500 font-bold font-mono text-lg rotate-90 sm:rotate-0">→</span>
-
-                      {/* Node 3 */}
-                      <div className="bg-slate-50 border-2 border-slate-300 px-4 py-3 rounded-xl text-xs w-48 space-y-1.5 shadow-sm">
-                        <div className="flex justify-between items-center text-xs text-slate-600 font-medium">
-                          <span>Status Check</span>
-                          <span className="text-amber-600 animate-pulse font-bold">Pending</span>
+                    <div className="flex-1 flex flex-col justify-center my-2">
+                      <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+                        {/* Node 1 */}
+                        <div className="bg-white border-2 border-slate-300 px-4 py-3 rounded-xl text-center text-xs w-40 shadow-sm">
+                          <span className="text-slate-600 font-medium block mb-0.5">Trigger Event</span>
+                          <span className="font-extrabold text-slate-950 uppercase">User Signed Up</span>
                         </div>
-                        <div className="text-xs text-slate-800 font-medium">
-                          Offline? → <span className="text-[#7C3AED] font-bold">SMS Fallback</span>
+                        
+                        {/* Arrow */}
+                        <span className="text-slate-500 font-bold font-mono text-lg rotate-90 sm:rotate-0">→</span>
+
+                        {/* Node 2 */}
+                        <div className="bg-purple-50 border-2 border-[#7C3AED]/60 px-4 py-3 rounded-xl text-center text-xs w-44 shadow-sm">
+                          <span className="text-[#7C3AED] block mb-0.5 font-bold">1st Attempt</span>
+                          <span className="font-extrabold text-slate-950 uppercase">WhatsApp Message</span>
                         </div>
+
+                        {/* Arrow */}
+                        <span className="text-slate-500 font-bold font-mono text-lg rotate-90 sm:rotate-0">→</span>
+
+                        {/* Node 3 */}
+                        <div className="bg-slate-50 border-2 border-slate-300 px-4 py-3 rounded-xl text-xs w-48 space-y-1.5 shadow-sm">
+                          <div className="flex justify-between items-center text-xs text-slate-605 font-medium">
+                            <span>Status Check</span>
+                            <span className="text-amber-600 animate-pulse font-bold">Pending</span>
+                          </div>
+                          <div className="text-xs text-slate-800 font-medium">
+                            Offline? → <span className="text-[#7C3AED] font-bold">SMS Fallback</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* Compact Audit Trail Terminal */}
+                    <div className="bg-slate-900 border border-slate-800 rounded-xl p-2.5 font-mono text-[9px] text-slate-400 space-y-1 select-none text-left leading-normal">
+                      <div className="flex justify-between text-slate-500 border-b border-slate-850 pb-1 mb-1 font-bold">
+                        <span>AUDIT LOGS</span>
+                        <span className="text-emerald-500 font-extrabold">LIVE</span>
+                      </div>
+                      <div className="flex gap-2">
+                        <span className="text-slate-500">[14:32:00]</span>
+                        <span className="text-slate-300">Trigger: signup validated.</span>
+                      </div>
+                      <div className="flex gap-2 text-emerald-400">
+                        <span className="text-slate-500">[14:32:02]</span>
+                        <span>DELIVERED: WhatsApp message (45ms).</span>
                       </div>
                     </div>
                   </motion.div>
@@ -179,36 +240,59 @@ export default function PlatformDemo() {
                     initial={{ opacity: 0, scale: 0.98 }}
                     animate={{ opacity: 1, scale: 1 }}
                     exit={{ opacity: 0, scale: 0.98 }}
-                    className="flex-1 flex flex-col justify-center space-y-6"
+                    className="flex-1 flex flex-col justify-between gap-4 py-4"
                   >
+                    {/* Execution Meta Header */}
+                    <div className="flex justify-between items-center text-[10px] sm:text-xs text-slate-500 font-mono border-b border-slate-200 pb-3">
+                      <div className="flex items-center gap-2">
+                        <span className="w-1.5 h-1.5 rounded-full bg-emerald-500" />
+                        <span>CAMPAIGN ID: <strong className="text-slate-800 font-bold">cmp_launch_alert_2026</strong></span>
+                      </div>
+                      <div className="flex items-center gap-1.5">
+                        <span>Schedule:</span>
+                        <span className="text-slate-700 font-bold">Completed (100%)</span>
+                      </div>
+                    </div>
+
                     {/* Stats Mockup Grid */}
                     <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
                       <div className="bg-slate-50 p-4 rounded-xl border border-slate-200">
-                        <span className="text-xs text-slate-600 block font-medium uppercase">Recipients</span>
+                        <span className="text-xs text-slate-650 block font-medium uppercase">Recipients</span>
                         <span className="text-lg font-extrabold text-slate-950">48,204</span>
                       </div>
                       <div className="bg-slate-50 p-4 rounded-xl border border-slate-200">
-                        <span className="text-xs text-slate-600 block font-medium uppercase">Delivered</span>
+                        <span className="text-xs text-slate-650 block font-medium uppercase">Delivered</span>
                         <span className="text-lg font-bold text-emerald-600">99.8%</span>
                       </div>
                       <div className="bg-slate-50 p-4 rounded-xl border border-slate-200">
-                        <span className="text-xs text-slate-600 block font-medium uppercase">Read Rate</span>
+                        <span className="text-xs text-slate-650 block font-medium uppercase">Read Rate</span>
                         <span className="text-lg font-bold text-brand-purple">84.2%</span>
                       </div>
                       <div className="bg-slate-50 p-4 rounded-xl border border-slate-200">
-                        <span className="text-xs text-slate-600 block font-medium uppercase">CTR</span>
+                        <span className="text-xs text-slate-655 block font-medium uppercase">CTR</span>
                         <span className="text-lg font-bold text-brand-purple">22.5%</span>
                       </div>
                     </div>
 
-                    {/* Progress Bar campaign preview */}
-                    <div className="space-y-2">
-                      <div className="flex justify-between text-xs text-slate-700 font-medium">
-                        <span>Campaign: Product Launch Alert</span>
-                        <span>Completed (100%)</span>
+                    {/* Progress Bar & Campaign preview */}
+                    <div className="space-y-4 pt-1">
+                      <div className="space-y-2">
+                        <div className="flex justify-between text-xs text-slate-700 font-medium">
+                          <span>Campaign: Product Launch Alert</span>
+                          <span>Completed (100%)</span>
+                        </div>
+                        <div className="w-full bg-slate-100 h-2 rounded-full overflow-hidden">
+                          <div className="bg-gradient-to-r from-[#7C3AED] to-purple-400 h-full w-full" />
+                        </div>
                       </div>
-                      <div className="w-full bg-slate-100 h-2 rounded-full overflow-hidden">
-                        <div className="bg-gradient-to-r from-[#7C3AED] to-purple-400 h-full w-full" />
+
+                      {/* Compact Channel Indicators flex pill */}
+                      <div className="flex justify-between items-center text-[9px] text-slate-500 bg-slate-50 border border-slate-200/60 rounded-xl px-3 py-2 font-mono select-none">
+                        <span>WhatsApp: <strong className="text-[#075E54]">34,180 (70.9%)</strong></span>
+                        <span className="text-slate-350">|</span>
+                        <span>SMS: <strong className="text-blue-700">12,084 (25.1%)</strong></span>
+                        <span className="text-slate-350">|</span>
+                        <span>RCS: <strong className="text-purple-700">1,940 (4.0%)</strong></span>
                       </div>
                     </div>
                   </motion.div>

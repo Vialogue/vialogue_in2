@@ -53,7 +53,7 @@ export default function CTASection() {
 
             {/* Button */}
             <div className="pt-4">
-              <Link href="/contact" className="group inline-flex items-center gap-2.5 px-8 py-4 rounded-xl bg-white text-gray-900 font-bold hover:bg-[#00E5FF] hover:text-gray-950 transition-all duration-300 shadow-xl shadow-indigo-950/20 hover:shadow-[0_0_30px_rgba(0,229,255,0.6)] active:scale-95">
+              <Link href="/contact" className="group inline-flex items-center gap-2.5 px-8 py-4 rounded-xl bg-white text-gray-900 font-bold hover:bg-brand-purple hover:text-white transition-all duration-300 shadow-xl shadow-indigo-950/20 hover:shadow-[0_0_30px_rgba(124,58,237,0.6)] active:scale-95">
                 Schedule Demo <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
               </Link>
             </div>

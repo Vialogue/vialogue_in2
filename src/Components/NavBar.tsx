@@ -185,22 +185,16 @@ const NavBar = () => {
       path: "/agent",
     },
     {
-      label: "Scalable API",
+      label: "Integration API",
       desc: "Connect CRM and automation tools",
       icon: Link,
-      path: "/third",
+      path: "/integrate-api",
     },
     {
       label: "Bots",
       desc: "Create and automate messaging campaigns",
       icon: Megaphone,
       path: "/bots",
-    },
-    {
-      label: "Conversation Tools",
-      desc: "Track leads and improve Conversations",
-      icon: Zap,
-      path: "/conversation",
     },
   ];
 

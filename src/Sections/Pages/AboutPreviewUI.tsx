@@ -7,12 +7,12 @@ import { MessageSquare, TrendingUp, Users, Smartphone, Globe } from "lucide-reac
 const AboutPreviewUI: React.FC = () => {
   return (
     <div className="relative w-full h-[400px] flex items-center justify-center font-sans mt-0 lg:-mt-6 lg:ml-8">
-      
+
       {/* Background glow */}
       <div className="absolute inset-0 bg-gradient-to-r from-[#7C3AED]/10 to-[#F9A8D4]/10 blur-[80px] rounded-full pointer-events-none"></div>
 
       {/* Main Growth Card */}
-      <motion.div 
+      <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
@@ -29,7 +29,7 @@ const AboutPreviewUI: React.FC = () => {
             </div>
           </div>
         </div>
-        
+
         {/* Mock Chart */}
         <div className="w-full h-28 flex items-end gap-3 justify-between mt-2 border-b border-slate-100 pb-2">
           {[35, 55, 45, 75, 60, 90, 110].map((height, i) => (
@@ -38,11 +38,10 @@ const AboutPreviewUI: React.FC = () => {
               initial={{ height: 0 }}
               animate={{ height: `${height}%` }}
               transition={{ duration: 1, delay: i * 0.1 }}
-              className={`w-full rounded-t-md ${
-                i === 6 
-                  ? 'bg-gradient-to-t from-[#7C3AED] to-[#F9A8D4] shadow-md shadow-purple-200' 
-                  : 'bg-slate-100'
-              }`}
+              className={`w-full rounded-t-md transition-all duration-350 ${i === 6
+                  ? 'bg-gradient-to-t from-[#7C3AED] to-[#F9A8D4] shadow-md shadow-purple-200'
+                  : 'bg-gradient-to-t from-[#7C3AED]/20 to-[#F9A8D4]/20 border border-purple-100/20 hover:from-[#7C3AED]/30 hover:to-[#F9A8D4]/30'
+                }`}
             />
           ))}
         </div>
@@ -71,7 +70,7 @@ const AboutPreviewUI: React.FC = () => {
             <p className="text-[11px] text-slate-500 font-medium">Global Infrastructure</p>
           </div>
         </div>
-        
+
         {/* Channels */}
         <div className="flex gap-2">
           <div className="flex-1 py-1.5 bg-blue-50 text-blue-600 rounded-md text-[10px] font-bold text-center">SMS</div>

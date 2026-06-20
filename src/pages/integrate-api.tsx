@@ -13,7 +13,7 @@ import IntegrationsCapabilities from "@/Sections/Services/Third/IntegrationsCapa
 import IntegrationsBusinessBenefits from "@/Sections/Services/Third/IntegrationsBusinessBenefits";
 import IntegrationsUseCases from "@/Sections/Services/Third/IntegrationsUseCases";
 
-export default function Third() {
+export default function IntegrateApi() {
   return (
     <div className="bg-white sm:text-left text-center">
       <NavBar />

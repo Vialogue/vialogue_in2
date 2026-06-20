@@ -18,12 +18,12 @@ const data = [
     link: "/agent",
   },
   {
-    title: "Scalable API",
+    title: "Integration API",
     description:
       "Connect seamlessly with CRMs and automation tools to sync customer data and workflows.",
     type: 2 as const,
     img: "./imgs/hm/img2.png",
-    link: "/third",
+    link: "/integrate-api",
   },
   {
     title: "Bots",
@@ -32,14 +32,6 @@ const data = [
     type: 3 as const,
     img: "./imgs/hm/img3.png",
     link: "/campaign",
-  },
-  {
-    title: "Conversation Tools",
-    description:
-      "Track leads, monitor customer interactions and optimize campaigns to improve Conversations.",
-    type: 4 as const,
-    img: "./imgs/hm/img4.png",
-    link: "/Conversation",
   },
 ];
 

@@ -12,6 +12,7 @@ export interface FeatureItem {
   title: string;
   desc: string;
   img: string;
+  icon?: React.ComponentType<{ size?: number; className?: string }>;
 }
 
 interface Props {
@@ -22,15 +23,15 @@ interface Props {
 }
 
 const iconColors = [
-  "bg-blue-600 shadow-blue-200/50",
-  "bg-emerald-600 shadow-emerald-200/50",
-  "bg-[#884CED] shadow-purple-200/50",
-  "bg-amber-600 shadow-amber-200/50",
-  "bg-rose-600 shadow-rose-200/50",
-  "bg-cyan-600 shadow-cyan-200/50",
-  "bg-indigo-600 shadow-indigo-200/50",
-  "bg-orange-500 shadow-orange-200/50",
-  "bg-teal-600 shadow-teal-200/50",
+  { bg: "bg-blue-100", text: "text-blue-900", border: "border-blue-200" },
+  { bg: "bg-emerald-100", text: "text-emerald-900", border: "border-emerald-200" },
+  { bg: "bg-purple-100", text: "text-purple-900", border: "border-purple-200" },
+  { bg: "bg-amber-100", text: "text-amber-900", border: "border-amber-200" },
+  { bg: "bg-rose-100", text: "text-rose-900", border: "border-rose-200" },
+  { bg: "bg-cyan-100", text: "text-cyan-900", border: "border-cyan-200" },
+  { bg: "bg-indigo-100", text: "text-indigo-900", border: "border-indigo-200" },
+  { bg: "bg-orange-100", text: "text-orange-900", border: "border-orange-200" },
+  { bg: "bg-teal-100", text: "text-teal-900", border: "border-teal-200" },
 ];
 
 const AnimatedFeatureGrid: React.FC<Props> = ({
@@ -98,8 +99,8 @@ const AnimatedFeatureGrid: React.FC<Props> = ({
               }}
               className="glass-card p-6 rounded-2xl border border-slate-200/60 flex flex-col items-start hover:-translate-y-1 transition-transform duration-300 group bg-white shadow-[0_4px_20px_rgba(15,23,42,0.04)] hover:shadow-[0_8px_30px_rgba(124,58,237,0.1)]"
             >
-              <div className={`text-white p-3 rounded-xl shadow-md mb-5 group-hover:scale-110 transition-transform ${iconColors[i % iconColors.length]}`}>
-                <Layers size={20} />
+              <div className={`p-3 rounded-xl mb-5 border shadow-sm group-hover:scale-110 transition-transform ${iconColors[i % iconColors.length].bg} ${iconColors[i % iconColors.length].text} ${iconColors[i % iconColors.length].border}`}>
+                {item.icon ? <item.icon size={20} /> : <Layers size={20} />}
               </div>
               <h3 className="card-title text-lg font-bold text-slate-900 mb-2">
                 {item.title}

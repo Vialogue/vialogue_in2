@@ -9,7 +9,7 @@ const solutions = [
     description: "High-deliverability bulk SMS campaigns, alerts, and customer notifications via direct carrier routing.",
     icon: MessageSquare,
     link: "/sms",
-    color: "bg-blue-600 text-white shadow-blue-200/50",
+    color: "bg-blue-100 text-blue-800 border border-blue-200 shadow-[0_4px_12px_rgba(37,99,235,0.05)]",
     badge: null,
     features: [
       "Direct carrier network routes",
@@ -22,7 +22,7 @@ const solutions = [
     description: "Connect verified brand accounts to automate customer service, send orders, and trigger marketing flows.",
     icon: MessageCircle,
     link: "/whatsapp",
-    color: "bg-emerald-600 text-white shadow-emerald-200/50",
+    color: "bg-emerald-100 text-emerald-800 border border-emerald-200 shadow-[0_4px_12px_rgba(5,150,105,0.05)]",
     badge: "Popular",
     features: [
       "Official green verified badge support",
@@ -35,7 +35,7 @@ const solutions = [
     description: "Next-gen rich texting with verified sender profiles, interactive buttons, and high-engagement media carousels.",
     icon: Send,
     link: "/rcs",
-    color: "bg-[#884CED] text-white shadow-purple-200/50",
+    color: "bg-purple-100 text-purple-800 border border-purple-200 shadow-[0_4px_12px_rgba(136,76,237,0.05)]",
     badge: "Next-Gen",
     features: [
       "Rich media and interactive cards",
@@ -48,7 +48,7 @@ const solutions = [
     description: "Ultra-fast authentication delivery with automated SMS fallback routing and multi-channel failover protection.",
     icon: Key,
     link: "/contact",
-    color: "bg-amber-600 text-white shadow-amber-200/50",
+    color: "bg-amber-100 text-amber-800 border border-amber-200 shadow-[0_4px_12px_rgba(217,119,6,0.05)]",
     badge: "Sub-3s Delivery",
     features: [
       "Anti-fraud validation controls",
@@ -61,7 +61,7 @@ const solutions = [
     description: "Plan, schedule, and orchestrate customer outreach campaigns across channels using smart segment filters.",
     icon: Megaphone,
     link: "/bots",
-    color: "bg-rose-600 text-white shadow-rose-200/50",
+    color: "bg-rose-100 text-rose-800 border border-rose-200 shadow-[0_4px_12px_rgba(225,29,72,0.05)]",
     badge: null,
     features: [
       "Visual multi-channel flow designer",
@@ -74,7 +74,7 @@ const solutions = [
     description: "Empower support teams with automated agent assist tools, NLP response bots, and live agent escalations.",
     icon: Bot,
     link: "/agent",
-    color: "bg-cyan-600 text-white shadow-cyan-200/50",
+    color: "bg-cyan-100 text-cyan-800 border border-cyan-200 shadow-[0_4px_12px_rgba(8,145,178,0.05)]",
     badge: null,
     features: [
       "Instant FAQ response automation",
@@ -117,7 +117,7 @@ export default function ProductSolutions() {
                 <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-[#7C3AED] to-[#F9A8D4] opacity-0 group-hover:opacity-100 transition-all duration-300"></div>
 
                 {/* Icon */}
-                <div className={`w-16 h-16 rounded-2xl flex items-center justify-center mb-6 shadow-lg ${item.color}`}>
+                <div className={`w-16 h-16 rounded-2xl flex items-center justify-center mb-6 transition-all duration-300 group-hover:scale-110 ${item.color}`}>
                   <Icon size={28} strokeWidth={2} />
                 </div>
 

@@ -39,7 +39,7 @@ export default function ContactUs() {
           <div className="grid md:grid-cols-5">
 
             {/* LEFT PANEL */}
-            <div className="md:col-span-2 relative bg-gradient-to-br from-[#7C3AED] to-[#F9A8D4] p-8 sm:p-12 text-white h-full flex flex-col justify-between overflow-hidden">
+            <div className="md:col-span-2 relative bg-[#7C3AED] p-8 sm:p-12 text-white h-full flex flex-col justify-between overflow-hidden">
               {/* Background elements */}
               <div className="absolute top-[-10%] left-[-10%] w-[50%] h-[50%] rounded-full bg-white/10 blur-[80px] pointer-events-none" />
               <div className="absolute bottom-[-10%] right-[-10%] w-[50%] h-[50%] rounded-full bg-white/20 blur-[80px] pointer-events-none" />

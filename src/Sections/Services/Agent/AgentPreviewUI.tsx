@@ -20,7 +20,7 @@ const AgentPreviewUI: React.FC = () => {
       timestamp: "10:24 AM",
     },
   ]);
-  const [step, setStep] = useState(0); 
+  const [step, setStep] = useState(0);
   // Steps:
   // 0: Initial customer message loaded. AI scanning...
   // 1: AI panel slides in with suggested response.
@@ -110,13 +110,13 @@ const AgentPreviewUI: React.FC = () => {
 
   return (
     <div className="relative w-full h-[440px] flex items-center justify-center font-sans mt-0 lg:-mt-6 select-none overflow-visible">
-      
+
       {/* Background Glow */}
       <div className="absolute w-[300px] h-[300px] rounded-full bg-purple-200/25 blur-3xl pointer-events-none" />
 
       {/* Scaling Container to prevent mobile overflow */}
       <div className="relative w-full h-full max-w-[420px] scale-[0.8] xxs:scale-[0.88] xs:scale-[0.95] sm:scale-100 flex items-center justify-center origin-center">
-        
+
         {/* Main Chat Window Card */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -160,24 +160,21 @@ const AgentPreviewUI: React.FC = () => {
                   initial={{ opacity: 0, y: 10, scale: 0.98 }}
                   animate={{ opacity: 1, y: 0, scale: 1 }}
                   transition={{ duration: 0.35 }}
-                  className={`flex gap-2.5 max-w-[85%] ${
-                    msg.sender === "agent" ? "self-end flex-row-reverse" : "self-start"
-                  }`}
+                  className={`flex gap-2.5 max-w-[85%] ${msg.sender === "agent" ? "self-end flex-row-reverse" : "self-start"
+                    }`}
                 >
                   <div
-                    className={`w-6 h-6 rounded-full flex items-center justify-center flex-shrink-0 text-[10px] ${
-                      msg.sender === "agent" ? "bg-purple-600 text-white" : "bg-slate-200 text-slate-600"
-                    }`}
+                    className={`w-6 h-6 rounded-full flex items-center justify-center flex-shrink-0 text-[10px] ${msg.sender === "agent" ? "bg-purple-600 text-white" : "bg-slate-200 text-slate-600"
+                      }`}
                   >
                     {msg.sender === "agent" ? <Bot size={12} /> : <User size={12} />}
                   </div>
                   <div className="flex flex-col gap-1">
                     <div
-                      className={`px-3 py-2 rounded-2xl text-[12px] leading-relaxed ${
-                        msg.sender === "agent"
+                      className={`px-3 py-2 rounded-2xl text-[12px] leading-relaxed ${msg.sender === "agent"
                           ? "bg-purple-600 text-white rounded-tr-none shadow-md shadow-purple-600/10"
                           : "bg-white text-slate-700 border border-slate-100 rounded-tl-none"
-                      }`}
+                        }`}
                     >
                       {msg.text}
                     </div>

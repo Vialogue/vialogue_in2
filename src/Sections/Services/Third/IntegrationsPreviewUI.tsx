@@ -74,13 +74,13 @@ const IntegrationsPreviewUI: React.FC = () => {
 
   return (
     <div className="relative w-full h-[440px] flex items-center justify-center font-sans mt-0 lg:-mt-6 select-none overflow-visible">
-      
+
       {/* Background Glow */}
       <div className="absolute w-[300px] h-[300px] rounded-full bg-cyan-200/25 blur-3xl pointer-events-none" />
 
       {/* Scaling Container to prevent mobile overflow */}
       <div className="relative w-full h-full max-w-[420px] scale-[0.8] xxs:scale-[0.88] xs:scale-[0.95] sm:scale-100 flex items-center justify-center origin-center">
-        
+
         {/* Main Terminal Card */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -125,7 +125,7 @@ const IntegrationsPreviewUI: React.FC = () => {
           animate={step >= 1 ? "active" : "inactive"}
           className="absolute right-[-10px] sm:right-[-25px] top-[40px] bg-white rounded-2xl border border-slate-100 p-3 shadow-lg flex items-center justify-center z-20 w-12 h-12"
         >
-          <img src="/imgs/brand_1.png" alt="HubSpot" className="w-7 h-7 object-contain" onError={(e)=>{e.currentTarget.style.display='none'}} />
+          <img src="/imgs/brand_1.png" alt="HubSpot" className="w-7 h-7 object-contain" onError={(e) => { e.currentTarget.style.display = 'none' }} />
           <Database size={24} className="text-orange-500 absolute m-auto" style={{ zIndex: -1 }} />
         </motion.div>
 
@@ -135,7 +135,7 @@ const IntegrationsPreviewUI: React.FC = () => {
           animate={step >= 2 ? "active" : "inactive"}
           className="absolute right-[-10px] sm:right-[-25px] top-[140px] bg-white rounded-2xl border border-slate-100 p-3 shadow-lg flex items-center justify-center z-20 w-12 h-12"
         >
-          <img src="/imgs/brand_3.png" alt="Salesforce" className="w-7 h-7 object-contain" onError={(e)=>{e.currentTarget.style.display='none'}} />
+          <img src="/imgs/brand_3.png" alt="Salesforce" className="w-7 h-7 object-contain" onError={(e) => { e.currentTarget.style.display = 'none' }} />
           <Server size={24} className="text-blue-500 absolute m-auto" style={{ zIndex: -1 }} />
         </motion.div>
 

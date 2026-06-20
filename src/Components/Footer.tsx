@@ -1,7 +1,6 @@
 import Link from "next/link";
-import { Facebook, Linkedin, Instagram, Twitter, Youtube } from "lucide-react";
+import { Facebook, Linkedin, Instagram, Twitter } from "lucide-react";
 import Image from "next/image";
-import { FaFacebook, FaFacebookSquare, FaInstagram, FaInstagramSquare, FaLinkedin, FaTwitter, FaYoutube, FaYoutubeSquare } from "react-icons/fa";
 
 interface FooterLink {
   label: string;
@@ -30,25 +29,24 @@ const footerData: FooterSection[] = [
     span: "",
     links: [
       { label: "Agent", href: "/agent" },
-      { label: "Scalable API", href: "/third" },
+      { label: "Integration API", href: "/integrate-api" },
       { label: "Bots", href: "/bots" },
-      { label: "Conversation Tools", href: "/conversation" },
     ],
   },
   {
-  title: "Company",
-  span: "col-span-2 sm:col-span-1",
-  links: [
-    { label: "About", href: "/about" },
+    title: "Company",
+    span: "col-span-2 sm:col-span-1",
+    links: [
+      { label: "About", href: "/about" },
       { label: "Contact", href: "/contact" },
       { label: "Industry", href: "/industry" },
-  ],
-},
+    ],
+  },
 ];
 
 const Footer: React.FC = () => {
   return (
-    <footer className="bg-[#F8FAFC] border-t border-slate-200 text-slate-600 text-left sm:text-left relative z-10">
+    <footer className="bg-[#FDF6FF] border-t border-purple-100 text-slate-650 text-left sm:text-left relative z-10">
       <div className="px-4 sm:px-6 lg:px-40 py-12 lg:py-20">
 
         <div className="flex flex-col lg:flex-row gap-10 lg:gap-20 justify-between">
@@ -63,7 +61,7 @@ const Footer: React.FC = () => {
             />
             <div className="space-y-4 text-sm text-center sm:text-left">
               <div className="flex gap-3">
-                <span className="text-slate-700 w-full leading-relaxed font-light">
+                <span className="text-slate-600 w-full leading-relaxed font-light">
                   1st Floor, Landmark Cyber Park,
                   <br />
                   Sector 67, Gurugram – 122101,
@@ -98,21 +96,21 @@ const Footer: React.FC = () => {
           </div>
         </div>
 
-        <div className="border-t border-slate-200 mt-12 pt-6 flex flex-col sm:flex-row justify-between items-center sm:items-center text-sm gap-4">
+        <div className="border-t border-purple-100 mt-12 pt-6 flex flex-col sm:flex-row justify-between items-center sm:items-center text-sm gap-4">
           <div className="flex text-white gap-2 sm:gap-3 mt-8 sm:mt-0 justify-center w-fit sm:justify-left sm:max-w-[280px]">
-                <Link href="#" aria-label="Instagram" className="w-8 h-8 bg-slate-100 hover:bg-gradient-to-br hover:from-[#7C3AED] hover:to-[#F9A8D4] border border-slate-200 hover:border-transparent rounded-lg flex items-center justify-center cursor-pointer transition-all duration-300 group">
-                  <Instagram size={16} className="text-slate-500 group-hover:text-white transition-colors" />
-                </Link>
-                <Link href="#" aria-label="Twitter" className="w-8 h-8 bg-slate-100 hover:bg-gradient-to-br hover:from-[#7C3AED] hover:to-[#F9A8D4] border border-slate-200 hover:border-transparent rounded-lg flex items-center justify-center cursor-pointer transition-all duration-300 group">
-                  <Twitter size={16} className="text-slate-500 group-hover:text-white transition-colors" />
-                </Link>
-                <Link href="#" aria-label="LinkedIn" className="w-8 h-8 bg-slate-100 hover:bg-gradient-to-br hover:from-[#7C3AED] hover:to-[#F9A8D4] border border-slate-200 hover:border-transparent rounded-lg flex items-center justify-center cursor-pointer transition-all duration-300 group">
-                  <Linkedin size={16} className="text-slate-500 group-hover:text-white transition-colors" />
-                </Link>
-                <Link href="#" aria-label="Facebook" className="w-8 h-8 bg-slate-100 hover:bg-gradient-to-br hover:from-[#7C3AED] hover:to-[#F9A8D4] border border-slate-200 hover:border-transparent rounded-lg flex items-center justify-center cursor-pointer transition-all duration-300 group">
-                  <Facebook size={16} className="text-slate-500 group-hover:text-white transition-colors" />
-                </Link>
-              </div>
+            <Link href="#" aria-label="Instagram" className="w-8 h-8 bg-slate-100 hover:bg-[#8141EF] border border-slate-200 hover:border-transparent rounded-lg flex items-center justify-center cursor-pointer transition-all duration-300 group">
+              <Instagram size={16} className="text-slate-500 group-hover:text-white transition-colors" />
+            </Link>
+            <Link href="#" aria-label="Twitter" className="w-8 h-8 bg-slate-100 hover:bg-[#8141EF] border border-slate-200 hover:border-transparent rounded-lg flex items-center justify-center cursor-pointer transition-all duration-300 group">
+              <Twitter size={16} className="text-slate-500 group-hover:text-white transition-colors" />
+            </Link>
+            <Link href="#" aria-label="LinkedIn" className="w-8 h-8 bg-slate-100 hover:bg-[#8141EF] border border-slate-200 hover:border-transparent rounded-lg flex items-center justify-center cursor-pointer transition-all duration-300 group">
+              <Linkedin size={16} className="text-slate-500 group-hover:text-white transition-colors" />
+            </Link>
+            <Link href="#" aria-label="Facebook" className="w-8 h-8 bg-slate-100 hover:bg-[#8141EF] border border-slate-200 hover:border-transparent rounded-lg flex items-center justify-center cursor-pointer transition-all duration-300 group">
+              <Facebook size={16} className="text-slate-500 group-hover:text-white transition-colors" />
+            </Link>
+          </div>
           <p className="text-center sm:text-left text-slate-500">© 2026 Vialogue. All Rights Reserved.</p>
           <div className="flex gap-4 sm:gap-6 text-slate-500">
             <Link href="#" className="hover:text-slate-900 transition-colors duration-200">
