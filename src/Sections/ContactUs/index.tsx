@@ -85,18 +85,18 @@ export default function ContactUs() {
               </div>
 
               <div className="flex gap-4 mt-16 sm:mt-24 relative z-10">
-                <div className="p-2.5 w-11 h-11 bg-white/10 hover:bg-white/20 border border-white/10 rounded-xl flex items-center justify-center cursor-pointer transition-colors backdrop-blur-sm">
+                <a href="https://www.instagram.com/vialoguemedia/" target="_blank" rel="noopener noreferrer" className="p-2.5 w-11 h-11 bg-white/10 hover:bg-white/20 border border-white/10 rounded-xl flex items-center justify-center cursor-pointer transition-colors backdrop-blur-sm">
                   <Instagram size={20} className="text-white" />
-                </div>
-                <div className="p-2.5 w-11 h-11 bg-white/10 hover:bg-white/20 border border-white/10 rounded-xl flex items-center justify-center cursor-pointer transition-colors backdrop-blur-sm">
+                </a>
+                <a href="https://x.com/VialogueM" target="_blank" rel="noopener noreferrer" className="p-2.5 w-11 h-11 bg-white/10 hover:bg-white/20 border border-white/10 rounded-xl flex items-center justify-center cursor-pointer transition-colors backdrop-blur-sm">
                   <Twitter size={20} className="text-white" />
-                </div>
-                <div className="p-2.5 w-11 h-11 bg-white/10 hover:bg-white/20 border border-white/10 rounded-xl flex items-center justify-center cursor-pointer transition-colors backdrop-blur-sm">
+                </a>
+                <a href="https://www.linkedin.com/company/vialogue-media/" target="_blank" rel="noopener noreferrer" className="p-2.5 w-11 h-11 bg-white/10 hover:bg-white/20 border border-white/10 rounded-xl flex items-center justify-center cursor-pointer transition-colors backdrop-blur-sm">
                   <Linkedin size={20} className="text-white" />
-                </div>
-                <div className="p-2.5 w-11 h-11 bg-white/10 hover:bg-white/20 border border-white/10 rounded-xl flex items-center justify-center cursor-pointer transition-colors backdrop-blur-sm">
+                </a>
+                <a href="https://www.facebook.com/VialogueMedia/" target="_blank" rel="noopener noreferrer" className="p-2.5 w-11 h-11 bg-white/10 hover:bg-white/20 border border-white/10 rounded-xl flex items-center justify-center cursor-pointer transition-colors backdrop-blur-sm">
                   <Facebook size={20} className="text-white" />
-                </div>
+                </a>
               </div>
             </div>
 

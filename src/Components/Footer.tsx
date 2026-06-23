@@ -98,16 +98,16 @@ const Footer: React.FC = () => {
 
         <div className="border-t border-purple-100 mt-12 pt-6 flex flex-col sm:flex-row justify-between items-center sm:items-center text-sm gap-4">
           <div className="flex text-white gap-2 sm:gap-3 mt-8 sm:mt-0 justify-center w-fit sm:justify-left sm:max-w-[280px]">
-            <Link href="#" aria-label="Instagram" className="w-8 h-8 bg-slate-100 hover:bg-[#8141EF] border border-slate-200 hover:border-transparent rounded-lg flex items-center justify-center cursor-pointer transition-all duration-300 group">
+            <Link href="https://www.instagram.com/vialoguemedia/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="w-8 h-8 bg-slate-100 hover:bg-[#8141EF] border border-slate-200 hover:border-transparent rounded-lg flex items-center justify-center cursor-pointer transition-all duration-300 group">
               <Instagram size={16} className="text-slate-500 group-hover:text-white transition-colors" />
             </Link>
-            <Link href="#" aria-label="Twitter" className="w-8 h-8 bg-slate-100 hover:bg-[#8141EF] border border-slate-200 hover:border-transparent rounded-lg flex items-center justify-center cursor-pointer transition-all duration-300 group">
+            <Link href="https://x.com/VialogueM" target="_blank" rel="noopener noreferrer" aria-label="Twitter" className="w-8 h-8 bg-slate-100 hover:bg-[#8141EF] border border-slate-200 hover:border-transparent rounded-lg flex items-center justify-center cursor-pointer transition-all duration-300 group">
               <Twitter size={16} className="text-slate-500 group-hover:text-white transition-colors" />
             </Link>
-            <Link href="#" aria-label="LinkedIn" className="w-8 h-8 bg-slate-100 hover:bg-[#8141EF] border border-slate-200 hover:border-transparent rounded-lg flex items-center justify-center cursor-pointer transition-all duration-300 group">
+            <Link href="https://www.linkedin.com/company/vialogue-media/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="w-8 h-8 bg-slate-100 hover:bg-[#8141EF] border border-slate-200 hover:border-transparent rounded-lg flex items-center justify-center cursor-pointer transition-all duration-300 group">
               <Linkedin size={16} className="text-slate-500 group-hover:text-white transition-colors" />
             </Link>
-            <Link href="#" aria-label="Facebook" className="w-8 h-8 bg-slate-100 hover:bg-[#8141EF] border border-slate-200 hover:border-transparent rounded-lg flex items-center justify-center cursor-pointer transition-all duration-300 group">
+            <Link href="https://www.facebook.com/VialogueMedia/" target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="w-8 h-8 bg-slate-100 hover:bg-[#8141EF] border border-slate-200 hover:border-transparent rounded-lg flex items-center justify-center cursor-pointer transition-all duration-300 group">
               <Facebook size={16} className="text-slate-500 group-hover:text-white transition-colors" />
             </Link>
           </div>
