@@ -9,7 +9,7 @@ import { Code2, Terminal } from "lucide-react";
 const snippets: Record<string, string> = {
   Python: `import requests
 
-url = "https://voice.vialogue.io/call"
+url = "https://api.example.com/call"
 
 headers = {
   "Authorization": "Bearer <API_KEY>",
@@ -30,7 +30,7 @@ print(response.json())`,
 
   "Node.js": `import axios from "axios";
 
-const url = "https://voice.vialogue.io/call";
+const url = "https://api.example.com/call";
 
 const payload = {
   from: "<caller_id>",
@@ -52,7 +52,7 @@ axios.post(url, payload, {
   Ruby: `require "net/http"
 require "json"
 
-uri = URI("https://voice.vialogue.io/call")
+uri = URI("https://api.example.com/call")
 
 payload = {
   from: "<caller_id>",
@@ -81,7 +81,7 @@ import (
 )
 
 func main() {
-  url := "https://voice.vialogue.io/call"
+  url := "https://api.example.com/call"
 
   payload := []byte(\`{
     "from": "<caller_id>",
@@ -101,7 +101,7 @@ func main() {
   fmt.Println(res.Status)
 }`,
 
-  cURL: `curl -X POST "https://voice.vialogue.io/call" \\
+  cURL: `curl -X POST "https://api.example.com/call" \\
   -H "Authorization: Bearer <API_KEY>" \\
   -H "Content-Type: application/json" \\
   -d '{

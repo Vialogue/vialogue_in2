@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { MessageSquare, MessageCircle, Send, Key, Megaphone, Bot } from "lucide-react";
+import { MessageSquare, MessageCircle, Send, Key, Megaphone, Bot, Phone, Sparkles } from "lucide-react";
 
 const solutions = [
   {
@@ -44,37 +44,37 @@ const solutions = [
     ]
   },
   {
-    title: "OTP Services",
-    description: "Ultra-fast authentication delivery with automated SMS fallback routing and multi-channel failover protection.",
-    icon: Key,
-    link: "/contact",
-    color: "bg-amber-100 text-amber-800 border border-amber-200 shadow-[0_4px_12px_rgba(217,119,6,0.05)]",
-    badge: "Sub-3s Delivery",
+    title: "Voice Services",
+    description: "Amplify customer engagement with conversational AI Voicebots for outbound and inbound automations",
+    icon: Phone,
+    link: "/voice",
+    color: "bg-indigo-100 text-indigo-800 border border-indigo-200 shadow-[0_4px_12px_rgba(99,102,241,0.05)]",
+    badge: null,
     features: [
-      "Anti-fraud validation controls",
-      "Automatic failover routing fallback",
-      "99.99% authentication success rate"
+      "Outbound programmable voice calls",
+      "Interactive IVR & keypad inputs",
+      "Real-time call tracking & analytics"
     ]
   },
   {
-    title: "Campaign Automation",
-    description: "Plan, schedule, and orchestrate customer outreach campaigns across channels using smart segment filters.",
-    icon: Megaphone,
-    link: "/bots",
-    color: "bg-rose-100 text-rose-800 border border-rose-200 shadow-[0_4px_12px_rgba(225,29,72,0.05)]",
+    title: "Agent Assist",
+    description: "Boost support productivity with real-time customer context, live replies, and guided resolution checklists.",
+    icon: Sparkles,
+    link: "/agent",
+    color: "bg-cyan-100 text-cyan-800 border border-cyan-200 shadow-[0_4px_12px_rgba(8,145,178,0.05)]",
     badge: null,
     features: [
-      "Visual multi-channel flow designer",
-      "Broadcasting and scheduler engines",
-      "Real-time deliverability statistics"
+      "Real-time AI suggested replies",
+      "Unified customer context panels",
+      "Guided resolution checklists"
     ]
   },
   {
     title: "AI Chatbots",
-    description: "Empower support teams with automated agent assist tools, NLP response bots, and live agent escalations.",
+    description: "Empower support teams with automated agent assist tools, NLP response bots and chatbots",
     icon: Bot,
-    link: "/agent",
-    color: "bg-cyan-100 text-cyan-800 border border-cyan-200 shadow-[0_4px_12px_rgba(8,145,178,0.05)]",
+    link: "/bots",
+    color: "bg-rose-100 text-rose-800 border border-rose-200 shadow-[0_4px_12px_rgba(225,29,72,0.05)]",
     badge: null,
     features: [
       "Instant FAQ response automation",
@@ -88,7 +88,7 @@ export default function ProductSolutions() {
   return (
     <section className="py-24 bg-transparent relative z-10 border-t border-slate-100">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl relative z-10">
-        
+
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
           <div className="inline-block px-3 py-1 rounded-full bg-brand-purple/10 border border-brand-purple/20 select-none">
@@ -125,7 +125,7 @@ export default function ProductSolutions() {
                 <h3 className="text-xl sm:text-2xl font-extrabold text-slate-950 mb-4">
                   {item.title}
                 </h3>
-                
+
                 {/* Description */}
                 <p className="text-base sm:text-lg text-slate-800 leading-relaxed font-medium">
                   {item.description}
