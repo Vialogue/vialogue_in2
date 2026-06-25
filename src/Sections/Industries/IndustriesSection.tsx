@@ -53,7 +53,7 @@ const industries = [
     useCase: "Order tracking, Cart abandonment reminders, Product catalog broadcasts.",
     mockMessage: {
       title: "Shipping Alert",
-      body: "Your Vialogue Shop order #9480 has been shipped! Track delivery: https://vialogue.in/track/9480",
+      body: "Your Vialogue Shop order #9480 has been shipped! Track delivery: https://vialogue.io/track/9480",
       sender: "SHOPPING",
     },
     theme: {
@@ -72,7 +72,7 @@ const industries = [
     useCase: "Student notification broadcasts, Exam timetable reminders, Fee due alerts.",
     mockMessage: {
       title: "Campus Notification",
-      body: "Dear Parent, the mid-term exam schedule has been published. View PDF online: https://vialogue.in/exams",
+      body: "Dear Parent, the mid-term exam schedule has been published. View PDF online: https://vialogue.io/exams",
       sender: "ACADEMY",
     },
     theme: {
@@ -147,7 +147,7 @@ export default function IndustriesSection() {
   return (
     <section className="py-24 bg-transparent border-y border-slate-200/60 relative z-10">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl relative z-10">
-        
+
         {/* Heading */}
         <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
           <div className="inline-block px-3 py-1 rounded-full bg-brand-purple/10 border border-brand-purple/20">
@@ -165,7 +165,7 @@ export default function IndustriesSection() {
 
         {/* Layout */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-          
+
           {/* LEFT: Industries selector tabs */}
           <div className="lg:col-span-5 space-y-3">
             {industries.map((item, idx) => {
@@ -175,17 +175,15 @@ export default function IndustriesSection() {
                 <button
                   key={item.id}
                   onClick={() => handleTabClick(idx)}
-                  className={`w-full text-left flex items-center gap-4 px-6 py-4 rounded-2xl border transition-all duration-300 cursor-pointer ${
-                    isActive
+                  className={`w-full text-left flex items-center gap-4 px-6 py-4 rounded-2xl border transition-all duration-300 cursor-pointer ${isActive
                       ? "bg-slate-50 border-slate-900 text-slate-900 shadow-sm"
                       : "bg-transparent border-slate-200/60 text-slate-600 font-medium hover:text-slate-900 hover:border-slate-350"
-                  }`}
+                    }`}
                 >
-                  <span className={`p-2.5 rounded-xl transition-all duration-300 ${
-                    isActive
+                  <span className={`p-2.5 rounded-xl transition-all duration-300 ${isActive
                       ? `${item.theme.bg} ${item.theme.text} border ${item.theme.border} shadow-sm scale-105`
                       : "bg-slate-100 text-slate-500 border border-transparent"
-                  }`}>
+                    }`}>
                     <IndIcon size={20} />
                   </span>
                   <div>
@@ -199,7 +197,7 @@ export default function IndustriesSection() {
           {/* RIGHT: Industry Preview Panel */}
           <div className="lg:col-span-7">
             <div className="glass-panel border border-slate-200/80 rounded-3xl p-6 sm:p-8 min-h-[420px] flex flex-col justify-between relative overflow-hidden shadow-xl h-full">
-              
+
               {/* Backlight glow */}
               <div className="absolute top-[-20%] right-[-20%] w-[300px] h-[300px] rounded-full bg-brand-purple/5 blur-[100px] pointer-events-none" />
 

@@ -44,7 +44,7 @@ export default function FeaturesBento() {
                 </span>
                 <h3 className="text-lg font-extrabold text-slate-900 mb-2">Multi-channel Messaging</h3>
                 <p className="text-sm text-slate-700 max-w-md font-normal leading-relaxed">
-                  Route notifications via WhatsApp, RCS, and SMS from a single API call with intelligent fallback logic to guarantee delivery.
+                  Route notifications via WhatsApp, RCS, and SMS to engage customer at each touch point
                 </p>
               </div>
 

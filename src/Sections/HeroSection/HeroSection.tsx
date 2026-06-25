@@ -107,7 +107,7 @@ export default function HeroSection() {
           {
             id: "sms-1",
             sender: "system",
-            text: "Your Vialogue authentication code is 584930. Valid for 5 minutes. vialogue.in/verify?code=584930",
+            text: "Your Vialogue authentication code is 584930. Valid for 5 minutes. vialogue.io/verify?code=584930",
             time: formatTime(),
             status: "delivered",
           },

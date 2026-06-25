@@ -69,7 +69,7 @@ export default function ContactUs() {
                     <div className="p-2.5 bg-white/10 rounded-xl group-hover:bg-white/20 transition-colors backdrop-blur-sm">
                       <Globe size={20} className="text-white" />
                     </div>
-                    <span className="font-light tracking-wide">vialogue.in</span>
+                    <span className="font-light tracking-wide">vialogue.io</span>
                   </div>
 
                   <div className="flex items-start gap-4 group cursor-pointer">

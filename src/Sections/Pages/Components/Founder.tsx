@@ -63,7 +63,7 @@ const FounderNote = () => {
         "
       >
         {/* ================= IMAGE ================= */}
-        <motion.div
+        {/* <motion.div
           variants={fadeScale}
           className="
             relative
@@ -79,7 +79,7 @@ const FounderNote = () => {
             className="object-cover object-[0px_-50px]"
             priority
           />
-        </motion.div>
+        </motion.div> */}
 
         {/* ================= CONTENT ================= */}
         <motion.div
@@ -129,7 +129,7 @@ const FounderNote = () => {
             <p className="text-xs sm:text-sm text-gray-500">Founder & CEO</p>
           </motion.div>
 
-          <FaLinkedin onClick={()=>nav.push("https://www.linkedin.com/in/vineet-kumar-singh-b7675257/")} className="text-blue-500 hover:text-blue-700 cursor-pointer mt-7 w-10 h-10" />
+          <FaLinkedin onClick={() => nav.push("https://www.linkedin.com/in/vineet-kumar-singh-b7675257/")} className="text-blue-500 hover:text-blue-700 cursor-pointer mt-7 w-10 h-10" />
         </motion.div>
       </motion.div>
     </section>
