@@ -283,7 +283,7 @@ export default function HeroSection() {
               transition={{ duration: 0.8, delay: 0.2 }}
               className="text-xl text-slate-600 max-w-2xl mx-auto lg:mx-0 leading-relaxed font-medium mb-8"
             >
-              Automate customer conversations, authenticate securely with low-latency OTP routing, and orchestrate campaigns globally via one unified enterprise API built for high deliverability.
+              Automate customer conversations, authenticate securely with low-latency OTP routing, and orchestrate campaigns globally via secure enterprise API built for high deliverability.
             </motion.p>
 
             {/* Action Buttons */}
