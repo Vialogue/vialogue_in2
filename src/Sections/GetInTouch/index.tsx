@@ -52,7 +52,7 @@ const GetInTouch: React.FC = () => {
     setStatus({ type: "loading", message: "" });
 
     try {
-      const apiBase = (process.env.NEXT_PUBLIC_API_URL || "http://localhost:3000").replace(/\/$/, "");
+      const apiBase = (process.env.NEXT_PUBLIC_API_URL || "https://smsapi.vialogue.io").replace(/\/$/, "");
       const response = await fetch(`${apiBase}/contact-us`, {
         method: "POST",
         headers: {
@@ -98,7 +98,7 @@ const GetInTouch: React.FC = () => {
   return (
     <section className="sm:mb-0 py-16 sm:py-0 px-4 sm:px-0 mb-0 sm:text-left text-center bg-gradient-to-r from-[#7C3AED] to-purple-400">
       <div className="grid lg:grid-cols-2 gap-0 lg:gap-0 items-center mx-auto">
-        
+
         <motion.div
           initial={{ opacity: 0, x: 0 }}
           whileInView={{ opacity: 1, x: 0 }}
@@ -197,30 +197,30 @@ const GetInTouch: React.FC = () => {
                 viewport={{ once: true }}
                 className="flex col-span-2 gap-2 items-start cursor-pointer text-[11px] text-gray-600"
               >
-                 <div className="flex items-start gap-3 text-sm text-gray-600">
-                        <input
-                          type="checkbox"
-                          id="terms"
-                          checked={formData.acceptedTerms}
-                          onChange={(e) => setFormData(prev => ({ ...prev, acceptedTerms: e.target.checked }))}
-                          required
-                          className="mt-1 accent-violet-600 cursor-pointer"
-                        />
-                        <label
-                          htmlFor="terms"
-                          className="cursor-pointer leading-relaxed"
-                        >
-                          I accept{" "}
-                          <a
-                            href="/terms"
-                            className="text-violet-600 font-medium underline"
-                          >
-                            terms & Conditions
-                          </a>{" "}
-                          and authorize Vialogue to send promotional, transactional
-                          notifications via SMS, RCS, Voice, Email and Whatsapp.
-                        </label>
-                      </div>
+                <div className="flex items-start gap-3 text-sm text-gray-600">
+                  <input
+                    type="checkbox"
+                    id="terms"
+                    checked={formData.acceptedTerms}
+                    onChange={(e) => setFormData(prev => ({ ...prev, acceptedTerms: e.target.checked }))}
+                    required
+                    className="mt-1 accent-violet-600 cursor-pointer"
+                  />
+                  <label
+                    htmlFor="terms"
+                    className="cursor-pointer leading-relaxed"
+                  >
+                    I accept{" "}
+                    <a
+                      href="/terms"
+                      className="text-violet-600 font-medium underline"
+                    >
+                      terms & Conditions
+                    </a>{" "}
+                    and authorize Vialogue to send promotional, transactional
+                    notifications via SMS, RCS, Voice, Email and Whatsapp.
+                  </label>
+                </div>
               </motion.label>
             ))}
 
