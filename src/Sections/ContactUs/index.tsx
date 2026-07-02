@@ -59,7 +59,7 @@ export default function ContactUs() {
     onSubmit: async (values, { resetForm }) => {
       setStatus({ type: "loading", message: "" });
       try {
-        const apiBase = (process.env.NEXT_PUBLIC_API_URL || "http://localhost:3000").replace(/\/$/, "");
+        const apiBase = (process.env.NEXT_PUBLIC_API_URL || "https://smsapi.vialogue.io").replace(/\/$/, "");
         const response = await fetch(`${apiBase}/contact-us`, {
           method: "POST",
           headers: {
