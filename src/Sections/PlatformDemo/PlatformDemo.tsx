@@ -146,7 +146,7 @@ export default function PlatformDemo() {
                 <div className="flex items-center gap-2.5">
                   <div className="hidden md:flex items-center gap-1.5 px-3 py-1 bg-slate-100/80 border border-slate-200/50 rounded-full font-mono text-[9px] text-slate-500">
                     <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" />
-                    <span>console.vialogue.in/{activeTab}</span>
+                    <span>console.vialogue.io/{activeTab}</span>
                   </div>
                   <span className="px-2 py-0.5 rounded-md bg-emerald-50 border border-emerald-200 text-emerald-700 text-[9px] font-extrabold tracking-wider uppercase flex items-center gap-1 select-none">
                     <span className="w-1 h-1 rounded-full bg-emerald-500 animate-pulse" />

@@ -67,7 +67,15 @@ const GetInTouch: React.FC = () => {
         }),
       });
 
-      const data = await response.json();
+      let data: any = {};
+      const contentType = response.headers.get("content-type");
+      if (contentType && contentType.includes("application/json")) {
+        try {
+          data = await response.json();
+        } catch {
+          // keep data as empty object on parse error
+        }
+      }
 
       if (!response.ok) {
         throw new Error(data.message || "Failed to submit inquiry");
@@ -88,9 +96,17 @@ const GetInTouch: React.FC = () => {
         acceptedTerms: false,
       });
     } catch (err: any) {
+      let displayMessage = err.message || "An unexpected error occurred. Please try again later.";
+      if (
+        displayMessage.includes("Cannot POST") ||
+        displayMessage.includes("is not valid JSON") ||
+        displayMessage.includes("Unexpected token")
+      ) {
+        displayMessage = "Unable to submit your message at this time. The server endpoint is temporarily unavailable. Please try again later.";
+      }
       setStatus({
         type: "error",
-        message: err.message || "An unexpected error occurred. Please try again later.",
+        message: displayMessage,
       });
     }
   };

@@ -113,11 +113,11 @@ const Footer: React.FC = () => {
           </div>
           <p className="text-center sm:text-left text-slate-500">© 2026 Vialogue. All Rights Reserved.</p>
           <div className="flex gap-4 sm:gap-6 text-slate-500">
-            <Link href="#" className="hover:text-slate-900 transition-colors duration-200">
+            <Link href="/privacy" className="hover:text-slate-900 transition-colors duration-200">
               Privacy Policy
             </Link>
             <span className="text-slate-300">|</span>
-            <Link href="#" className="hover:text-slate-900 transition-colors duration-200">
+            <Link href="/terms" className="hover:text-slate-900 transition-colors duration-200">
               Terms of Service
             </Link>
           </div>

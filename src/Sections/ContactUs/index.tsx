@@ -75,7 +75,15 @@ export default function ContactUs() {
           }),
         });
 
-        const data = await response.json();
+        let data: any = {};
+        const contentType = response.headers.get("content-type");
+        if (contentType && contentType.includes("application/json")) {
+          try {
+            data = await response.json();
+          } catch {
+            // keep data as empty object on parse error
+          }
+        }
 
         if (!response.ok) {
           throw new Error(data.message || "Failed to submit message");
@@ -89,9 +97,17 @@ export default function ContactUs() {
         resetForm();
         recaptchaRef.current?.reset();
       } catch (err: any) {
+        let displayMessage = err.message || "An unexpected error occurred. Please try again later.";
+        if (
+          displayMessage.includes("Cannot POST") ||
+          displayMessage.includes("is not valid JSON") ||
+          displayMessage.includes("Unexpected token")
+        ) {
+          displayMessage = "Unable to submit message. The server endpoint is temporarily unavailable. Please try again later.";
+        }
         setStatus({
           type: "error",
-          message: err.message || "An unexpected error occurred. Please try again later.",
+          message: displayMessage,
         });
       }
     },
@@ -147,7 +163,7 @@ export default function ContactUs() {
                     <div className="p-2.5 bg-white/10 rounded-xl group-hover:bg-white/20 transition-colors backdrop-blur-sm">
                       <Mail size={20} className="text-white" />
                     </div>
-                    <span className="font-light tracking-wide">contact@vialogue.in</span>
+                    <span className="font-light tracking-wide">contact@vialogue.io</span>
                   </div>
 
                   <div className="flex items-center gap-4 group cursor-pointer">

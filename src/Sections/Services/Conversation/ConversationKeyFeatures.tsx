@@ -33,7 +33,7 @@ const ConversationKeyFeatures: React.FC = () => {
         const next = (prev + 1) % 4;
         if (next === 0) setLeadFields({ name: "", email: "", phone: "" });
         if (next === 1) setLeadFields((f) => ({ ...f, name: "Aria" }));
-        if (next === 2) setLeadFields((f) => ({ ...f, email: "aria@vialogue.in" }));
+        if (next === 2) setLeadFields((f) => ({ ...f, email: "aria@vialogue.io" }));
         if (next === 3) setLeadFields((f) => ({ ...f, phone: "+91 99000 12345" }));
         return next;
       });
